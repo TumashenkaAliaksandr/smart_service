@@ -408,8 +408,8 @@ website:   	http://www.themepunch.com
 .tp-caption.lightgrey_divider,.lightgrey_divider
 {
 	background-color:rgba(235,235,235,1);
-	background-position:initial initial;
-	background-repeat:initial initial;
+	background-position:initial;
+	background-repeat:initial;
 	border-color:#222;
 	border-style:none;
 	border-width:0;
@@ -4065,6 +4065,8 @@ tp-caption.Team-Thumb,
     border-radius: 0 0 0 0px;
     text-align: left
 }
+
+
 .tp-caption.Team-Social,
 .Team-Social {
     color: rgba(255, 255, 255, 1.00);
@@ -4082,6 +4084,7 @@ tp-caption.Team-Thumb,
     border-radius: 0 0 0 0px;
     text-align: center
 }
+
 .tp-caption.Team-Social:hover,
 .Team-Social:hover {
     color: rgba(255, 255, 255, 1.00);
@@ -4111,6 +4114,7 @@ tp-caption.Team-Thumb,
     border-radius: 100px 100px 100px 100px;
     text-align: center
 }
+
 .tp-caption.VideoControls-Play:hover,
 .VideoControls-Play:hover {
     color: rgba(0, 0, 0, 1.00);
@@ -4122,6 +4126,7 @@ tp-caption.Team-Thumb,
     border-radius: 100px 100px 100px 100px;
     cursor: pointer
 }
+
 .tp-caption.VideoPlayer-Title,
 .VideoPlayer-Title {
     color: rgba(255, 255, 255, 1.00);
@@ -4140,6 +4145,7 @@ tp-caption.Team-Thumb,
     text-align: left;
     letter-spacing: 10px
 }
+
 .tp-caption.VideoPlayer-SubTitle,
 .VideoPlayer-SubTitle {
     color: rgba(255, 255, 255, 1.00);
@@ -4157,6 +4163,7 @@ tp-caption.Team-Thumb,
     border-radius: 0 0 0 0px;
     text-align: center
 }
+
 .tp-caption.VideoPlayer-Social,
 .VideoPlayer-Social {
     color: rgba(255, 255, 255, 1.00);
@@ -4174,6 +4181,7 @@ tp-caption.Team-Thumb,
     border-radius: 0 0 0 0px;
     text-align: center
 }
+
 .tp-caption.VideoPlayer-Social:hover,
 .VideoPlayer-Social:hover {
     color: rgba(255, 255, 255, 1.00);
@@ -4185,6 +4193,7 @@ tp-caption.Team-Thumb,
     border-radius: 0px 0px 0px 0px;
     cursor: pointer
 }
+
 .tp-caption.VideoControls-Mute,
 .VideoControls-Mute {
     color: rgba(0, 0, 0, 1.00);
@@ -4202,6 +4211,7 @@ tp-caption.Team-Thumb,
     border-radius: 100px 100px 100px 100px;
     text-align: center
 }
+
 .tp-caption.VideoControls-Mute:hover,
 .VideoControls-Mute:hover {
     color: rgba(0, 0, 0, 1.00);
@@ -4213,6 +4223,7 @@ tp-caption.Team-Thumb,
     border-radius: 100px 100px 100px 100px;
     cursor: pointer
 }
+
 .tp-caption.VideoControls-Pause,
 .VideoControls-Pause {
     color: rgba(0, 0, 0, 1.00);
@@ -4230,13 +4241,15 @@ tp-caption.Team-Thumb,
     border-radius: 100px 100px 100px 100px;
     text-align: center
 }
+
 .tp-caption.VideoControls-Pause:hover,
 .VideoControls-Pause:hover {
-    color: rgba(0, 0, 0, 1.00);
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 1.00);
-    border-color: rgba(0, 0, 0, 1.00);
-    border-style: solid;
-    border-width: 0px;
-    border-radius: 100px 100px 100px 100px;
-    cursor: pointer
+	color: rgba(0, 0, 0, 1.00);
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 1.00);
+	border-color: rgba(0, 0, 0, 1.00);
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 100px 100px 100px 100px;
+	cursor: pointer
+}

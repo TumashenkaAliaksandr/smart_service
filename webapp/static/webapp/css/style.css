@@ -928,6 +928,11 @@ select:focus {
   width: 100%;
   z-index: -1;
 }
+.bg_img{
+  background-image: url(../images/resources/categories-bg.jpg);
+}
+
+
 .categories-area .sec-title h1{
     
 }
@@ -2549,7 +2554,7 @@ select:focus {
   text-decoration: inherit;
   color: #f1f1f1;
   font-size: 24px;
-  padding-right: ;
+  padding-right:20px ;
   position: absolute;
   top: -3px;
   left: 30px;    
