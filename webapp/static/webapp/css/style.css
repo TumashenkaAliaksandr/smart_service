@@ -932,6 +932,9 @@ select:focus {
   background-image: url(../images/resources/categories-bg.jpg);
 }
 
+.bg_img_fact{
+  background-image: url(../images/resources/fact-counter-bg.png);
+}
 
 .categories-area .sec-title h1{
     

@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
                 <div class="welcome">
-                    <p>Профессиональный ремонт Сложной Электроники</p>
+                    <p>ПРОФЕССИОНАЛЬНЫЙ РЕМОНТ СЛОЖНОЙ ЭЛЕКТРОНИКИ</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
@@ -71,8 +71,8 @@
                 <div class="top-social-links">
                     <ul>
                         <li><a href="https://www.instagram.com/smart_service_novopolock/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a href="https://t.me/belserv"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +87,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{% url 'webapp:home' %}">
                         <img src="{% static 'webapp/images/resources/logo.png' %}" alt="Awesome Logo">
                     </a>
                 </div>
@@ -100,8 +100,8 @@
                                 <span class="flaticon-home-page"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>321, Breaking Street</h5>
-                                <h6>Newyork ,USA 10002</h6>
+                                <h5>г. Новополоцк</h5>
+                                <h6>ул. Кирова 3, Дом Быта</h6>
                             </div>
                         </li>
                         <li>
@@ -109,8 +109,8 @@
                                 <span class="flaticon-clock"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Opening Time</h5>
-                                <h6>Mon - Sat: 09.00 to 18.00</h6>
+                                <h5>Время Работы</h5>
+                                <h6>Пн - Суб: 10.00 до 19.00</h6>
                             </div>
                         </li>
                         <li>
@@ -118,8 +118,8 @@
                                 <span class="flaticon-envelope"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Mail Us</h5>
-                                <h6>Supportyou@Repairplus.com</h6>
+                                <h5>Наша Почта</h5>
+                                <h6>Smartservice@gmail.com</h6>
                             </div>
                         </li>
                     </ul>
@@ -146,8 +146,8 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="current"><a href="index.html">Home</a></li>
-                            <li class="dropdown"><a href="services.html">Services</a>
+                            <li class="current"><a href="{% url 'webapp:home' %}">Главная</a></li>
+                            <li class="dropdown"><a href="services.html">Услуги</a>
                                 <ul>
                                     <li><a href="smartphone-repair.html">Smartphone Repair</a></li>
                                     <li><a href="tablet-repair.html">Tablet & iPad Repair</a></li>
@@ -157,7 +157,7 @@
                                     <li><a href="mp3-repair.html">MP3 & MP4 Player Repair</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="about.html">Pages</a>
+                            <li class="dropdown"><a href="about.html">О Нас</a>
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
                                     <li><a href="team.html">Meet Our Team</a></li>
@@ -168,7 +168,7 @@
                                     <li><a href="404.html">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="shop.html">Shop</a>
+                            <li class="dropdown"><a href="shop.html">Мастерская</a>
                                 <ul>
                                     <li><a href="shop.html">Shop Products</a></li>
                                     <li><a href="shop-single.html">Single Product</a></li>
@@ -177,13 +177,13 @@
                                     <li><a href="account.html">My Account</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="blog.html">Blog</a>
+                            <li class="dropdown"><a href="blog.html">Блог</a>
                                 <ul>
                                     <li><a href="blog.html">Blog Default</a></li>
                                     <li><a href="blog-single.html">Blog Single</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -195,8 +195,8 @@
                         <span class="flaticon-cell-phone"></span>
                     </div>
                     <div class="title-holder">
-                        <h5>Customer Care</h5>
-                        <h4>1800-56-78-9012</h4>
+                        <h5>Наш Телефон</h5>
+                        <a href="tel:+375295907777"><h4>+375(29)590-77-77</h4></a>
                     </div>
                 </div>
                 <div class="top-search-box pull-right">
