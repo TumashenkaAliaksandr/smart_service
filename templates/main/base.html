@@ -226,8 +226,8 @@
             <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
                 <div class="single-footer-widget pd-bottom">
                     <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="{% static 'webapp/images/footer/footer-logo.png' %}" alt="Awesome Footer Logo">
+                        <a href="{% url 'webapp:home' %}">
+                            <img src="{% static 'webapp/images/footer/footer_logo_be_se.png' %}" alt="Awesome Footer Logo">
                         </a>
                     </div>
                     <div class="repairplus-info">
@@ -247,14 +247,14 @@
                         <div class="col-lg-3 col-md-4 col-sm-12">
                             <div class="single-footer-widget">
                                 <div class="title">
-                                    <h3>Our Services</h3>
+                                    <h3>Наши Услуги</h3>
                                 </div>
                                 <ul class="services-list">
-                                    <li><a href="smartphone-repair.html">Smart Phone Repair</a></li>
-                                    <li><a href="tablet-repair.html">Tablets & iPad Repair</a></li>
+                                    <li><a href="smartphone-repair.html">Smart Phone</a></li>
+                                    <li><a href="tablet-repair.html">Tablets & iPad</a></li>
                                     <li><a href="desktop-repair.html">Desktop & Laptop</a></li>
-                                    <li><a href="game-repair.html">Game System Repair</a></li>
-                                    <li><a href="lcd-repair.html">LCD & LED TV Repair</a></li>
+                                    <li><a href="game-repair.html">Game System</a></li>
+                                    <li><a href="lcd-repair.html">LCD & LED TV</a></li>
                                     <li><a href="mp3-repair.html">MP3 & MP4 Player</a></li>
                                 </ul>
                             </div>
@@ -264,25 +264,26 @@
                         <div class="col-lg-5 col-md-4 col-sm-12">
                             <div class="single-footer-widget subscribe-form-widget">
                                 <div class="title">
-                                    <h3>Subscribe US</h3>
+                                    <h3>Наши соцети</h3>
+                                </div>
+                                <div class="footer-social-links">
+                                    <ul>
+                                        <li><a href="https://www.instagram.com/smart_service_novopolock/"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o"
+                                                                              aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i
+                                                class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                    </ul>
                                 </div>
                                 <div class="subscribe-form">
-                                    <p>Subscribe to our newsletter!</p>
+                                    <p> </p>
+                                    <p>Подпишитесь на наши Новости!</p>
                                     <form action="#">
                                         <input name="email" placeholder="Enter Your Email..." type="text">
                                         <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                     </form>
-                                    <h4>We don’t do mail to spam and your mail id is confidential.</h4>
-                                </div>
-                                <div class="footer-social-links">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    </ul>
+                                    <h4>Мы не занимаемся рассылкой спама.</h4>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +292,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="single-footer-widget contact-info-widget">
                                 <div class="title">
-                                    <h3>Contact Info</h3>
+                                    <h3>Контакты</h3>
                                 </div>
                                 <ul class="footer-contact-info">
                                     <li>
@@ -299,7 +300,7 @@
                                             <span class="flaticon-home-page"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA 10002</h5>
+                                            <h5><span>г.Новополоцк</span><br> ул. Кирова 3, Дом Быта</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -307,7 +308,7 @@
                                             <span class="flaticon-call-answer"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Call Us</span><br>+321 4567 89 012 & 79 023</h5>
+                                            <h5><span>Наш Телефон</span><br> +375(29)590-77-77</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -315,7 +316,7 @@
                                             <span class="flaticon-envelope"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
+                                            <h5><span>Наша Почта</span><br>Smartservice@gmail.com</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -323,7 +324,7 @@
                                             <span class="flaticon-clock"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
+                                            <h5><span>Время работы</span><br>Пн - Пт: 10.00 до 19.00</h5>
                                         </div>
                                     </li>
                                 </ul>
@@ -339,7 +340,7 @@
             <div class="col-md-12">
                 <div class="footer-bottom">
                     <div class="copyright-text pull-left">
-                        <p>Copyrights © 2017 All Rights Reserved by <a href="#">ThemeKalia.</a></p>
+                        <p>Copyrights © 2024 All Rights Reserved by <a href="https://t.me/ultravioletpartyeyes">PhoenixPegasus.</a></p>
                     </div>
                     <div class="payment-method pull-right">
                         <ul>
