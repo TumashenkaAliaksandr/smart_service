@@ -14,7 +14,7 @@
                 <div class="col-md-4">
                     <div class="single-item text-center">
                         <a href="#">
-                            <h5>Smart phone Repair</h5>
+                            <h5>Ремонт Смартфонов</h5>
                         </a>
                         <div class="img-holder">
                             <img src="{% static 'webapp/images/callto-action/1.jpg' %}" alt="Awesome Image">
@@ -27,8 +27,7 @@
                             </div>
                         </div>
                         <div class="text-holder">
-                            <p>We specialise in Phone repairs for Apple iPhones, iPad, iPod, Samsung, Galaxy, Sony, HTC,
-                                Nexus, Motorola, Blackberry & Tablets.</p>
+                            <p>Мы специализируемся на ремонте телефонов Apple iPhone, iPad, iPod, Samsung, Galaxy, Sony, HTC, Nexus, Motorola, Blackberry и планшетов.</p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +36,7 @@
                 <div class="col-md-4">
                     <div class="single-item text-center">
                         <a href="#">
-                            <h5>Tablets & Ipad Repair</h5>
+                            <h5>Ремонт Планшетов и Ipad</h5>
                         </a>
                         <div class="img-holder">
                             <img src="{% static 'webapp/images/callto-action/2.jpg' %}" alt="Awesome Image">
@@ -50,8 +49,7 @@
                             </div>
                         </div>
                         <div class="text-holder">
-                            <p>If you are facing any problem with your Tablets / Ipads, Kindly pls go through the
-                                menttioned catagories as per requirement.</p>
+                            <p>Если вы столкнулись с какой-либо проблемой с вашими планшетами или Ipads, обращайтесь в Бел.Серв., мы решим ваши проблемы!</p>
                         </div>
                     </div>
                 </div>
@@ -60,10 +58,10 @@
                 <div class="col-md-4">
                     <div class="single-item text-center">
                         <a href="#">
-                            <h5>Desktop & Mac Repair</h5>
+                            <h5>Ремонт PC Notebook Mac</h5>
                         </a>
-                        <div class="img-holder">
-                            <img src="{% static 'webapp/images/callto-action/1.jpg' %}" alt="Awesome Image">
+                        <div class="img-holder img-fixed-size">
+                            <img src="{% static 'webapp/images/callto-action/repair_bel_ser.jpg' %}" alt="Awesome Image">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -73,8 +71,7 @@
                             </div>
                         </div>
                         <div class="text-holder">
-                            <p>We specialist in providing On-Site Computer Desktop Repair Service and Network Support
-                                for all sized business, On-Site Computer.</p>
+                            <p>Мы специализируемся на предоставлении услуг по ремонту настольных Компьютеров, Ноутбуков и Mac Book</p>
                         </div>
                     </div>
                 </div>
@@ -737,35 +734,12 @@
                 <div class="col-md-12">
                     <div class="brand">
                         <!--Start single item-->
+                        {% for main_brands in brands %}
                         <div class="single-item">
-                            <a href="#"><img src="{% static 'webapp/images/brand/1.jpg' %}"
+                            <a href="#"><img src="{{ main_brands.photo.url }}"
                                              alt="Awesome Brand Image"></a>
                         </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="single-item">
-                            <a href="#"><img src="{% static 'webapp/images/brand/2.jpg' %}"
-                                             alt="Awesome Brand Image"></a>
-                        </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="single-item">
-                            <a href="#"><img src="{% static 'webapp/images/brand/3.jpg' %}"
-                                             alt="Awesome Brand Image"></a>
-                        </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="single-item">
-                            <a href="#"><img src="{% static 'webapp/images/brand/4.jpg' %}"
-                                             alt="Awesome Brand Image"></a>
-                        </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="single-item">
-                            <a href="#"><img src="{% static 'webapp/images/brand/5.jpg' %}"
-                                             alt="Awesome Brand Image"></a>
-                        </div>
-                        <!--End single item-->
+                        {% endfor %}
                     </div>
                 </div>
             </div>
