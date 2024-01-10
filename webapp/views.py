@@ -10,3 +10,8 @@ def index(request):
     context = locals()
 
     return render(request, 'webapp/index.html', context)
+
+
+def about(request):
+
+    return render(request, 'webapp/about.html')

@@ -833,7 +833,9 @@ select:focus {
   background: #43c3ea;
 }
 
-
+.background-image-about{
+  background: url(../images/working-process/bg.jpg);
+}
 
 /*** 
 =============================================
