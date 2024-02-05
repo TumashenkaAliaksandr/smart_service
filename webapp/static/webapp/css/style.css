@@ -268,11 +268,11 @@ button{
   left: 0;
   width: 100%;
   z-index: 10000;
-  background: #152545;
+  background: #0b5e0d;
   transition: all 0.7s ease 0s;
-  -moz-box-shadow: 3px 1px 3px #0a1327;
-  -webkit-box-shadow: 3px 1px 3px #0a1327;
-  box-shadow: 3px 1px 3px #0a1327;
+  /*-moz-box-shadow: 3px 1px 3px #0a1327;*/
+  /*-webkit-box-shadow: 3px 1px 3px #0a1327;*/
+  /*box-shadow: 3px 1px 3px #0a1327;*/
 }
 
 
@@ -366,7 +366,7 @@ select:focus {
   -webkit-transform: scale(0);
   transform: scale(0);
   border: 3px solid #43ea65;
-  background-color: rgba(67,195,234,0.90);
+  background-color: rgb(67, 234, 101, 0.7);
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
@@ -550,7 +550,7 @@ select:focus {
     Mainmenu Area Css
 ===============================================*/
 .mainmenu-area {
-  background: #152545;
+  background: #0d2d1a;
 }
 .main-menu {
   float: left;
@@ -568,10 +568,10 @@ select:focus {
   float: left;
   padding: 0;
   position: relative;
-  border-right: 1px solid #1f3155;
+  border-right: 1px solid #074420;
 }
 .main-menu .navigation li:first-child{
-  border-left: 1px solid #1f3155;
+  border-left: 1px solid #074420;
 }
 .main-menu .navigation li a {
   color: #ffffff;
@@ -601,7 +601,7 @@ select:focus {
   z-index: 100;
   visibility: hidden;
   opacity: 0;
-  border-bottom: 2px solid #3cb4d8;
+  border-bottom: 2px solid #28e14e;
   transition: all 500ms ease;
 }
 .main-menu .navigation > li:hover > ul {
@@ -615,7 +615,7 @@ select:focus {
   padding: 0;
   position: relative;
   width: 100%;
-  border-top: 1px solid #3eb9de;
+  border-top: 1px solid #28e14e;
   border-right: none;
 }
 .main-menu .navigation > li > ul > li:first-child{
@@ -635,7 +635,7 @@ select:focus {
 }
 .main-menu .navigation > li > ul > li:hover > a {
   color: #fff;
-  background-color: #3eb9de;
+  background-color: #0C2C19FF;
 }
 
 
