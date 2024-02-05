@@ -20,3 +20,6 @@ def contact(request):
 
 def services(request):
     return render(request, 'webapp/services.html')
+
+def errors(request):
+    return render(request, 'webapp/404.html')
