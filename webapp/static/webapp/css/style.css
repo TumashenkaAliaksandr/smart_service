@@ -202,15 +202,6 @@ button{
 
 
 
-
-
-
-
-
-
-
-
-
 /* jQuery ui dropdown Sub item style */
 .ui-widget-content {
   background: #ffffff none repeat scroll 0 0;
@@ -258,9 +249,9 @@ button{
   z-index: 10000;
   background: #0d2d1a;
   transition: all 0.7s ease 0s;
-  -moz-box-shadow: -1px 5px 11px #0a1327;
-  -webkit-box-shadow: -1px 5px 11px #0a1327;
-  box-shadow: -1px 5px 11px #0a1327;
+  -moz-box-shadow: -1px 5px 11px #011809;
+  -webkit-box-shadow: -1px 5px 11px #011809;
+  box-shadow: -1px 5px 11px #011809;
 }
 .mainmenu-area.stricky-fixed {
   position: fixed;
@@ -366,7 +357,7 @@ select:focus {
   -webkit-transform: scale(0);
   transform: scale(0);
   border: 3px solid #43ea65;
-  background-color: rgb(67, 234, 101, 0.7);
+  background-color: rgb(67, 234, 101, 0.5);
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
