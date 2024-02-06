@@ -154,12 +154,12 @@ button{
 }
 
 .bg-1{
-  background: #43ea65;
-  border-bottom: 2px solid #3cb4d8;
+  background: #10a62e;
+  border-bottom: 2px solid #0d2d1a;
 }
 
 .bg-2{
-  background: #2a3b5c; 
+  background: #10a62e;
   border-bottom: 2px solid #0d2d1a;
 }
 
@@ -340,7 +340,7 @@ select:focus {
   border-radius: 3px;
 }
 .post-pagination li.active a, .post-pagination li:hover a {
-  background: #43ea65;
+  background: #10a62e;
   color: #fff;
   border: 1px solid #43ea65;
 }
@@ -378,7 +378,7 @@ select:focus {
     Top bar Area Css
 ===============================================*/
 .top-bar-area {
-  background: #43ea65  none repeat scroll 0 0;
+  background: #10a62e  none repeat scroll 0 0;
   padding: 7px 0 8px;
 }
 .top-bar-area .welcome p {
@@ -697,7 +697,7 @@ select:focus {
   position: relative;
 }
 .top-search-box button {
-  background: #43ea65;
+  background: #10a62e;
   border: medium none;
   color: #ffffff;
   font-size: 15px;
@@ -708,7 +708,7 @@ select:focus {
   text-align: center;
   transition: all 0.3s ease 0s;
   width: 70px;
-  border: 2px solid #43ea65;
+  border: 2px solid #10a62e;
 }
 .top-search-box button:hover {
   background: none;
@@ -802,26 +802,26 @@ select:focus {
 }
 .rev_slider_wrapper .slide-content-box .button a.bg-1{
   margin-right: 27px;
-  border: 2px solid #43ea65;
+  border: 2px solid #10a62e;
   border-bottom: 2px solid #3cb4d8;
-  background: #43ea65;
+  background: #10a62e;
 }
 .rev_slider_wrapper .slide-content-box .button a.bg-1:hover{
   color: #fff;
-  border: 2px solid #0d2d1a;
-  border-bottom: 2px solid #43ea65;
-  background: #0d2d1a;
+  border: 2px solid #08ef08;
+  border-bottom: 2px solid #10a62e;
+  background: #08ef08;
 }
 .rev_slider_wrapper .slide-content-box .button a.bg-2{
-  border: 2px solid #2a3b5c;
+  border: 2px solid #0d2d1a;
   border-bottom: 2px solid #0d2d1a;
-  background: #2a3b5c;
+  background: #0d2d1a;
 }
 .rev_slider_wrapper .slide-content-box .button a.bg-2:hover{
   color: #fff;
-  border: 2px solid #43ea65;
+  border: 2px solid #08ef08;
   border-bottom: 2px solid #0d2d1a;
-  background: #43ea65;
+  background: #08ef08;
 }
 
 .background-image-about{
@@ -1301,7 +1301,7 @@ select:focus {
   display: block;
   padding: 13px 20px 11px;
   border: none;
-  border-bottom: 2px solid #3cb4d8;
+  border-bottom: 2px solid #0d2d1a;
   margin-top: 4px;
 }
 
@@ -1825,10 +1825,10 @@ select:focus {
 }
 .single-footer-widget .repairplus-info .button a {
   padding: 17px 25px 15px;
-  border-left: 2px solid #43ea65;
-  border-right: 2px solid #43ea65;
-  border-top: 2px solid #43ea65;
-  border-bottom: 2px solid #43ea65;
+  border-left: 2px solid #10a62e;
+  border-right: 2px solid #10a62e;
+  border-top: 2px solid #10a62e;
+  border-bottom: 2px solid #10a62e;
 }
 .single-footer-widget .repairplus-info .button a:hover{
   background: transparent;
@@ -2107,7 +2107,7 @@ select:focus {
 .breadcrumb-botton-area .left ul li{
   display: inline-block;
   margin: 0 2px;
-  color: #43ea65;
+  color: #10a62e;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2121,7 +2121,7 @@ select:focus {
 }
 .breadcrumb-botton-area .right {}
 .breadcrumb-botton-area .right a {
-  color: #43ea65;
+  color: #10a62e;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2333,7 +2333,7 @@ select:focus {
   width: 100%;
 }
 .sidebar-wrapper .single-sidebar .search-form button {
-  background: #43ea65 none repeat scroll 0 0;
+  background: #10a62e none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   display: block;

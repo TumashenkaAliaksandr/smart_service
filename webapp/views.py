@@ -21,5 +21,8 @@ def contact(request):
 def services(request):
     return render(request, 'webapp/services.html')
 
+def shop (request):
+    return render(request, 'webapp/shop.html')
+
 def errors(request):
     return render(request, 'webapp/404.html')
