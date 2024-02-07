@@ -415,9 +415,11 @@ select:focus {
 
 
 .top-bar-area .topinfo .select-items .single-select-item{
-  width: 135px;
+  width: 70%;
   float: left;
+  color: whitesmoke;
 }
+
 .top-bar-area .topinfo .select-items .single-select-item .bootstrap-select {
   width: 135px;
 }
