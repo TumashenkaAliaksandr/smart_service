@@ -881,7 +881,7 @@ select:focus {
 }
 
 .call-to-action-area .single-item:hover a h5{
-  color: #43ea65;
+  color: #10a62e;
 }
 .call-to-action-area .single-item:hover .img-holder .overlay{
   -webkit-transform: scale(1);
@@ -893,7 +893,7 @@ select:focus {
 }
 .call-to-action-area .single-item .img-holder .overlay .box .content a:hover i{
   background: #0d2d1a;
-  color: #43ea65;
+  color: #10a62e;
 }
 
 /* CSS стили для фиксированного размера изображений */
@@ -912,6 +912,22 @@ select:focus {
 
 }
 
+
+/* CSS стили для фиксированного размера изображений */
+.img-fixed-size-two {
+    width: 70px; /* Установите желаемую ширину */
+    height: 30px; /* Установите желаемую высоту */
+    object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+}
+
+@media screen and (max-width: 767px) {
+    .img-fixed-size {
+        width: 100%; /* Установите желаемую ширину */
+        height: 150px; /* Установите желаемую высоту */
+        object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+    }
+
+}
 /*** 
 =============================================
     Categories Area style
@@ -1222,7 +1238,7 @@ select:focus {
   left: 0;
   width: 100%;
   height: 0%;
-  background: rgb(16, 166, 46) none repeat scroll 0 0;
+  background: rgb(16, 166, 46, 0.7) none repeat scroll 0 0;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   opacity: 0;    
@@ -1470,7 +1486,7 @@ select:focus {
   left: 0;
   width: 100%;
   height: 0%;
-  background: rgb(16, 166, 46) none repeat scroll 0 0;
+  background: rgb(16, 166, 46, 0.5) none repeat scroll 0 0;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   opacity: 0;        
@@ -1939,7 +1955,7 @@ select:focus {
 }
 .single-footer-widget .subscribe-form form button {
   background: #0d2d1a;
-  color: #4d8cb2;
+  color: #43ea65;
   display: block;
   height: 42px;
   padding: 5px 0;
@@ -1963,7 +1979,7 @@ select:focus {
   border-color: #43ea65;
 }
 .single-footer-widget .subscribe-form h4 {
-  border-bottom: 1px solid #172849;
+  border-bottom: 1px solid #43ea65;
   color: #c1c1c1;
   font-size: 14px;
   font-style: italic;
