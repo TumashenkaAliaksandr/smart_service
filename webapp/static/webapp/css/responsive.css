@@ -644,7 +644,7 @@
   z-index:12;
 }        
 .main-menu .navbar-header .navbar-toggle {
-  border: 2px solid #43c3ea;
+  border: 2px solid #0e9727;
   display: inline-block;
   float: none;
   margin: 0;
@@ -739,13 +739,13 @@
 .main-menu .navbar-collapse > .navigation > li > a:hover,
 .main-menu .navbar-collapse > .navigation > li > a:active,
 .main-menu .navbar-collapse > .navigation > li > a:focus{
-  background:#43c3ea;
+  background:#0e9727;
 } 
 .main-menu .navbar-collapse > .navigation > li:hover > a,
 .main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
 .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
 .main-menu .navbar-collapse > .navigation > li.current > a{
-  background:#43c3ea;
+  background:#0e9727;
   color:#ffffff !important;
 }        
 .main-menu .navbar-collapse > .navigation li.dropdown .dropdown-btn{
