@@ -950,7 +950,7 @@ select:focus {
   z-index: 1;
 }
 .categories-area::before {
-  background: rgba(21, 37, 69, 0.8) none repeat scroll 0 0;
+  background: rgba(13, 45, 26, 0.5) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -960,7 +960,7 @@ select:focus {
   z-index: -1;
 }
 .bg_img{
-  background-image: url(../images/resources/categories-bg.jpg);
+  background-image: url(../images/resources/ecu_service_proc.jpg);
 }
 
 .bg_img_fact{
@@ -976,6 +976,7 @@ select:focus {
   padding-left: 90px;
   background: #ffffff;
   z-index: 1;
+  opacity: 0.9;
 }
 .categories-area .single-item:before {
   position: absolute;
