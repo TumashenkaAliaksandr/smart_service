@@ -11,13 +11,15 @@
         <div class="container">
             <div class="row">
                 <!--Start single item-->
+                {% for main_services in main_serv %}
                 <div class="col-md-4">
                     <div class="single-item text-center">
                         <a href="#">
-                            <h5>Ремонт ECU TCU DCT ECM</h5>
+                            <h5>{{ main_services.name }}</h5>
                         </a>
                         <div class="img-holder">
-                            <img src="{% static 'webapp/images/callto-action/ecu_car_two.jpg' %}" class="img-fixed-size-three" alt="Awesome Image">
+                            <img src="{{ main_services.image.url }}"
+                                 class="img-fixed-size-three" alt="Awesome Image">
                             <div class="overlay">
                                 <div class="box">
                                     <div class="content">
@@ -27,54 +29,11 @@
                             </div>
                         </div>
                         <div class="text-holder">
-                            <p>Ремонт автомобильной электроники, включая блоки управления двигателем (ЭБУ), а также электромеханические узлы.</p>
+                            <p>{{ main_services.description }}</p>
                         </div>
                     </div>
                 </div>
-                <!--End single item-->
-                <!--Start single item-->
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <a href="#">
-                            <h5>Ремонт Электро Транспорта</h5>
-                        </a>
-                        <div class="img-holder">
-                            <img src="{% static 'webapp/images/callto-action/ecu_eltransport.jpg' %}" class="img-fixed-size-three" alt="Awesome Image">
-                            <div class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <p>Если вы столкнулись с какой-либо проблемой с вашим Электротранспортом, обращайтесь в ECU SERVICE, мы решим ваши проблемы!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--End single item-->
-                <!--Start single item-->
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <a href="#">
-                            <h5>Ремонт PC Notebook Mac</h5>
-                        </a>
-                        <div class="img-holder">
-                            <img src="{% static 'webapp/images/callto-action/ecu_pc.jpg' %}" class="img-fixed-size-three" alt="Awesome Image">
-                            <div class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <p>Мы специализируемся на предоставлении услуг по ремонту настольных Компьютеров, Ноутбуков и Mac Book</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
                 <!--End single item-->
             </div>
         </div>

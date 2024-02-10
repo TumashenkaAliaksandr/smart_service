@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Brand
+from .models import *
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
@@ -9,3 +9,13 @@ class BrandAdmin(admin.ModelAdmin):
         return obj.photo.url if obj.photo else None  # Отображение превью изображения в админке
 
     photo_preview.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+
+@admin.register(Services)
+class ServicesAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+
+    def image(self, obj):
+        return obj.image.url if obj.image else None  # Отображение превью изображения в админке
+
+    image.short_description = 'Photo Preview'  # Название столбца с превью изображения
