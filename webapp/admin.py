@@ -13,7 +13,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+    list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке

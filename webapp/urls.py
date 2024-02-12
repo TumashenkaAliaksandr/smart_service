@@ -11,6 +11,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('services/', services, name='services'),
     path('shop/', shop, name='shop'),
+    path('shop_single/', shop_single, name='shop_single'),
     path('errors/', errors, name='errors'),
 ]
 

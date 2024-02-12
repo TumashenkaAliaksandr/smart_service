@@ -6,6 +6,7 @@ class Services(models.Model):
     """Services model"""
     name = models.CharField(max_length=100, verbose_name='name')
     description = models.TextField(verbose_name='description')
+    description_two = models.TextField(verbose_name='description_two', default='Описание')
     image = models.ImageField(upload_to='services', verbose_name='photo')
     is_main = models.BooleanField(default=False)
     link = models.URLField()  # Поле для хранения ссылки

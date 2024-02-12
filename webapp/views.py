@@ -36,6 +36,10 @@ def services(request):
 def shop (request):
     return render(request, 'webapp/shop.html')
 
+def shop_single (request):
+    return render(request, 'webapp/shop-single.html')
+
+
 
 def errors(request):
     return render(request, 'webapp/404.html')

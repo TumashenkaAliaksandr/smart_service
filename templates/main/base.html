@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="{% static 'webapp/css/responsive.css' %}">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'webapp/images/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" href="{% static 'webapp/images/favicon/ecu_favicon_two.png' %}" sizes="32x62">
-    <link rel="icon" type="image/png" href="{% static 'webapp/images/favicon/ecus_favicon-removebg.png' %}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{% static 'webapp/images/favicon/ecu_favicon1.png' %}" sizes="32x62">
+    <link rel="icon" type="image/png" href="{% static 'webapp/images/favicon/ecu_favicon1.png' %}" sizes="16x16">
 
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
@@ -172,7 +172,7 @@
                             <li class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
                                 <ul>
                                     <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="shop-single.html">Single Product</a></li>
+                                    <li><a href="{% url 'webapp:shop_single' %}">Single Product</a></li>
                                     <li><a href="shopping-cart.html">Shopping Cart</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="account.html">My Account</a></li>
