@@ -33,11 +33,18 @@ def services(request):
     return render(request, 'webapp/services.html', context=context)
 
 
-def shop (request):
+def shop(request):
     return render(request, 'webapp/shop.html')
 
-def shop_single (request):
-    return render(request, 'webapp/shop-single.html')
+def shop_encoders(request):
+    main_serv = Services.objects.all()
+    main_encoders = Shop_Encoders.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_encoders': main_encoders,
+    }
+    return render(request, 'webapp/shop-single.html', context=context)
 
 
 

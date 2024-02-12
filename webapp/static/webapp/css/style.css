@@ -356,8 +356,8 @@ select:focus {
   left:0;
   -webkit-transform: scale(0);
   transform: scale(0);
-  border: 3px solid #43ea65;
-  background-color: rgb(67, 234, 101, 0.5);
+  border: 3px solid #12982d;
+  background-color: rgb(16, 166, 46, 0.5);
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
@@ -615,7 +615,7 @@ select:focus {
   border: none;
 }
 .main-menu .navigation > li > ul > li > a {
-  background: #43ea65;
+  background: #10a62e;
   color: #ffffff;
   display: block;
   font-size: 16px;
@@ -881,7 +881,7 @@ select:focus {
 }
 
 .call-to-action-area .single-item:hover a h5{
-  color: #10a62e;
+  color: rgba(21, 69, 22, 0.9);
 }
 .call-to-action-area .single-item:hover .img-holder .overlay{
   -webkit-transform: scale(1);
@@ -2101,11 +2101,12 @@ select:focus {
 ***/
 .breadcrumb-area {
   background: #f7f7f7 none repeat scroll 0 0;
-  height: 155px;
+  height: 200px;
   padding-top: 55px;
+  background-position: center;
 }
 .breadcrumb-area h1 {
-  color: #3d3d3d;
+  color: #e1e1e1;
   font-size: 40px;
   font-weight: 700;
   text-transform: capitalize;
@@ -4979,7 +4980,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   margin: 0 1px;
 }
 .review-box ul li i {
-  color: #08ef08;
+  color: #ffef00;
   font-size: 12px;
 }
 #shop-area .post-pagination {
@@ -5122,7 +5123,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   transition: all 500ms ease;
 }
 .sidebar-wrapper .single-sidebar .latest-product li .title-holder h5 {
-  color: #43ea65;
+  color: #0d2d1a;
   font-size: 16px;
   font-weight: 400;
   text-transform: capitalize; 
@@ -5177,10 +5178,10 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 .single-shop-content .content-box .review-box ul {}
 .single-shop-content .content-box .review-box ul li {}
 .single-shop-content .content-box .review-box ul li i {
-  color: #43ea65;
+  color: #ffef00;
 }
 .single-shop-content .content-box span.price {
-  color: #43ea65;
+  color: #0d2d1a;
   font-size: 22px;
   font-weight: 400;
 }
@@ -5388,7 +5389,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   margin-right: 1px;
 }
 .product-tab-box .tab-content .review-box .single-review-box .text-holder .top .review-box ul li i {
-  color: #43ea65;
+  color: #ffef00;
   font-size: 14px;
 }
 
@@ -5497,6 +5498,6 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   text-transform: capitalize;
 }
 .related-product .single-product-item {
-  margin-bottom: 0;
+  margin-bottom: 25px;
 }
 

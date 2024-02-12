@@ -5,40 +5,67 @@
 {% block content %}
 
     {% include 'main/slider.html' %}
-
-    <!--Start call to action area-->
     <section class="call-to-action-area">
         <div class="container">
             <div class="row">
-                <!--Start single item-->
-                {% for main_services in main_serv %}
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <a href="#">
-                            <h5>{{ main_services.name }}</h5>
-                        </a>
-                        <div class="img-holder">
-                            <img src="{{ main_services.image.url }}"
-                                 class="img-fixed-size-three" alt="Awesome Image">
-                            <div class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                <div class="related-product">
+                    <div class="sec-title-two">
+                        <h3>Наши Услуги</h3>
+                    </div>
+                    <div class="row">
+                        <!--Start single product item-->
+                        {% for main_services in main_serv|slice:":8" %}
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-product-item">
+                                    <div class="img-holder">
+                                        <img src="{{ main_services.image.url }}" class="img-fixed-size"
+                                             alt="Awesome Product Image">
+                                        <div class="overlay-box">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
+                                                        Больше</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <div class="top clearfix">
+                                            <div class="product-title pull-left">
+                                                <a href="shop-single.html">
+                                                    <h5>{{ main_services.name }}</h5>
+                                                </a>
+                                            </div>
+                                            <div class="review-box pull-right">
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        {#                                    <h4>$34.99</h4>#}
+                                        <div class="text-holder">
+                                            <p>{{ main_services.description }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-holder">
-                            <p>{{ main_services.description }}</p>
+                            {% if forloop.counter|divisibleby:3 %}
+                                {# Закрываем текущий ряд после каждой третьей модели #}
+                                </div>
+                                <div class="row">
+                            {% endif %}
+                        {% endfor %}
+                        <!--End single product item-->
                         </div>
                     </div>
                 </div>
-                {% endfor %}
-                <!--End single item-->
             </div>
-        </div>
     </section>
-    <!--End call to action area-->
+
 
     <!--Start categories area-->
     <section class="categories-area bg_img">

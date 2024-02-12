@@ -11,7 +11,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('services/', services, name='services'),
     path('shop/', shop, name='shop'),
-    path('shop_single/', shop_single, name='shop_single'),
+    path('shop_encoders/', shop_encoders, name='shop_encoders'),
     path('errors/', errors, name='errors'),
 ]
 

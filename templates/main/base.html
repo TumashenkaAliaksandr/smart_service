@@ -148,9 +148,9 @@
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
                             <li class="current"><a href="{% url 'webapp:home' %}">Главная</a></li>
-                            <li class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
+                            <li {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
                                 <ul>
-                                    <li><a href="smartphone-repair.html">Smartphone Repair</a></li>
+                                    <li><a href="{% url 'webapp:shop_encoders' %}">Ремонт Датчиков</a></li>
                                     <li><a href="tablet-repair.html">Tablet & iPad Repair</a></li>
                                     <li><a href="desktop-repair.html">Desktop & Mac Repair</a></li>
                                     <li><a href="game-repair.html">Game Console Repair</a></li>
@@ -172,7 +172,7 @@
                             <li class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
                                 <ul>
                                     <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="{% url 'webapp:shop_single' %}">Single Product</a></li>
+                                    <li><a href="{% url 'webapp:shop_encoders' %}">Single Product</a></li>
                                     <li><a href="shopping-cart.html">Shopping Cart</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="account.html">My Account</a></li>

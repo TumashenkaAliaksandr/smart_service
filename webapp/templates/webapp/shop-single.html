@@ -3,24 +3,23 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
 	<div class="container text-center">
-		<h1>Single Product</h1>
+		<h1>Ремонт Датчиков</h1>
 	</div>
 </section>
-<!--End breadcrumb area-->
 
 <!--Start breadcrumb bottom area-->
 <section class="breadcrumb-botton-area">
     <div class="container">
         <div class="left pull-left">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a href="shop.html">Услуги</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>Single Product</li>
+                <li>Ремонт Датчиков</li>
             </ul>    
         </div>
         <div class="right pull-right">
@@ -38,14 +37,15 @@
                 <!--Start single shop content-->
                 <div class="single-shop-content">
                     <div class="row">
+                    {% for main_services in main_encoders %}
                         <div class="col-md-6">
                             <div class="img-holder">
-                                <img src="{% static 'webapp/images/shop/single-product.jpg' %}" alt="Awesome Image" data-imagezoom="true" class="img-responsive">
+                                <img src="{{ main_services.image.url }}" alt="Awesome Image" data-imagezoom="true" class="img-responsive">
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-md-6">
                             <div class="content-box">
-                                <h2>Bluetooth Device</h2>
+                                <h2>{{ main_services.name }}</h2>
                                 <div class="review-box">
                                     <ul>
                                         <li><i class="fa fa-star"></i></li>
@@ -55,17 +55,9 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
-                                <span class="price">$19.99</span>
+{#                                <span class="price">$19.99</span>#}
                                 <div class="text">
-                                    <p>Working from home meant we couldsnack and coffee our breaks change our desks or view, good, drink on the job, even spend the weather started getting roughday in pajamas consequences.</p>
-                                </div>
-                                <div class="location-box">
-                                    <p>Check Delivery Option at Your Location:</p>
-                                    <form action="#">
-                                        <input type="text" placeholder="Pincode">
-                                        <button type="submit">Check</button><br/>
-                                        <span>Expected Delivery in 4-10 Days</span>
-                                    </form>
+                                    <p>{{ main_services.description_two }}</p>
                                 </div>
                                 <div class="addto-cart-box">
                                     <input class="quantity-spinner" type="text" value="2" name="quantity">
@@ -73,11 +65,13 @@
                                 </div>    
                             </div>
                         </div>
+                    {% endfor %}
                     </div>
                 </div>
                 <!--End single shop content-->
                 <!--Start product tab box-->
                 <div class="row">
+                    {% for main_services in main_encoders %}
                     <div class="col-md-12">
                         <div class="product-tab-box">
                             <ul class="nav nav-tabs tab-menu">
@@ -88,8 +82,7 @@
                                 <div class="tab-pane" id="desc">
                                     <div class="product-details-content">
                                         <div class="desc-content-box">
-                                            <p>Bluetooth device reflects the design philosophy of form following function prevalent in modernism. These designs represent the ideals of cutting excess, practicality and an absence of decoration. These forms of lamps are visually light and follow minimalist principles of design which are influenced by architectural concepts like the cantilever.</p>
-                                            <p>Modern device fits best in open floor plans with clean lines that thrive in the absence of clutter. A one stop shop for home decor and furniture, Interior sells a home product every 30 seconds.</p>
+                                            <p>{{ main_services.description }}</p>
                                         </div>
 
                                     </div>    
@@ -240,23 +233,25 @@
                             </div>      
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
                 <!--End product tab box-->
                 <!--Start related product box-->
                 <div class="related-product">
-                    <div class="sec-title-two">
-                        <h3>Related Products</h3>
-                    </div>
-                    <div class="row">
+                        <div class="sec-title-two">
+                            <h3>Наши Услуги</h3>
+                        </div>
+                        <div class="row">
                         <!--Start single product item-->
+                        {% for main_services in main_serv|slice:"3" %}
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-product-item">
                                 <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/1.jpg' %}" alt="Awesome Product Image">
+                                    <img src="{{ main_services.image.url }}" class="img-fixed-size" alt="Awesome Product Image">
                                     <div class="overlay-box">
                                         <div class="box">
                                             <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
+                                                <a class="thm-btn bg-1" href="shop-single.html">Узнать Больше</a>
                                             </div>
                                         </div>
                                     </div>
@@ -265,7 +260,7 @@
                                     <div class="top clearfix">
                                         <div class="product-title pull-left">
                                             <a href="shop-single.html">
-                                                <h5>Adapter Cable</h5>
+                                                <h5>{{ main_services.name }}</h5>
                                             </a>
                                         </div>
                                         <div class="review-box pull-right">
@@ -278,83 +273,12 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <h4>$34.99</h4>
+{#                                    <h4>$34.99</h4>#}
                                 </div>
-                           
+
                             </div>
                         </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/2.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-single.html">
-                                                <h5>Emily Player</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$24.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/3.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-single.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-single.html">
-                                                <h5>Poratbel Stand</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$19.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
+                        {% endfor %}
                         <!--End single product item-->
                     </div>
                 </div>
