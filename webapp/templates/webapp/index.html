@@ -6,6 +6,40 @@
 
     {% include 'main/slider.html' %}
 
+    <!--Start call to action area-->
+    <section class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <!--Start single item-->
+                {% for main_services in main_serv %}
+                <div class="col-md-4">
+                    <div class="single-item text-center">
+                        <a href="{{ main_services.link }}">
+                            <h5>{{ main_services.name }}</h5>
+                        </a>
+                        <div class="img-holder">
+                            <img src="{{ main_services.image.url }}"
+                                 class="img-fixed-size-three" alt="Awesome Image">
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <a href="{{ main_services.link }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <p>{{ main_services.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!--End single item-->
+            </div>
+        </div>
+    </section>
+    <!--End call to action area-->
+
     <!--Start services area-->
     <section class="call-to-action-area">
         <div class="container">
@@ -25,8 +59,7 @@
                                         <div class="overlay-box">
                                             <div class="box">
                                                 <div class="content">
-                                                    <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
-                                                        Больше</a>
+                                                    <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать Больше</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,13 +95,12 @@
                             {% endif %}
                         {% endfor %}
                         <!--End single product item-->
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-    <!--end services area-->
-
+    <!--End services area-->
 
     <!--Start categories area-->
     <section class="categories-area bg_img">
