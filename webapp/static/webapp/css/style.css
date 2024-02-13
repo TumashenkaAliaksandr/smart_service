@@ -830,6 +830,10 @@ select:focus {
   background: url(../images/working-process/bg.jpg);
 }
 
+.background-image-services{
+  background: url(../images/working-process/ecu_banner_white.jpg);
+}
+
 /*** 
 =============================================
     Call to action Area style
@@ -837,12 +841,13 @@ select:focus {
 ***/
 .call-to-action-area {
   background: #f3fff3;
-  padding: 80px 0 40px;
+  padding: 80px 0 30px;
 }
 .call-to-action-area .single-item {
   margin-bottom: 40px;
   border: 1px solid #f4f4f4;
-  padding: 17px 19px 12px;
+  padding: 15px 0px 15px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 30%);
 }
 .call-to-action-area .single-item .img-holder {
   display: block;
@@ -865,9 +870,14 @@ select:focus {
   transition: all 500ms ease 0s;
   width: 45px;   
 }
+
+.action h4 {
+  font-size: 21px;
+}
+
 .call-to-action-area .single-item a h5 {
-  color: #3d3d3d;
-  font-size: 16px;
+  color: #0d2d1a;
+  font-size: 21px;
   text-transform: uppercase;
   font-weight: 700;
   margin: 0 0 16px;
