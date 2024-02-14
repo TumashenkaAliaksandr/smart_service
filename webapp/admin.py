@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 
+
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('name', 'photo_preview')  # Отображаемые поля в списке брэндов
@@ -29,6 +30,17 @@ class Shop_EncodersAdmin(admin.ModelAdmin):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке
 
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+
+@admin.register(Shop_Board)
+class Shop_BoardAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+
+    def image(self, obj):
+        return obj.image.url if obj.image else None  # Отображение превью изображения в админке
+
+    image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
 
 @admin.register(Favors)
 class FavorsAdmin(admin.ModelAdmin):

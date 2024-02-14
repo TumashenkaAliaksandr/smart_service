@@ -12,6 +12,7 @@ urlpatterns = [
     path('services/', services, name='services'),
     path('shop/', shop, name='shop'),
     path('shop_encoders/', shop_encoders, name='shop_encoders'),
+    path('shop_board/', shop_board, name='shop_board'),
     path('errors/', errors, name='errors'),
 ]
 

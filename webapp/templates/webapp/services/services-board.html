@@ -1,0 +1,338 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
+	<div class="container text-center">
+		<h1>Ремонт Электронных Плат</h1>
+	</div>
+</section>
+
+<!--Start breadcrumb bottom area-->
+<section class="breadcrumb-botton-area">
+    <div class="container">
+        <div class="left pull-left">
+            <ul>
+                <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
+                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                <li><a href="shop.html">Услуги</a></li>
+                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                <li>Ремонт Электронных Плат</li>
+            </ul>    
+        </div>
+        <div class="right pull-right">
+            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+        </div>  
+    </div>
+</section>
+<!--End breadcrumb bottom area-->
+
+<!--Start blog area-->
+<section id="shop-area" class="single-shop-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <!--Start single shop content-->
+                <div class="single-shop-content">
+                    <div class="row">
+                    {% for main_boards in main_board %}
+                        <div class="col-md-6">
+                            <div class="img-holder">
+                                <img src="{{ main_boards.image.url }}" alt="Awesome Image" data-imagezoom="true" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="content-box">
+                                <h2>{{ main_boards.name }}</h2>
+                                <div class="review-box">
+                                    <ul>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="text">
+                                    <p>{{ main_boards.description_two }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <!--End single shop content-->
+                <!--Start product tab box-->
+                <div class="row">
+                    {% for main_boards in main_board %}
+                    <div class="col-md-12">
+                        <div class="product-tab-box">
+                            <ul class="nav nav-tabs tab-menu">
+                                <li><a href="#desc" data-toggle="tab">Выезжаем</a></li>
+                                <li class="active"><a href="#review" data-toggle="tab">Reviews (2)</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="desc">
+                                    <div class="product-details-content">
+                                        <div class="desc-content-box">
+                                            <p>{{ main_boards.description }}</p>
+                                        </div>
+
+                                    </div>    
+                                </div>
+                                <div class="tab-pane active" id="review">
+                                    <div class="review-box">
+                                        <div class="sec-title-two">
+                                            <h3>2 Reviews For Wooden Watch</h3>
+                                        </div>
+                                        <!--Start single review box-->
+                                        <div class="single-review-box">
+                                            <div class="img-holder">
+                                                <img src="{% static 'webapp/images/shop/review-1.jpg' %}" alt="Awesome Image">
+                                            </div>
+                                            <div class="text-holder">
+                                                <div class="top">
+                                                    <div class="name pull-left">
+                                                        <h4>Steven Rich – Sep 17, 2016:</h4>
+                                                    </div>
+                                                    <div class="review-box pull-right">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End single review box-->
+                                        <!--Start single review box-->
+                                        <div class="single-review-box">
+                                            <div class="img-holder">
+                                                <img src="{% static 'webapp/images/shop/review-2.jpg' %}" alt="Awesome Image">
+                                            </div>
+                                            <div class="text-holder">
+                                                <div class="top">
+                                                    <div class="name pull-left">
+                                                        <h4>William Cobus – Aug 21, 2016:</h4>
+                                                    </div>
+                                                    <div class="review-box pull-right">
+                                                        <ul>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                            <li><i class="fa fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>there anyone who loves or pursues or desires to obtain pain itself, because it is pain, but because occasionally circumstances occur some great pleasure.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End single review box-->   
+                                    </div>
+                                </div>
+                            </div>      
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!--End product tab box-->
+                <!--Start related product box-->
+                <div class="related-product">
+                        <div class="sec-title-two">
+                            <h3>Наши Услуги</h3>
+                        </div>
+                        <div class="row">
+                        <!--Start single product item-->
+                        {% for main_services in main_serv|slice:"3" %}
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-product-item">
+                                <div class="img-holder">
+                                    <img src="{{ main_services.image.url }}" class="img-fixed-size" alt="Awesome Product Image">
+                                    <div class="overlay-box">
+                                        <div class="box">
+                                            <div class="content">
+                                                <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать Больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-holder">
+                                    <div class="top clearfix">
+                                        <div class="product-title pull-left">
+                                            <a href="{{ main_services.link }}">
+                                                <h5>{{ main_services.name }}</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!--End single product item-->
+                    </div>
+                </div>
+                <!--End related product box--> 
+            </div>
+            <!--Start sidebar Wrapper-->
+            <div class="col-lg-3 col-md-4 col-sm-7 col-xs-12">
+                <div class="sidebar-wrapper">
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <form class="search-form" action="#">
+							<input placeholder="Поиск..." type="text">
+							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+                    </div>
+                    <!--End single sidebar-->
+
+                    <!--Start single sidebar-->
+                    <div class="single-sidebar">
+                        <div class="sidebar-title">
+                            <h1>Категории</h1>
+                        </div>
+                        <ul class="categories clearfix">
+                            <li>
+                                <a href="{% url 'webapp:shop_encoders' %}">
+                                    Ремонт Датчиков
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'webapp:shop_board' %}">
+                                    Ремонт Электронных Плат
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="#">
+                                    Ремонт ЭБУ
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="#">
+                                    Ремонт Электротранспорта
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="#">
+                                    Промышленная Электроника
+                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                </a>
+                            </li>     
+                        </ul>
+                    </div>
+                    <!--End single sidebar-->
+
+                    <!--Start single sidebar--> 
+                    <div class="single-sidebar">
+                        <div class="sidebar-title">
+                            <h1>Наши Работы</h1>
+                        </div>
+                        <ul class="latest-product">
+                            <li>
+                                <div class="img-holder">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-1.jpg' %}" alt="Awesome Image">
+                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="content">
+                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-holder">
+                                    <a href="#">
+                                        <h4>Portable Stand</h4>
+                                    </a>
+                                    <h5>$34.99</h5>
+                                    <div class="review-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="img-holder">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-2.jpg' %}" alt="Awesome Image">
+                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="content">
+                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-holder">
+                                    <a href="#">
+                                        <h4>Zan Speaker</h4>
+                                    </a>
+                                    <h5>$24.99</h5>
+                                    <div class="review-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="img-holder">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-3.jpg' %}" alt="Awesome Image">
+                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="content">
+                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title-holder">
+                                    <a href="#">
+                                        <h4>Mini Earphone</h4>
+                                    </a>
+                                    <h5>$34.99</h5>
+                                    <div class="review-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End single sidebar-->
+                </div>    
+            </div>
+            <!--End Sidebar Wrapper-->  
+        </div>
+    </div>
+</section> 
+<!--End blog area-->                                                                        
+
+{% endblock %}

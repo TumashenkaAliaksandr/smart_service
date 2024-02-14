@@ -151,7 +151,7 @@
                             <li {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
                                 <ul>
                                     <li><a href="{% url 'webapp:shop_encoders' %}">Ремонт Датчиков</a></li>
-                                    <li><a href="tablet-repair.html">Tablet & iPad Repair</a></li>
+                                    <li><a href="{% url 'webapp:shop_board' %}">Ремонт Электронных Плат</a></li>
                                     <li><a href="desktop-repair.html">Desktop & Mac Repair</a></li>
                                     <li><a href="game-repair.html">Game Console Repair</a></li>
                                     <li><a href="lcd-repair.html">LCD & LED Tv Repair</a></li>

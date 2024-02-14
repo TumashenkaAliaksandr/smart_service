@@ -32,11 +32,11 @@ def services(request):
     context = {
         'main_serv': main_serv,
     }
-    return render(request, 'webapp/services.html', context=context)
+    return render(request, 'webapp/services/services.html', context=context)
 
 
 def shop(request):
-    return render(request, 'webapp/shop.html')
+    return render(request, 'webapp/services/shop.html')
 
 def shop_encoders(request):
     main_serv = Services.objects.all()
@@ -46,8 +46,18 @@ def shop_encoders(request):
         'main_serv': main_serv,
         'main_encoders': main_encoders,
     }
-    return render(request, 'webapp/shop-single.html', context=context)
+    return render(request, 'webapp/services/shop-encoders.html', context=context)
 
+
+def shop_board(request):
+    main_serv = Services.objects.all()
+    main_board = Shop_Board.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_board': main_board,
+    }
+    return render(request, 'webapp/services/services-board.html', context=context)
 
 
 def errors(request):

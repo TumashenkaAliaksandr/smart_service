@@ -55,14 +55,9 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
-{#                                <span class="price">$19.99</span>#}
                                 <div class="text">
                                     <p>{{ main_services.description_two }}</p>
                                 </div>
-                                <div class="addto-cart-box">
-                                    <input class="quantity-spinner" type="text" value="2" name="quantity">
-                                    <button class="thm-btn bg-1 addtocart" type="submit">Add to Cart</button>
-                                </div>    
                             </div>
                         </div>
                     {% endfor %}
@@ -75,7 +70,7 @@
                     <div class="col-md-12">
                         <div class="product-tab-box">
                             <ul class="nav nav-tabs tab-menu">
-                                <li><a href="#desc" data-toggle="tab">Descriprion</a></li>
+                                <li><a href="#desc" data-toggle="tab">Выезжаем</a></li>
                                 <li class="active"><a href="#review" data-toggle="tab">Reviews (2)</a></li>
                             </ul>
                             <div class="tab-content">
@@ -118,6 +113,7 @@
                                             </div>
                                         </div>
                                         <!--End single review box-->
+
                                         <!--Start single review box-->
                                         <div class="single-review-box">
                                             <div class="img-holder">
@@ -145,90 +141,6 @@
                                         </div>
                                         <!--End single review box-->   
                                     </div>
-                                    <div class="review-form">
-                                        <div class="sec-title-two">
-                                            <h3>Add Your Comments</h3>
-                                        </div>
-                                        <div class="add-rating-box">
-                                            <div class="add-rating-title">
-                                                <h4>Your Rating</h4>    
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-star"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>   
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <form action="#">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="field-label">
-                                                        <p>First Name*</p>
-                                                        <input type="text" name="fname" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="field-label">
-                                                        <p>Last Name*</p>
-                                                        <input type="text" name="lname" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="field-label">
-                                                        <p>Email*</p>
-                                                        <input type="text" name="email" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="field-label">
-                                                        <p>Your Comments*</p>
-                                                        <textarea name="review" placeholder=""></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <button class="thm-btn bg-1" type="submit">Submit Now</button>
-                                                </div>
-                                            </div>
-                                        </form>  
-                                    </div>
                                 </div>
                             </div>      
                         </div>
@@ -236,6 +148,7 @@
                     {% endfor %}
                 </div>
                 <!--End product tab box-->
+
                 <!--Start related product box-->
                 <div class="related-product">
                         <div class="sec-title-two">
@@ -251,7 +164,7 @@
                                     <div class="overlay-box">
                                         <div class="box">
                                             <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-single.html">Узнать Больше</a>
+                                                <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать Больше</a>
                                             </div>
                                         </div>
                                     </div>
@@ -259,23 +172,12 @@
                                 <div class="title-holder">
                                     <div class="top clearfix">
                                         <div class="product-title pull-left">
-                                            <a href="shop-single.html">
+                                            <a href="{{ main_services.link }}">
                                                 <h5>{{ main_services.name }}</h5>
                                             </a>
                                         </div>
-{#                                        <div class="review-box pull-right">#}
-{#                                            <ul>#}
-{#                                                <li><i class="fa fa-star"></i></li>#}
-{#                                                <li><i class="fa fa-star"></i></li>#}
-{#                                                <li><i class="fa fa-star"></i></li>#}
-{#                                                <li><i class="fa fa-star"></i></li>#}
-{#                                                <li><i class="fa fa-star"></i></li>#}
-{#                                            </ul>#}
-{#                                        </div>#}
                                     </div>
-{#                                    <h4>$34.99</h4>#}
                                 </div>
-
                             </div>
                         </div>
                         {% endfor %}
@@ -290,77 +192,67 @@
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <form class="search-form" action="#">
-							<input placeholder="Search..." type="text">
-							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</form>
+                            <input placeholder="Поиск..." type="text">
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
                     </div>
                     <!--End single sidebar-->
+
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Categories</h1>
+                            <h1>Категории</h1>
                         </div>
                         <ul class="categories clearfix">
                             <li>
-                                <a href="#">
-                                    Smart Phones 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                <a href="{% url 'webapp:shop_encoders' %}">
+                                    Ремонт Датчиков
+                                    <span class="pull-right"><i class="fa fa-angle-right"
+                                                                aria-hidden="true"></i> </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#"> 
-                                    Desktop & Mac
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                <a href="{% url 'webapp:shop_board' %}">
+                                    Ремонт Электронных Плат
+                                    <span class="pull-right"><i class="fa fa-angle-right"
+                                                                aria-hidden="true"></i> </span>
                                 </a>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="#">
-                                    Game Console 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                    Ремонт ЭБУ
+                                    <span class="pull-right"><i class="fa fa-angle-right"
+                                                                aria-hidden="true"></i> </span>
                                 </a>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="#">
-                                    Safety & Security 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                    Ремонт Электротранспорта
+                                    <span class="pull-right"><i class="fa fa-angle-right"
+                                                                aria-hidden="true"></i> </span>
                                 </a>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="#">
-                                    Uncategorized 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
+                                    Промышленная Электроника
+                                    <span class="pull-right"><i class="fa fa-angle-right"
+                                                                aria-hidden="true"></i> </span>
                                 </a>
-                            </li>     
+                            </li>
                         </ul>
                     </div>
                     <!--End single sidebar-->
-                    <!--Start single sidebar--> 
+
+                    <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Filter By Price</h1>
-                        </div>
-                        <div class="price-ranger">
-                            <div id="slider-range"></div>
-                            <div class="ranger-min-max-block">
-                                <input class="thm-btn bg-1" type="submit" value="Filter">
-                                <span>Price:</span>
-                                <input type="text" readonly class="min"> 
-                                <span>-</span>
-                                <input type="text" readonly class="max">
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <!--End single sidebar-->
-                    <!--Start single sidebar--> 
-                    <div class="single-sidebar">
-                        <div class="sidebar-title">
-                            <h1>Latest Products</h1>
+                            <h1>Наши Работы</h1>
                         </div>
                         <ul class="latest-product">
                             <li>
                                 <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-1.jpg' %}" alt="Awesome Image">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-1.jpg' %}"
+                                         alt="Awesome Image">
                                     <div class="overlay">
                                         <div class="box">
                                             <div class="content">
@@ -383,11 +275,12 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
-                                </div> 
+                                </div>
                             </li>
                             <li>
                                 <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-2.jpg' %}" alt="Awesome Image">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-2.jpg' %}"
+                                         alt="Awesome Image">
                                     <div class="overlay">
                                         <div class="box">
                                             <div class="content">
@@ -410,11 +303,12 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
-                                </div> 
+                                </div>
                             </li>
                             <li>
                                 <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-3.jpg' %}" alt="Awesome Image">
+                                    <img src="{% static 'webapp/images/shop/product-thumb-3.jpg' %}"
+                                         alt="Awesome Image">
                                     <div class="overlay">
                                         <div class="box">
                                             <div class="content">
@@ -437,12 +331,12 @@
                                             <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
-                                </div> 
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <!--End single sidebar-->
-                </div>    
+                </div>
             </div>
             <!--End Sidebar Wrapper-->  
         </div>
