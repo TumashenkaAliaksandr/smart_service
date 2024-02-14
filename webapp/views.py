@@ -60,5 +60,16 @@ def shop_board(request):
     return render(request, 'webapp/services/services-board.html', context=context)
 
 
+def shop_inverter(request):
+    main_serv = Services.objects.all()
+    main_inverter = Shop_Inverter.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_inverter': main_inverter,
+    }
+    return render(request, 'webapp/services/services-inverter.html', context=context)
+
+
 def errors(request):
     return render(request, 'webapp/404.html')

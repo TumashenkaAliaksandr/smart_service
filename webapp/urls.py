@@ -13,6 +13,7 @@ urlpatterns = [
     path('shop/', shop, name='shop'),
     path('shop_encoders/', shop_encoders, name='shop_encoders'),
     path('shop_board/', shop_board, name='shop_board'),
+    path('shop_inverter/', shop_inverter, name='shop_inverter'),
     path('errors/', errors, name='errors'),
 ]
 

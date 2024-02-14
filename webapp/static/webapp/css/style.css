@@ -843,6 +843,12 @@ select:focus {
   background: #f3fff3;
   padding: 80px 0 30px;
 }
+
+.call-to-action-area-two {
+  background: #ffffff;
+  padding: 60px 0 30px;
+}
+
 .call-to-action-area .single-item {
   margin-bottom: 40px;
   border: 1px solid #f4f4f4;

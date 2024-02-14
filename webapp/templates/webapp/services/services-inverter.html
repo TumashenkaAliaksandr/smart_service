@@ -6,7 +6,7 @@
 <!--Start breadcrumb area-->
 <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
 	<div class="container text-center">
-		<h1>Ремонт Электронных Плат</h1>
+		<h1>Ремонт Частотных Преобразователей</h1>
 	</div>
 </section>
 
@@ -19,7 +19,7 @@
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
                 <li><a href="shop.html">Услуги</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>Ремонт Электронных Плат</li>
+                <li>Ремонт Частотных Преобразователей</li>
             </ul>    
         </div>
         <div class="right pull-right">
@@ -37,15 +37,15 @@
                 <!--Start single shop content-->
                 <div class="single-shop-content">
                     <div class="row">
-                    {% for main_boards in main_board %}
+                    {% for main_inverters in main_inverter %}
                         <div class="col-md-6">
                             <div class="img-holder">
-                                <img src="{{ main_boards.image.url }}" alt="Awesome Image" data-imagezoom="true" class="img-responsive">
+                                <img src="{{ main_inverters.image.url }}" alt="Awesome Image" data-imagezoom="true" class="img-responsive">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="content-box">
-                                <h2>{{ main_boards.name }}</h2>
+                                <h2>{{ main_inverters.name }}</h2>
                                 <div class="review-box">
                                     <ul>
                                         <li><i class="fa fa-star"></i></li>
@@ -56,7 +56,7 @@
                                     </ul>
                                 </div>
                                 <div class="text">
-                                    <p>{{ main_boards.description_two }}</p>
+                                    <p>{{ main_inverters.description_two }}</p>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
 
                 <!--Start product tab box-->
                 <div class="row">
-                    {% for main_boards in main_board %}
+                    {% for main_inverters in main_inverter %}
                     <div class="col-md-12">
                         <div class="product-tab-box">
                             <ul class="nav nav-tabs tab-menu">
@@ -78,7 +78,7 @@
                                 <div class="tab-pane active" id="desc">
                                     <div class="product-details-content">
                                         <div class="desc-content-box">
-                                            <p>{{ main_boards.description }}</p>
+                                            <p>{{ main_inverters.description }}</p>
                                         </div>
 
                                     </div>    
