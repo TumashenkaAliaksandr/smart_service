@@ -15,6 +15,7 @@ urlpatterns = [
     path('shop_board/', shop_board, name='shop_board'),
     path('shop_inverter/', shop_inverter, name='shop_inverter'),
     path('errors/', errors, name='errors'),
+    path('game_repair/', game_repair, name='game_repair'),
 ]
 
 if settings.DEBUG:

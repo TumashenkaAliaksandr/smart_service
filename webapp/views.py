@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 
 from webapp.models import *
@@ -61,7 +63,8 @@ def shop_board(request):
 
 
 def shop_inverter(request):
-    main_serv = Services.objects.all()
+    main_serv = list(Services.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
     main_inverter = Shop_Inverter.objects.all()
 
     context = {
@@ -73,3 +76,7 @@ def shop_inverter(request):
 
 def errors(request):
     return render(request, 'webapp/404.html')
+
+
+def game_repair(request):
+    return render(request, 'webapp/game-repair.html')
