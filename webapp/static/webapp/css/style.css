@@ -152,6 +152,25 @@ button{
 .thm-btn:hover{
   background: transparent;
 }
+.thm-btn2 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  border-left: 1px solid #43ea65;
+  border-right: 1px solid #43ea65;
+  border-top: 1px solid #43ea65;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  transition: all 500ms ease;
+  line-height: 14px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.thm-btn2:hover{
+  background: transparent;
+}
 
 .bg-1{
   background: #10a62e;
@@ -846,7 +865,7 @@ select:focus {
 
 .call-to-action-area-two {
   background: #ffffff;
-  padding: 60px 0 30px;
+  padding: 20px 0 30px;
 }
 
 .call-to-action-area-three {
@@ -1244,8 +1263,9 @@ select:focus {
 =============================================
 ***/
 .appoinment-area {
-  padding: 80px 0 50px;
+  padding: 40px 0 30px;
 }
+
 .appoinment-area .products {}
 .appoinment-area .products .single-product {
   overflow: hidden;
@@ -2352,7 +2372,7 @@ select:focus {
 }
 .sidebar-wrapper .single-sidebar {
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   position: relative;
 }
 .sidebar-wrapper .single-sidebar .sidebar-title {
@@ -3854,7 +3874,7 @@ select:focus {
 =============================================
 ***/
 #service-single-area {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   padding-top: 80px;
 }
 #service-single-area .service-single-sidebar {}
@@ -3938,7 +3958,7 @@ select:focus {
   width: 100%;
   height: 100%;
   background: #0d2d1a;
-  opacity: .80;
+  opacity: .75;
   content: "";
   z-index: -1; 
 }
@@ -3985,11 +4005,18 @@ select:focus {
 }
 
 
+/*для текста выезжаем в сервисе */
+.text-for-visit h5 {
+  font-size: 18px;
+}
+
+
 #service-single-area .service-single-content .middle-content {
   padding-top: 60px;  
 }
 #service-single-area .service-single-content .middle-content .text-holder {
   margin-right: 25px;
+  margin-bottom: 65px;
 }
 #service-single-area .service-single-content .middle-content .img-holder {
   display: block;

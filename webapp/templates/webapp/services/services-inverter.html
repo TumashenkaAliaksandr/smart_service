@@ -3,178 +3,231 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
-	<div class="container text-center">
-		<h1>Ремонт Частотных Преобразователей</h1>
-	</div>
-</section>
-
-<!--Start breadcrumb bottom area-->
-<section class="breadcrumb-botton-area">
-    <div class="container">
-        <div class="left pull-left">
-            <ul>
-                <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
-                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li><a href="shop.html">Услуги</a></li>
-                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>Ремонт Частотных Преобразователей</li>
-            </ul>    
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>Ремонт Частотных Преобразователей</h1>
         </div>
-        <div class="right pull-right">
-            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-        </div>  
-    </div>
-</section>
-<!--End breadcrumb bottom area-->
+    </section>
 
-<!--Start service single area-->
-<section id="service-single-area" class="smartphone-repair-area">
-    <div class="container">
-        <div class="row">
-            <!--Start sidebar Wrapper-->
-            <div class="col-lg-3 col-md-4 col-sm-7 col-xs-12">
-                <div class="sidebar-wrapper">
-                    <!--Start single sidebar-->
-                    <div class="single-sidebar">
-                        <form class="search-form" action="#">
-                            <input placeholder="Поиск..." type="text">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                    <!--End single sidebar-->
-                </div>
+    <!--Start breadcrumb bottom area-->
+    <section class="breadcrumb-botton-area">
+        <div class="container">
+            <div class="left pull-left">
+                <ul>
+                    <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                    <li><a href="shop.html">Услуги</a></li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                    <li>Ремонт Частотных Преобразователей</li>
+                </ul>
             </div>
-            <!--End Sidebar Wrapper-->
-            <div class="col-md-9 col-sm-12 col-xs-12 pull-right">
-                <div class="service-single-content">
-                    {% for main_inverters in main_inverter %}
-                        <div class="row top-content">
-                            <div class="col-md-5 col-sm-12 col-xs-12">
-                                <div class="img-holder">
-                                    <img src="{{ main_inverters.image.url }}"
-                                         alt="Awesome Image">
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                <div class="text-holder">
-                                    <div class="title">
-                                        <h2>{{ main_inverters.name }}</h2>
-                                    </div>
-                                    <div class="text">
-                                        <p>{{ main_inverters.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-
-                    {% for main_inverters in main_inverter %}
-                        <div class="row middle-content">
-                            <div class="col-md-7">
-                                <div class="text-holder">
-                                    <div class="title">
-                                        <h2>{{ main_inverters.name_two }}</h2>
-                                    </div>
-                                    <div class="text">
-                                        <p>{{ main_inverters.description_two }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="img-holder ">
-                                    <img src="{{ main_inverters.image_two.url }}"
-                                         alt="Awesome Image">
-                                    <div class="button">
-                                        <a href="{% url 'webapp:contact' %}">ECUS</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                    {% endfor %}
-
-            <div class="col-md-3 col-sm-7 col-xs-12 pull-left">
-                <div class="service-single-sidebar">
-                    <ul class="service-lists">
-                        <li class="allservice"><a href="{% url 'webapp:services' %}">Все Наши Услуги<i
-                                class="fa fa-cog" aria-hidden="true"></i></a></li>
-                        {% for main_categories in main_serv|slice:":8" %}
-                            <li><a href="{{ main_categories.link }}">
-                                {% if main_categories.name|length > 24 %}
-                                    {{ main_categories.name|slice:":24" }}...
-                                {% else %}
-                                    {{ main_categories.name }}
-                                {% endif %}</a></li>
-                        {% endfor %}
-                    </ul>
-                    <div class="repair-time">
-                        <h3>Напиши в течении<br> 60 Минут!</h3>
-                        <a class="thm-btn bg-1" href="#">Получи скидку!</a>
-                    </div>
-                </div>
+            <div class="right pull-right">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
             </div>
+        </div>
+    </section>
+    <!--End breadcrumb bottom area-->
 
-            <!--Start product tab box-->
+    <!--Start service single area-->
+    <section id="service-single-area" class="smartphone-repair-area">
+        <div class="container">
             <div class="row">
-                {% for main_inverters in main_inverter %}
-                    <div class="col-md-12">
-                        <div class="product-tab-box">
-                            <ul class="nav nav-tabs tab-menu">
-                                <li class="active"><a href="#desc" data-toggle="tab">Выезжаем</a></li>
-                                <li><a href="#review" data-toggle="tab">Описание</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="desc">
-                                    <div class="product-details-content">
-                                        <div class="desc-content-box">
-                                            <p>{{ main_inverters.client_visit }}</p>
-                                        </div>
-
+                <!--Start sidebar Wrapper-->
+                <div class="col-lg-3 col-md-4 col-sm-7 col-xs-12">
+                    <div class="sidebar-wrapper">
+                        <!--Start single sidebar-->
+                        <div class="single-sidebar">
+                            <form class="search-form" action="#">
+                                <input placeholder="Поиск..." type="text">
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!--End single sidebar-->
+                    </div>
+                </div>
+                <!--End Sidebar Wrapper-->
+                <div class="col-md-9 col-sm-12 col-xs-12 pull-right">
+                    <div class="service-single-content">
+                        {% for main_inverters in main_inverter %}
+                            <div class="row top-content">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
+                                    <div class="img-holder">
+                                        <img src="{{ main_inverters.image.url }}"
+                                             alt="Awesome Image">
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="review">
-                                    <div class="review-box">
-                                        <div class="sec-title-two">
-                                            <h3>Что это и с чем его едят</h3>
+                                <div class="col-md-7 col-sm-12 col-xs-12">
+                                    <div class="text-holder">
+                                        <div class="title">
+                                            <h2>{{ main_inverters.name }}</h2>
                                         </div>
-                                        <!--Start single review box-->
-                                        <div class="single-review-box">
-                                            <div class="img-holder img-fixed-size-two">
-                                                <img src="{{ main_inverters.image_three.url }}"
-                                                     alt="Awesome Image">
+                                        <div class="text">
+                                            <p>{{ main_inverters.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {% for main_inverters in main_inverter %}
+                            <div class="row middle-content">
+                                <div class="col-md-7">
+                                    <div class="text-holder">
+                                        <div class="title">
+                                            <h2>{{ main_inverters.name_two }}</h2>
+                                        </div>
+                                        <div class="text">
+                                            <p>{{ main_inverters.description_two }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="img-holder ">
+                                        <img src="{{ main_inverters.image_two.url }}"
+                                             alt="Awesome Image">
+                                        <div class="button">
+                                            <a href="{% url 'webapp:contact' %}">ECUS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-holder">
+                                        <div class="text-for-visit">
+                                            <h5>{{ main_inverters.client_visit }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        {% endfor %}
+
+                <div class="col-md-3 col-sm-7 col-xs-12 pull-left">
+                    <div class="service-single-sidebar">
+                        <ul class="service-lists">
+                            <li class="allservice"><a href="{% url 'webapp:services' %}">Все Наши Услуги<i
+                                    class="fa fa-cog" aria-hidden="true"></i></a></li>
+                            {% for main_categories in main_serv|slice:":8" %}
+                                <li><a href="{{ main_categories.link }}">
+                                    {% if main_categories.name|length > 24 %}
+                                        {{ main_categories.name|slice:":24" }}...
+                                    {% else %}
+                                        {{ main_categories.name }}
+                                    {% endif %}</a></li>
+                            {% endfor %}
+                        </ul>
+                        <div class="repair-time">
+                            <h3>Напиши в течении<br> 60 Минут!</h3>
+                            <a class="thm-btn bg-1" href="#">Получи скидку!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Start product tab box-->
+                <div class="call-to-action-area-two">
+                    <div class="row">
+                        {% for main_inverters in main_inverter %}
+                            <div class="col-md-12">
+                                <div class="product-tab-box">
+                                    <ul class="nav nav-tabs tab-menu">
+                                        <li class="active"><a href="#desc" data-toggle="tab">Оставить Заявку</a></li>
+                                        <li><a href="#review" data-toggle="tab">Описание</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="desc">
+                                            <div class="product-details-content">
+                                                <div class="desc-content-box">
+                                                    <!--Start appoinment area-->
+                                                    <section class="appoinment-area">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                    <div class="appoinment">
+                                                                        <form class="appoinment-form">
+                                                                            <div class="row margin">
+                                                                                <div class="col-md-6 pd">
+                                                                                    <div class="input-box">
+                                                                                        <input type="text" name="name"
+                                                                                               placeholder="Имя*">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6 pd">
+                                                                                    <div class="input-box">
+                                                                                        <input type="text" name="phone"
+                                                                                               placeholder="Телефон*">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row margin">
+                                                                                <div class="col-md-12 pd">
+                                                                                    <div class="input-box">
+                                                                                    <textarea name="message"
+                                                                                              placeholder="Сообщение..."></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <button class="thm-btn bg-1"
+                                                                                            type="submit">Отправить
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <!--End appoinment area-->
+                                                    <div class="pull-right">
+                                                        <p>Мы свяжемся с вами в течении 10 минут!</p>
+                                                    </div>
+
+                                                </div>
                                             </div>
-                                            <div class="text-holder">
-                                                <div class="top">
-                                                    <div class="review-box pull-right">
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                        </ul>
+                                        </div>
+                                        <div class="tab-pane" id="review">
+                                            <div class="review-box">
+                                                <div class="sec-title-two">
+                                                    <h3>Что это и с чем его едят</h3>
+                                                </div>
+                                                <!--Start single review box-->
+                                                <div class="single-review-box">
+                                                    <div class="img-holder img-fixed-size-two">
+                                                        <img src="{{ main_inverters.image_three.url }}"
+                                                             alt="Awesome Image">
+                                                    </div>
+                                                    <div class="text-holder">
+                                                        <div class="top">
+                                                            <div class="review-box pull-right">
+                                                                <ul>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>{{ main_inverters.description_three }}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="text">
-                                                    <p>{{ main_inverters.description_three }}</p>
-                                                </div>
+                                                <!--End single review box-->
                                             </div>
                                         </div>
-                                        <!--End single review box-->
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                    <!--End product tab box-->
+                </div>
             </div>
-            <!--End product tab box-->
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="call-to-action-area-two">
         <div class="container">
@@ -188,25 +241,27 @@
                         <!--Start single product item-->
                         {% for main_services in main_serv|slice:":4" %}
                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div class="single-product-item">
-                                    <div class="img-holder">
-                                        <img src="{{ main_services.image.url }}" class="img-fixed-size"
-                                             alt="Awesome Product Image">
-                                        <div class="overlay-box">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
-                                                        Больше</a>
+                                <div class="single-item">
+                                    <div class="single-product-item">
+                                        <div class="img-holder">
+                                            <img src="{{ main_services.image.url }}" class="img-fixed-size"
+                                                 alt="Awesome Product Image">
+                                            <div class="overlay-box">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
+                                                            Больше</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="title-holder">
-                                        <div class="top clearfix">
-                                            <div class="product-title pull-left">
-                                                <a href="{{ main_services.link }}">
-                                                    <h5>{{ main_services.name }}</h5>
-                                                </a>
+                                        <div class="title-holder">
+                                            <div class="top clearfix">
+                                                <div class="product-title pull-left">
+                                                    <a href="{{ main_services.link }}">
+                                                        <h5>{{ main_services.name }}</h5>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -220,5 +275,6 @@
         </div>
     </section>
     <!--End service single area-->
+
 
 {% endblock %}
