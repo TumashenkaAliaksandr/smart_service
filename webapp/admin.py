@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import *
-
+from ckeditor.widgets import CKEditorWidget
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
@@ -44,6 +44,10 @@ class Shop_BoardAdmin(admin.ModelAdmin):
 
 @admin.register(Shop_Inverter)
 class Shop_InverterAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget}
+    }
+
     list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):

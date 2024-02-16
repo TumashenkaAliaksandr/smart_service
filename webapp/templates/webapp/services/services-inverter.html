@@ -63,7 +63,7 @@
                                             <h2>{{ main_inverters.name }}</h2>
                                         </div>
                                         <div class="text">
-                                            <p>{{ main_inverters.description }}</p>
+                                            <p>{{ main_inverters.description | safe }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                             <h2>{{ main_inverters.name_two }}</h2>
                                         </div>
                                         <div class="text">
-                                            <p>{{ main_inverters.description_two }}</p>
+                                            <p>{{ main_inverters.description_two | safe  }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@
                                 <div class="col-md-7">
                                     <div class="text-holder">
                                         <div class="text-for-visit">
-                                            <h5>{{ main_inverters.client_visit }}</h5>
+                                            <h5>{{ main_inverters.client_visit | safe  }}</h5>
                                         </div>
                                     </div>
                                 </div>

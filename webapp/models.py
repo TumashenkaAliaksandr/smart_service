@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 
@@ -77,10 +78,10 @@ class Shop_Inverter(models.Model):
     """Inverter model"""
     name = models.CharField(max_length=100, verbose_name='name')
     name_two = models.CharField(max_length=100, verbose_name='name_two', default='Второй Заголовок')
-    description = models.TextField(verbose_name='description')
-    description_two = models.TextField(verbose_name='description_two', default='Описание')
-    description_three = models.TextField(verbose_name='description_three', default='Полное Описание')
-    client_visit = models.TextField(verbose_name='client_visit', default='Выезд к Клиенту')
+    description = RichTextField()
+    description_two = RichTextField()
+    description_three = RichTextField()
+    client_visit = RichTextField()
     image = models.ImageField(upload_to='services', verbose_name='photo')
     image_two = models.ImageField(upload_to='services', verbose_name='photo_two', default='default_image.jpg')
     image_three = models.ImageField(upload_to='services', verbose_name='photo_three', default='default_image_three.jpg')
