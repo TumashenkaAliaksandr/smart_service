@@ -1,5 +1,6 @@
 import random
-
+from django.contrib import messages
+from django.core.mail import send_mail
 from django.shortcuts import render
 
 from webapp.models import *
@@ -24,7 +25,24 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'webapp/contact.html')
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        description = request.POST.get('description')
+
+        if email and description:
+            send_mail(
+                subject='Message from your website',
+                message=f'Name: {name}\nEmail: {email}\nMessage: {description}',
+                from_email='tumashenkaaliaksandr@gmail.com',
+                recipient_list=['Badminton500@inbox.lv'],  # Замените на ваш адрес получателя
+                fail_silently=False,
+            )
+
+            return render(request, 'webapp/about.html')  # Шаблон для страницы успешной отправки
+
+    return render(request, 'webapp/contact.html')  # Шаблон с формой обратной связи
 
 
 def services(request):
