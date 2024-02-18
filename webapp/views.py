@@ -50,7 +50,7 @@ def contact(request):
         if email and description:
             send_mail(
                 subject='Message from your website',
-                message=f'Name: {name}\nEmail: {email}\nMessage: {description}',
+                message=f'Name: {name}\nPhone: {email}\nMessage: {description}',
                 from_email='tumashenkaaliaksandr@gmail.com',
                 recipient_list=['Badminton500@inbox.lv'],  # Замените на ваш адрес получателя
                 fail_silently=False,
