@@ -40,9 +40,9 @@ def contact(request):
                 fail_silently=False,
             )
 
-            return render(request, 'webapp/about.html')  # Шаблон для страницы успешной отправки
+            return render(request, 'webapp/success.html')  # Шаблон для страницы успешной отправки
 
-    return render(request, 'webapp/contact.html')  # Шаблон с формой обратной связи
+    return render(request, 'webapp/404.html')  # Шаблон с формой обратной связи
 
 
 def services(request):
@@ -57,6 +57,7 @@ def services(request):
 
 def shop(request):
     return render(request, 'webapp/services/shop.html')
+
 
 def shop_encoders(request):
     main_serv = Services.objects.all()
@@ -94,6 +95,9 @@ def shop_inverter(request):
 
 def errors(request):
     return render(request, 'webapp/404.html')
+
+def success(request):
+    return render(request, 'webapp/success.html')
 
 
 def game_repair(request):

@@ -3,12 +3,12 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
-	<div class="container text-center">
-		<h1>Page Does Not Exist</h1>
-	</div>
-</section>
+<!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_convert.jpg' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>Отправлено!</h1>
+        </div>
+    </section>
 <!--End breadcrumb area-->
 
 <!--Start breadcrumb bottom area-->
@@ -18,24 +18,21 @@
             <ul>
                 <li><a href="{% url 'webapp:home' %}">Главная</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>404</li>
+                <li>Отправлено</li>
             </ul>    
         </div>
-        <div class="right pull-right">
-            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-        </div>  
     </div>
 </section>
 <!--End breadcrumb bottom area-->
 
-<!--Start 404 area-->
+<!--Start success area-->
 <section class="not-found-area">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="not-found-content text-center">
-                    <h1>404</h1>
-                    <h3>Упс! Что то пошло не так.</h3>
+                    <h2>ВАШЕ ПИСЬМО УСПЕШНО ОТПРАВЛЕНО!</h2>
+                    <h3>Мы сваяжемся с вами в течении 10 минут.</h3>
                     <p>Вы можете воспользоваться поиском или перейти на главну страницу:</p>
                     <form class="search-form" action="#">
 				        <input placeholder="Поиск..." type="text">
@@ -46,5 +43,5 @@
         </div>
     </div>
 </section> 
-<!--End 404 area-->
+<!--End success area-->
 {% endblock %}

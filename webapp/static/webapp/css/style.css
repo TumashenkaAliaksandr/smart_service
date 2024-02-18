@@ -4095,6 +4095,14 @@ select:focus {
   margin: 0 0 7px;
   text-shadow: 1px 4px 5px #222;
 }
+
+.not-found-content h2 {
+  color: #0d2d1a;
+  font-weight: 700;
+  margin: 0 0 7px;
+  text-shadow: 1px 4px 5px #222;
+}
+
 .not-found-content h3 {
   color: #3d3d3d;
   font-size: 20px;
@@ -4147,13 +4155,13 @@ select:focus {
     font-size: 14px
 }
 .not-found-content .search-form input[type="text"]:focus {
-  border: 1px solid #0f192c;
+  border: 1px solid #43ea65;
   background: #0d2d1a;
   color: #fff;
 }
 .not-found-content .search-form input[type="text"]:focus + button, 
 .not-found-content .search-form button:hover {
-  background: #0a152b none repeat scroll 0 0;
+  background: #43ea65 none repeat scroll 0 0;
   color: #fff;
 }
 
