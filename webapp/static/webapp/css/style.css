@@ -5584,7 +5584,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   position: absolute;
   top: 0;
   left: 0;
-  border-right: 5px solid #4ce62c;
+  border-right: 5px solid #10a62e;
 }
 
 #newsletter .mailpoet_form {
@@ -5592,7 +5592,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
     position: relative;
     overflow:hidden;
     background: #fff;
-    height: 24.6%;
+    height: 17%;
 }
 
 @media (max-width: 736px) {
@@ -5616,7 +5616,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 
 #newsletter input[type="submit"] {
     border: none;
-    background: #4ce62c;
+    background: #10a62e;
     position: absolute;
     /*top: 0px;*/
     right: 0;
@@ -5632,7 +5632,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 
   #newsletter:before{width: 100%;}
 
-  #newsletter input[type="submit"]{color: #5b5b5b; background: #4ce62c; width: 0;}
+  #newsletter input[type="submit"]{color: #5b5b5b; background: #10a62e; width: 0;}
 
 }
 

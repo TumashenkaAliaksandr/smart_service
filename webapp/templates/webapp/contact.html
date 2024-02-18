@@ -4,12 +4,12 @@
 
 {% block content %}
 
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
-	<div class="container text-center">
-		<h1>Contact</h1>
-	</div>
-</section>
+<!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_phone.png' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>Контакты</h1>
+        </div>
+    </section>
 <!--End breadcrumb area-->
 
 <!--Start breadcrumb bottom area-->

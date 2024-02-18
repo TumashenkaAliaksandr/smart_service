@@ -228,7 +228,7 @@
                 <div class="single-footer-widget pd-bottom">
                     <div class="footer-logo">
                         <a href="{% url 'webapp:home' %}">
-                            <img src="{% static 'webapp/images/footer/ecu_footer_lg.png' %}" alt="Awesome Footer Logo">
+                            <img src="{% static 'webapp/images/footer/ecu_favicon_two.png' %}" alt="Awesome Footer Logo">
                         </a>
                     </div>
                     <div class="repairplus-info">
@@ -250,14 +250,15 @@
                                 <div class="title">
                                     <h3>Наши Услуги</h3>
                                 </div>
-                                <ul class="services-list">
-                                    <li><a href="smartphone-repair.html">Smart Phone</a></li>
-                                    <li><a href="tablet-repair.html">Tablets & iPad</a></li>
-                                    <li><a href="desktop-repair.html">Desktop & Laptop</a></li>
-                                    <li><a href="game-repair.html">Game System</a></li>
-                                    <li><a href="lcd-repair.html">LCD & LED TV</a></li>
-                                    <li><a href="mp3-repair.html">MP3 & MP4 Player</a></li>
-                                </ul>
+                                {% for main_services_footer in main_serv %}
+                                    {% if forloop.counter <= 4 %}
+                                        <ul class="services-list">
+                                            <li>
+                                                <a href="{{ main_services_footer.link }}">{{ main_services_footer.name }}</a>
+                                            </li>
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                         <!--Start single footer widget-->

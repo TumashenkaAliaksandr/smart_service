@@ -6,6 +6,15 @@ from django.shortcuts import render
 from webapp.models import *
 
 
+
+def base(request):
+
+    main_serv = Services.objects.all()
+
+    context = locals()
+    return render(request, 'main/base.html', context)
+
+
 def index(request):
     main_serv = Services.objects.all()
     brands = Brand.objects.all()
@@ -21,10 +30,17 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'webapp/about.html')
+    main_serv = Services.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+    }
+    return render(request, 'webapp/about.html', context=context)
 
 
 def contact(request):
+
+    main_serv = Services.objects.all()
 
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -42,7 +58,11 @@ def contact(request):
 
             return render(request, 'webapp/success.html')  # Шаблон для страницы успешной отправки
 
-    return render(request, 'webapp/404.html')  # Шаблон с формой обратной связи
+    context = {
+        'main_serv': main_serv,
+    }
+
+    return render(request, 'webapp/contact.html', context=context)  # Шаблон с формой обратной связи
 
 
 def services(request):
