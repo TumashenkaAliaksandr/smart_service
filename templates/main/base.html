@@ -218,6 +218,25 @@
 <!--End mainmenu area-->
 
 {% block content %}{% endblock %}
+<!--Start Brand area-->
+<section class="brand-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="brand">
+                    <!--Start single item-->
+                    {% for main_brands in brands %}
+                        <div class="single-item">
+                            <a href="#"><img src="{{ main_brands.photo.url }}"
+                                             alt="Awesome Brand Image"></a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Brand area-->
 
 <!--Start footer area-->
 <footer class="footer-area">
@@ -337,6 +356,7 @@
                 </div>
             </div>
         </div>
+
         <!--Start footer botton-->
         <div class="row">
             <div class="col-md-12">
