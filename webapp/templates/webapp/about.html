@@ -3,30 +3,26 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
-	<div class="container text-center">
-		<h1>About Us</h1>
-	</div>
-</section>
-<!--End breadcrumb area-->
-
-<!--Start breadcrumb bottom area-->
-<section class="breadcrumb-botton-area">
-    <div class="container">
-        <div class="left pull-left">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>About Us</li>
-            </ul>    
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>О Нас</h1>
         </div>
-        <div class="right pull-right">
-            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-        </div>  
-    </div>
-</section>
-<!--End breadcrumb bottom area-->
+    </section>
+
+    <!--Start breadcrumb bottom area-->
+    <section class="breadcrumb-botton-area">
+        <div class="container">
+            <div class="left pull-left">
+                <ul>
+                    <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
+                    <li>О Нас</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End breadcrumb bottom area-->
 
 <!--Start video gallery area-->
 <section class="video-gallery-area">
@@ -66,6 +62,48 @@
     </div>
 </section>
 <!--End video gallery area-->
+
+    <!--*Mail Form*-->
+    <section class="call-to-action-area-mailform services-area">
+        <div class="container">
+            <div class="row">
+                <!--*Newsletter*-->
+                <div id="newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="news-content">
+                                    <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}"
+                                         class="img-fixed-size-for-mailform" alt="Awesome Logo">
+                                    <h2>Бесплатная Консультация</h2>
+                                    <p class="beige"><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="mailpoet_form">
+                                    <form target="_self" method="post" action="{% url 'webapp:contact' %}"
+                                          novalidate="">
+                                        {% csrf_token %}
+                                        <input type="text" class="mailpoet_text" name="name"
+                                               placeholder="Введите Ваше Имя">
+                                        <input type="email" class="mailpoet_text" name="email" title="Email"
+                                               placeholder="Введите Ваш Телефон">
+                                        <input type="text" class="mailpoet_text" name="description"
+                                               placeholder="Опишите проблему">
+                                        <div class="button">
+                                            <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--*End Newsletter*-->
+            </div>
+        </div>
+    </section>
+    <!--*END MAIL FORM*-->
 
 <!--Start core value area-->
 <section class="core-value-area">
@@ -222,8 +260,6 @@
 </section>
 <!--End working process area-->
 
-
-
 <!--Start team area-->
 <section class="team-area">
     <div class="container">
@@ -365,41 +401,4 @@
 </section>
 <!--End team area-->
 
-<!--Start Brand area-->  
-<section class="brand-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="brand">
-                    <!--Start single item-->
-                    <div class="single-item">
-                        <a href="#"><img src="{% static 'webapp/images/brand/1.jpg' %}" alt="Awesome Brand Image"></a>
-                    </div>
-                    <!--End single item-->
-                    <!--Start single item-->
-                    <div class="single-item">
-                        <a href="#"><img src="{% static 'webapp/images/brand/2.jpg' %}" alt="Awesome Brand Image"></a>
-                    </div>
-                    <!--End single item-->
-                    <!--Start single item-->
-                    <div class="single-item">
-                        <a href="#"><img src="{% static 'webapp/images/brand/3.jpg' %}" alt="Awesome Brand Image"></a>
-                    </div>
-                    <!--End single item-->
-                    <!--Start single item-->
-                    <div class="single-item">
-                        <a href="#"><img src="{% static 'webapp/images/brand/4.jpg' %}" alt="Awesome Brand Image"></a>
-                    </div>
-                    <!--End single item-->
-                    <!--Start single item-->
-                    <div class="single-item">
-                        <a href="#"><img src="{% static 'webapp/images/brand/5.jpg' %}" alt="Awesome Brand Image"></a>
-                    </div>
-                    <!--End single item-->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End Brand area-->
-                                {% endblock %}
+{% endblock %}

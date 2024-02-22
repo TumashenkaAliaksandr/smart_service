@@ -151,6 +151,7 @@ button{
 }
 .thm-btn:hover{
   background: transparent;
+
 }
 .thm-btn2 {
   color: #ffffff;
@@ -955,7 +956,7 @@ select:focus {
 /* CSS стили для фиксированного размера изображений */
 .img-fixed-size {
     width: 330px; /* Установите желаемую ширину */
-    height: 150px; /* Установите желаемую высоту */
+    height: 180px; /* Установите желаемую высоту */
     object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
 }
 
@@ -3268,7 +3269,7 @@ select:focus {
 }
 
 .video-gallery-area .video-gallery:hover .overlay-gallery {
-  background-color: rgba(67, 195, 235, 0.70);
+  background-color: rgba(16, 166, 46, 0.70);
 }
 .video-gallery-area .video-gallery:hover img {
   transform: scale(1.1);
@@ -3315,7 +3316,7 @@ select:focus {
   left: 0;
 }
 .core-value-area .text-holder .single-item .icon-box span:before{
-  color: #43c3ea;
+  color: #43ea65;
   font-size: 20px;
 }
 .core-value-area .text-holder .single-item .text-box {
@@ -3401,10 +3402,6 @@ select:focus {
 }
 
 
-
-
-
-
 .team-area{
   padding-top: 80px;
   padding-bottom: 40px;
@@ -3445,7 +3442,7 @@ select:focus {
   width:100%;
   height:100%;
   display:table;
-  background: rgba(67, 195, 234, 0.9);  
+  background: rgba(16, 166, 46, 0.9);
 }
 .single-team-member .img-holder .overlay-one .overlay-inner .content {
   display:table-cell;
