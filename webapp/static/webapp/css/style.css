@@ -2179,7 +2179,7 @@ select:focus {
   background-position: right;
 }
 .breadcrumb-area h1 {
-  color: #e1e1e1;
+  color: #e1ffed;
   font-size: 40px;
   font-weight: 700;
   text-transform: capitalize;

@@ -3,30 +3,83 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
-	<div class="container text-center">
-		<h1>Services</h1>
-	</div>
-</section>
-<!--End breadcrumb area-->
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_uslugi1.png' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>Наши Услуги</h1>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
 
 <!--Start breadcrumb bottom area-->
 <section class="breadcrumb-botton-area">
     <div class="container">
         <div class="left pull-left">
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="{% url 'webapp:home' %}">Home</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>Services</li>
+                <li>Услуги</li>
             </ul>    
         </div>
         <div class="right pull-right">
-            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Поделиться</a>
         </div>  
     </div>
 </section>
 <!--End breadcrumb bottom area-->
+
+    <!--Start services area-->
+    <section class="call-to-action-area-two">
+        <div class="container">
+            <div class="row">
+                <div class="related-product">
+                    <div class="sec-title-two">
+                        <h3>Наши Услуги</h3>
+                    </div>
+                    <div class="row">
+                        <!--Start single product item-->
+                        {% for main_services in main_serv|slice:":8" %}
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-product-item">
+                                    <div class="img-holder">
+                                        <img src="{{ main_services.image.url }}" class="img-fixed-size"
+                                             alt="Awesome Product Image">
+                                        <div class="overlay-box">
+                                            <div class="box">
+                                                <div class="content">
+                                                    <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
+                                                        Больше</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder">
+                                        <div class="top clearfix">
+                                            <div class="product-title pull-left">
+                                                <a href="{{ main_services.link }}">
+                                                    <h5>{{ main_services.name }}</h5>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="text-holder">
+                                            <p>{{ main_services.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:3 %}
+                                {# Закрываем текущий ряд после каждой третьей модели #}
+                                </div>
+                                <div class="row">
+                            {% endif %}
+                        {% endfor %}
+                        <!--End single product item-->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End services area-->
 
 <!--Start services area-->
 <section class="call-to-action-area services-area">

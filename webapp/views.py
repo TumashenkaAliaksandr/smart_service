@@ -68,9 +68,13 @@ def contact(request):
 def services(request):
     """Services"""
     main_serv = Services.objects.all()
+    brands = Brand.objects.all()
+    favorites = Favors.objects.all()
 
     context = {
         'main_serv': main_serv,
+        'brands': brands,
+        'favorites': favorites,
     }
     return render(request, 'webapp/services/services.html', context=context)
 
