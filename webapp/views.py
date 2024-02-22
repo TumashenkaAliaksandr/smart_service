@@ -9,14 +9,14 @@ from webapp.models import *
 
 def base(request):
 
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
 
     context = locals()
     return render(request, 'main/base.html', context)
 
 
 def index(request):
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
     brands = Brand.objects.all()
     favorites = Favors.objects.all()
 
@@ -30,17 +30,20 @@ def index(request):
 
 
 def about(request):
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
+    brands = Brand.objects.all()
 
     context = {
         'main_serv': main_serv,
+        'brands': brands,
     }
     return render(request, 'webapp/about.html', context=context)
 
 
 def contact(request):
 
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
+    brands = Brand.objects.all()
 
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -60,6 +63,7 @@ def contact(request):
 
     context = {
         'main_serv': main_serv,
+        'brands': brands,
     }
 
     return render(request, 'webapp/contact.html', context=context)  # Шаблон с формой обратной связи
@@ -67,7 +71,7 @@ def contact(request):
 
 def services(request):
     """Services"""
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
     brands = Brand.objects.all()
     favorites = Favors.objects.all()
 
@@ -84,29 +88,33 @@ def shop(request):
 
 
 def encoders(request):
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
     main_encoders = Shop_Encoders.objects.all()
+    brands = Brand.objects.all()
 
     context = {
         'main_serv': main_serv,
         'main_encoders': main_encoders,
+        'brands': brands,
     }
     return render(request, 'webapp/services/shop-encoders.html', context=context)
 
 
 def board(request):
-    main_serv = Services.objects.all()
+    main_serv = ServicesMain.objects.all()
     main_board = Shop_Board.objects.all()
+    brands = Brand.objects.all()
 
     context = {
         'main_serv': main_serv,
         'main_board': main_board,
+        'brands': brands,
     }
     return render(request, 'webapp/services/services-board.html', context=context)
 
 
 def inverter(request):
-    main_serv = list(Services.objects.all())
+    main_serv = list(ServicesMain.objects.all())
     random.shuffle(main_serv)  # Перемешиваем список объектов
     main_inverter = Shop_Inverter.objects.all()
     brands = Brand.objects.all()
@@ -120,17 +128,17 @@ def inverter(request):
 
 
 def indastrial_electroniks(request):
-    main_serv = list(Services.objects.all())
-    random.shuffle(main_serv)  # Перемешиваем список объектов
-    main_inverter = Shop_Inverter.objects.all()
+    main_inverter = Shop_Indastrial_Electroniks.objects.all()
     brands = Brand.objects.all()
+    main_serv = list(ServicesMain.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
 
     context = {
         'main_serv': main_serv,
         'main_inverter': main_inverter,
         'brands': brands,
     }
-    return render(request, 'webapp/services/services-inverter.html', context=context)
+    return render(request, 'webapp/services/industrial-electronics.html', context=context)
 
 
 def errors(request):

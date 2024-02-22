@@ -18,7 +18,7 @@
                 <ul>
                     <li><a href="{% url 'webapp:home' %}">На Главную</a></li>
                     <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                    <li><a href="shop.html">Услуги</a></li>
+                    <li><a href="{% url 'webapp:shop' %}">Услуги</a></li>
                     <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
                     <li>Ремонт Промышленной Электроники</li>
                 </ul>
@@ -27,243 +27,80 @@
     </section>
     <!--End breadcrumb bottom area-->
 
-    <!--Start service single area-->
-    <section id="service-single-area" class="smartphone-repair-area">
+    <!--Start services area-->
+    <section class="call-to-action-area services-area">
         <div class="container">
             <div class="row">
-                <!--Start sidebar Wrapper-->
-                <div class="col-lg-3 col-md-4 col-sm-7 col-xs-12">
-                    <div class="sidebar-wrapper">
-                        <!--Start single sidebar-->
-                        <div class="single-sidebar">
-                            <form class="search-form" action="#">
-                                <input placeholder="Поиск..." type="text">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <!--End single sidebar-->
-                    </div>
-                </div>
-                <!--End Sidebar Wrapper-->
-                <div class="col-md-9 col-sm-12 col-xs-12 pull-right">
-                    <div class="service-single-content">
-                        {% for main_inverters in main_inverter %}
-                            <div class="row top-content">
-                                <div class="col-md-5 col-sm-12 col-xs-12">
-                                    <div class="img-holder">
-                                        <img src="{{ main_inverters.image.url }}"
-                                             alt="Awesome Image">
-                                    </div>
-                                </div>
-                                <div class="col-md-7 col-sm-12 col-xs-12">
-                                    <div class="text-holder">
-                                        <div class="title">
-                                            <h2>{{ main_inverters.name }}</h2>
-                                        </div>
-                                        <div class="text">
-                                            <p>{{ main_inverters.description | safe }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-
-                        {% for main_inverters in main_inverter %}
-                            <div class="row middle-content">
-                                <div class="col-md-7">
-                                    <div class="text-holder">
-                                        <div class="title">
-                                            <h2>{{ main_inverters.name_two }}</h2>
-                                        </div>
-                                        <div class="text">
-                                            <p>{{ main_inverters.description_two | safe  }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="img-holder ">
-                                        <img src="{{ main_inverters.image_two.url }}"
-                                             alt="Awesome Image">
-                                        <div class="button">
-                                            <a href="{% url 'webapp:contact' %}">ECUS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="text-holder">
-                                        <div class="text-for-visit">
-                                            <h5>{{ main_inverters.client_visit | safe  }}</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                        {% endfor %}
-
-                <div class="col-md-3 col-sm-7 col-xs-12 pull-left">
-                    <div class="service-single-sidebar">
-                        <ul class="service-lists">
-                            <li class="allservice"><a href="{% url 'webapp:services' %}">Все Наши Услуги<i
-                                    class="fa fa-cog" aria-hidden="true"></i></a></li>
-                            {% for main_categories in main_serv|slice:":8" %}
-                                <li><a href="{{ main_categories.link }}">
-                                    {% if main_categories.name|length > 24 %}
-                                        {{ main_categories.name|slice:":24" }}...
-                                    {% else %}
-                                        {{ main_categories.name }}
-                                    {% endif %}</a></li>
-                            {% endfor %}
-                        </ul>
-                        <div class="repair-time">
-                            <h3>Напиши в течении<br> 60 Минут!</h3>
-                            <a class="thm-btn bg-1" href="#">Получи скидку!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <!--*Newsletter*-->
-        <div id="newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="news-content">
-                            <h2>Бесплатная Консультация</h2>
-                            <p><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="mailpoet_form">
-                            <form target="_self" method="post" action="{% url 'webapp:contact' %}" novalidate="">
-                                {% csrf_token %}
-                                <input type="text" class="mailpoet_text" name="name" placeholder="Введите Ваше Имя">
-                                <input type="email" class="mailpoet_text" name="email" title="Email"
-                                       placeholder="Введите Ваш Телефон">
-                                <input type="text" class="mailpoet_text" name="description"
-                                       placeholder="Опишите проблему">
-                                <div class="button">
-                                    <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--*End Newsletter*-->
-    </section>
-
-    <section class="categories-area-two background-image-about">
-        <!--Start product tab box-->
-        <div class="container">
-            <div class="row">
+                <!--Start single item-->
                 {% for main_inverters in main_inverter %}
-                    <div class="col-md-12">
-                        <div class="product-tab-box">
-                            <ul class="nav nav-tabs tab-menu">
-                                <li class="active"><a href="#desc" data-toggle="tab">Контакты</a></li>
-                                <li><a href="#review" data-toggle="tab">Описание</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="desc">
-                                    <div class="product-details-content">
-                                        <div class="desc-content-box">
-                                            <div class="news-content">
-                                                <p><br><br>Наш телефон: +375295907777<br>➖➖➖➖➖➖➖➖➖➖➖<br>Наша почта: ecuservice@gmail.com<br>➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="review">
-                                    <div class="review-box">
-                                        <div class="sec-title-two">
-                                            <h3>Что это и с чем его едят</h3>
-                                        </div>
-                                        <!--Start single review box-->
-                                        <div class="single-review-box">
-                                            <div class="img-holder img-fixed-size-two">
-                                                <img src="{{ main_inverters.image_three.url }}"
-                                                     alt="Awesome Image">
-                                            </div>
-                                            <div class="text-holder">
-                                                <div class="top">
-                                                    <div class="review-box pull-right">
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>{{ main_inverters.description_three | safe }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End single review box-->
+                <div class="col-md-4">
+                    <div class="single-item text-center">
+                        <a href="{% url 'webapp:encoders' %}">
+                            <h5>{{ main_inverters.name }}</h5>
+                        </a>
+                        <div class="img-holder">
+                            <img src="{{ main_inverters.image_two.url }}" alt="Awesome Image" class="img-fixed-size-five">
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <a href="{% url 'webapp:encoders' %}"><i class="fa fa-link"
+                                                                               aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <!--End product tab box-->
-        </div>
-    </section>
-
-    <section class="call-to-action-area-two">
-        <div class="container">
-            <div class="col-md-12">
-                <!--Start related product box-->
-                <div class="related-product">
-                    <div class="sec-title-two">
-                        <h3>Услуги</h3>
-                    </div>
-                    <div class="row">
-                        <!--Start single product item-->
-                        {% for main_services in main_serv|slice:":4" %}
-                            <div class="col-md-3 col-sm-3 col-xs-6">
-                                <div class="single-item">
-                                    <div class="single-product-item">
-                                        <div class="img-holder">
-                                            <img src="{{ main_services.image.url }}" class="img-fixed-size"
-                                                 alt="Awesome Product Image">
-                                            <div class="overlay-box">
-                                                <div class="box">
-                                                    <div class="content">
-                                                        <a class="thm-btn bg-1" href="{{ main_services.link }}">Узнать
-                                                            Больше</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="title-holder">
-                                            <div class="top clearfix">
-                                                <div class="product-title pull-left">
-                                                    <a href="{{ main_services.link }}">
-                                                        <h5>{{ main_services.name }}</h5>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                        <!--End single product item-->
+                        <div class="text-holder">
+                            <p>{{ main_inverters.description | safe}}</p>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
+                <!--End single item-->
             </div>
         </div>
     </section>
-    <!--End service single area-->
+    <!--End services area-->
+
+    <!--*Mail Form*-->
+    <section class="call-to-action-area-mailform services-area">
+        <div class="container">
+            <div class="row">
+                <!--*Newsletter*-->
+                <div id="newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="news-content">
+                                    <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}"
+                                         class="img-fixed-size-for-mailform" alt="Awesome Logo">
+                                    <h2>Бесплатная Консультация</h2>
+                                    <p class="beige"><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="mailpoet_form">
+                                    <form target="_self" method="post" action="{% url 'webapp:contact' %}"
+                                          novalidate="">
+                                        {% csrf_token %}
+                                        <input type="text" class="mailpoet_text" name="name"
+                                               placeholder="Введите Ваше Имя">
+                                        <input type="email" class="mailpoet_text" name="email" title="Email"
+                                               placeholder="Введите Ваш Телефон">
+                                        <input type="text" class="mailpoet_text" name="description"
+                                               placeholder="Опишите проблему">
+                                        <div class="button">
+                                            <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--*End Newsletter*-->
+            </div>
+        </div>
+    </section>
+    <!--*END MAIL FORM*-->
 
 {% endblock %}

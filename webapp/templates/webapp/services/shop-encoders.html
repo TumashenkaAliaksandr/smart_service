@@ -128,37 +128,47 @@
         </div>
     </section>
 
-    <section>
-        <!--*Newsletter*-->
-        <div id="newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="news-content">
-                            <h2>Бесплатная Консультация</h2>
-                            <p><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="mailpoet_form">
-                            <form target="_self" method="post" action="{% url 'webapp:contact' %}" novalidate="">
-                                {% csrf_token %}
-                                <input type="text" class="mailpoet_text" name="name" placeholder="Введите Ваше Имя">
-                                <input type="email" class="mailpoet_text" name="email" title="Email"
-                                       placeholder="Введите Ваш Телефон">
-                                <input type="text" class="mailpoet_text" name="description"
-                                       placeholder="Опишите проблему">
-                                <div class="button">
-                                    <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+    <!--*Mail Form*-->
+    <section class="call-to-action-area-mailform services-area">
+        <div class="container">
+            <div class="row">
+                <!--*Newsletter*-->
+                <div id="newsletter" class="mail-form-animation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="news-content">
+                                    <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}"
+                                         class="img-fixed-size-for-mailform" alt="Awesome Logo">
+                                    <h2>Бесплатная Консультация</h2>
+                                    <p class="beige"><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="mailpoet_form">
+                                    <form target="_self" method="post" action="{% url 'webapp:contact' %}"
+                                          novalidate="">
+                                        {% csrf_token %}
+                                        <input type="text" class="mailpoet_text" name="name"
+                                               placeholder="Введите Ваше Имя">
+                                        <input type="email" class="mailpoet_text" name="email" title="Email"
+                                               placeholder="Введите Ваш Телефон">
+                                        <input type="text" class="mailpoet_text" name="description"
+                                               placeholder="Опишите проблему">
+                                        <div class="button">
+                                            <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--*End Newsletter*-->
             </div>
         </div>
-        <!--*End Newsletter*-->
     </section>
+    <!--*END MAIL FORM*-->
 
     <section class="categories-area-two background-image-about">
         <!--Start product tab box-->

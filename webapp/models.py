@@ -21,7 +21,7 @@ class Favors(models.Model):
         verbose_name_plural = "Favors"
 
 
-class Services(models.Model):
+class ServicesMain(models.Model):
     """Services model"""
     name = models.CharField(max_length=100, verbose_name='name')
     description = models.TextField(verbose_name='description')
@@ -35,8 +35,8 @@ class Services(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "Services"
-        verbose_name_plural = "Services"
+        verbose_name = "Services MAIN"
+        verbose_name_plural = "Services MAIN"
 
 class Shop_Encoders(models.Model):
     """Services model"""

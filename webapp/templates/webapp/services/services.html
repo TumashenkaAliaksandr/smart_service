@@ -81,144 +81,45 @@
     </section>
     <!--End services area-->
 
-<!--Start services area-->
-<section class="call-to-action-area services-area">
-    <div class="container">
-        <div class="row">
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../smartphone-repair.html">
-                        <h5>Smart phone Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/1.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../smartphone-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+    <!--*Mail Form*-->
+    <section class="call-to-action-area-mailform services-area">
+        <div class="container">
+            <div class="row">
+                <!--*Newsletter*-->
+                <div id="newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="news-content">
+                                    <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}" class="img-fixed-size-for-mailform" alt="Awesome Logo">
+                                    <h2>Бесплатная Консультация</h2>
+                                    <p class="beige"><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="mailpoet_form">
+                                    <form target="_self" method="post" action="{% url 'webapp:contact' %}"
+                                          novalidate="">
+                                        {% csrf_token %}
+                                        <input type="text" class="mailpoet_text" name="name"
+                                               placeholder="Введите Ваше Имя">
+                                        <input type="email" class="mailpoet_text" name="email" title="Email"
+                                               placeholder="Введите Ваш Телефон">
+                                        <input type="text" class="mailpoet_text" name="description"
+                                               placeholder="Опишите проблему">
+                                        <div class="button">
+                                            <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-holder">
-                        <p>We specialise in Phone repairs for Apple iPhones, iPad, iPod, Samsung, Galaxy, Sony, HTC, Nexus, Motorola, Blackberry &amp; Tablets.</p>
-                    </div>
                 </div>
+                <!--*End Newsletter*-->
             </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../tablet-repair.html">
-                        <h5>Tablets & Ipad Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/2.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../tablet-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <p>If you are facing any problem with your Tablets / Ipads, Kindly pls go through the menttioned catagories as per requirement.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../desktop-repair.html">
-                        <h5>Desktop & Mac Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/3.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../desktop-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <p>We specialist in providing On-Site Computer Desktop Repair Service and Network Support for all sized business, On-Site Computer.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../game-repair.html">
-                        <h5>Game Console Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/4.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../game-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <p>Has your gaming life come to a halt because of faulty equipment? Let us help you with video game console repair, Our technicians can.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../lcd-repair.html">
-                        <h5>LCD & LED Tv Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/5.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../lcd-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <p>It doesn’t matter where you purchased your television, our experts can fix the problem at our state-of-the-art repair lab.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item text-center">
-                    <a href="../mp3-repair.html">
-                        <h5>MP3 & Mp4 Player Repair</h5>
-                    </a>
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/services/6.jpg' %}" alt="Awesome Image">
-                        <div class="overlay">
-                            <div class="box">
-                                <div class="content">
-                                    <a href="../mp3-repair.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <p>If you are facing any problem with your MP3 / P4 Player, dont worry our experts also repair those digital systems.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
         </div>
-    </div>
-</section>
-<!--End services area-->
+    </section>
+    <!--*END MAIL FORM*-->
+
 {% endblock %}

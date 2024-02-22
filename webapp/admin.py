@@ -12,8 +12,8 @@ class BrandAdmin(admin.ModelAdmin):
     photo_preview.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
 
-@admin.register(Services)
-class ServicesAdmin(admin.ModelAdmin):
+@admin.register(ServicesMain)
+class ServicesMainAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
