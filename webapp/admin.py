@@ -24,7 +24,7 @@ class ServicesAdmin(admin.ModelAdmin):
 
 @admin.register(Shop_Encoders)
 class Shop_EncodersAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+    list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке
