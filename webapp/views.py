@@ -126,6 +126,32 @@ def inverter(request):
     }
     return render(request, 'webapp/services/services-inverter.html', context=context)
 
+def bcm(request):
+    main_serv = list(ServicesMain.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
+    main_bcm = Shop_Inverter.objects.all()
+    brands = Brand.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_inverter': main_bcm,
+        'brands': brands,
+    }
+    return render(request, 'webapp/services/services_bcm.html', context=context)
+
+def electro_transport(request):
+    main_serv = list(ServicesMain.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
+    main_el_trans = Shop_Inverter.objects.all()
+    brands = Brand.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_inverter': main_el_trans,
+        'brands': brands,
+    }
+    return render(request, 'webapp/services/electro_transport.html', context=context)
+
 
 def indastrial_electroniks(request):
     main_inverter = Shop_Indastrial_Electroniks.objects.all()

@@ -52,6 +52,25 @@ class Shop_BoardAdmin(admin.ModelAdmin):
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
 
+@admin.register(Shop_Electro_Transport)
+class Shop_Electro_TransportAdmin(admin.ModelAdmin):
+    list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+
+    def image(self, obj):
+        return obj.image.url if obj.image else None  # Отображение превью изображения в админке
+
+    image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+
+@admin.register(Shop_Bcm)
+class Shop_BcmAdmin(admin.ModelAdmin):
+    list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+
+    def image(self, obj):
+        return obj.image.url if obj.image else None  # Отображение превью изображения в админке
+
+    image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
 @admin.register(Shop_Inverter)
 class Shop_InverterAdmin(admin.ModelAdmin):
     formfield_overrides = {

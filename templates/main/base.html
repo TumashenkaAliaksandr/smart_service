@@ -148,14 +148,14 @@
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
                             <li {% if request.resolver_match.url_name == 'home' %} class="current" {% endif %} ><a href="{% url 'webapp:home' %}">Главная</a></li>
-                            <li {% if request.resolver_match.url_name in "['services', 'encoders', 'board', 'inverter', 'indastrial-electroniks']" %}class="current"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
+                            <li {% if request.resolver_match.url_name in "['services', 'encoders', 'board', 'inverter', 'indastrial-electroniks', 'bloks-bcm', 'electro-transport']" %}class="current"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
                                 <ul>
                                     <li {% if request.resolver_match.url_name == 'indastrial-electroniks' %}class="current"{% endif %}><a href="{% url 'webapp:indastrial-electroniks' %}">Промышленная Электроника</a></li>
                                     <li {% if request.resolver_match.url_name == 'encoders' %}class="current"{% endif %}><a href="{% url 'webapp:encoders' %}">Ремонт Датчиков</a></li>
                                     <li {% if request.resolver_match.url_name == 'board' %}class="current"{% endif %}><a href="{% url 'webapp:board' %}">Ремонт Электронных Плат</a></li>
                                     <li {% if request.resolver_match.url_name == 'inverter' %}class="current"{% endif %}><a href="{% url 'webapp:inverter' %}">Ремонт Частотных Преобразователей</a></li>
-                                    <li><a href="lcd-repair.html">LCD & LED Tv Repair</a></li>
-                                    <li><a href="mp3-repair.html">MP3 & MP4 Player Repair</a></li>
+                                    <li {% if request.resolver_match.url_name == 'bloks-bcm' %}class="current"{% endif %}><a href="{% url 'webapp:bloks-bcm' %}">Ремонт ECU TCU DCT ECM BCM SBC</a></li>
+                                    <li {% if request.resolver_match.url_name == 'electro-transport' %}class="current"{% endif %}><a href="{% url 'webapp:electro-transport' %}">Ремонт Электротранспорта</a></li>
                                 </ul>
                             </li>
                             <li {% if request.resolver_match.url_name == 'about' %} class="current" {% endif %}class="dropdown"><a href="{% url 'webapp:about' %}">О Нас</a></li>
