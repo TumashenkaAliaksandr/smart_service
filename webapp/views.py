@@ -119,6 +119,20 @@ def inverter(request):
     return render(request, 'webapp/services/services-inverter.html', context=context)
 
 
+def indastrial_electroniks(request):
+    main_serv = list(Services.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
+    main_inverter = Shop_Inverter.objects.all()
+    brands = Brand.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_inverter': main_inverter,
+        'brands': brands,
+    }
+    return render(request, 'webapp/services/services-inverter.html', context=context)
+
+
 def errors(request):
     return render(request, 'webapp/404.html')
 

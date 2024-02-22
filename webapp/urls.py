@@ -13,10 +13,11 @@ urlpatterns = [
     path('shop/', shop, name='shop'),
     path('encoders/', encoders, name='encoders'),
     path('board/', board, name='board'),
+    path('indastrial-electroniks/', indastrial_electroniks, name='indastrial-electroniks'),
     path('inverter/', inverter, name='inverter'),
     path('errors/', errors, name='errors'),
     path('success/', success, name='success'),
-    path('game_repair/', game_repair, name='game_repair'),
+    path('game-repair/', game_repair, name='game-repair'),
 ]
 
 if settings.DEBUG:

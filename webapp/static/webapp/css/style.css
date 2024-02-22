@@ -608,7 +608,7 @@ select:focus {
   position: absolute;
   left: 29px;
   top: 140%;
-  width: 270px;
+  width: 360px;
   padding: 0px;
   z-index: 100;
   visibility: hidden;
