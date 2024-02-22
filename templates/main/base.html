@@ -147,12 +147,12 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="current"><a href="{% url 'webapp:home' %}">Главная</a></li>
-                            <li {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
+                            <li {% if request.resolver_match.url_name == 'home' %} class="current" {% endif %} ><a href="{% url 'webapp:home' %}">Главная</a></li>
+                            <li {% if request.resolver_match.url_name in "['services', 'encoders', 'board', 'inverter']" %}class="current"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
                                 <ul>
-                                    <li><a href="{% url 'webapp:shop_encoders' %}">Ремонт Датчиков</a></li>
-                                    <li><a href="{% url 'webapp:shop_board' %}">Ремонт Электронных Плат</a></li>
-                                    <li><a href="{% url 'webapp:shop_inverter' %}">Ремонт Частотных Преобразователей</a></li>
+                                    <li {% if request.resolver_match.url_name == 'encoders' %}class="current"{% endif %}><a href="{% url 'webapp:encoders' %}">Ремонт Датчиков</a></li>
+                                    <li {% if request.resolver_match.url_name == 'board' %}class="current"{% endif %}><a href="{% url 'webapp:board' %}">Ремонт Электронных Плат</a></li>
+                                    <li {% if request.resolver_match.url_name == 'inverter' %}class="current"{% endif %}><a href="{% url 'webapp:inverter' %}">Ремонт Частотных Преобразователей</a></li>
                                     <li><a href="game-repair.html">Game Console Repair</a></li>
                                     <li><a href="lcd-repair.html">LCD & LED Tv Repair</a></li>
                                     <li><a href="mp3-repair.html">MP3 & MP4 Player Repair</a></li>
@@ -169,10 +169,10 @@
                                     <li><a href="404.html">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
+                            <li {% if request.resolver_match.url_name == 'shop' %} class="current" {% endif %} class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
                                 <ul>
                                     <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="{% url 'webapp:shop_encoders' %}">Single Product</a></li>
+                                    <li><a href="{% url 'webapp:encoders' %}">Single Product</a></li>
                                     <li><a href="shopping-cart.html">Shopping Cart</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
                                     <li><a href="account.html">My Account</a></li>

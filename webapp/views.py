@@ -83,7 +83,7 @@ def shop(request):
     return render(request, 'webapp/services/shop.html')
 
 
-def shop_encoders(request):
+def encoders(request):
     main_serv = Services.objects.all()
     main_encoders = Shop_Encoders.objects.all()
 
@@ -94,7 +94,7 @@ def shop_encoders(request):
     return render(request, 'webapp/services/shop-encoders.html', context=context)
 
 
-def shop_board(request):
+def board(request):
     main_serv = Services.objects.all()
     main_board = Shop_Board.objects.all()
 
@@ -105,7 +105,7 @@ def shop_board(request):
     return render(request, 'webapp/services/services-board.html', context=context)
 
 
-def shop_inverter(request):
+def inverter(request):
     main_serv = list(Services.objects.all())
     random.shuffle(main_serv)  # Перемешиваем список объектов
     main_inverter = Shop_Inverter.objects.all()
