@@ -175,4 +175,4 @@ def success(request):
 
 
 def game_repair(request):
-    return render(request, 'webapp/game-repair.html')
+    return render(request, 'webapp/account.html')
