@@ -168,11 +168,11 @@
                                     <li><a href="account.html">My Account</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="blog.html">Блог</a>
-                                <ul>
-                                    <li><a href="blog.html">Blog Default</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
+                            <li {% if request.resolver_match.url_name in "['blog', 'single']" %}class="current"{% endif %}><a href="{% url 'blog:blog' %}">Блог</a>
+{#                                <ul>#}
+{#                                    <li><a href="blog.html">Blog Default</a></li>#}
+{#                                    <li><a href="blog-single.html">Blog Single</a></li>#}
+{#                                </ul>#}
                             </li>
                             <li><a href="{% url 'webapp:contact' %}">Контакты</a></li>
                         </ul>
