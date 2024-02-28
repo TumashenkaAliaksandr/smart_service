@@ -198,6 +198,24 @@ button{
   margin: 0;
 }
 
+.sec-title-proces h1 {
+  color: #08da08;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.sec-title-proces h2 {
+  color: #08da08;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
 
 .sec-title-two {
   margin-top: -1px;
@@ -852,6 +870,10 @@ select:focus {
 
 .background-image-services{
   background: url(../images/working-process/ecu_banner_white.jpg);
+}
+
+.background-image-process{
+  background: url(../images/working-process/ecu_serv_ban.png);
 }
 
 /*** 
@@ -3389,7 +3411,7 @@ select:focus {
   position: absolute;
   top: 13px;
   left: -5px;
-  background: #43ea65;
+  background: #08da08;
   height: 45px;
   width: 45px;
   border-radius: 50%;

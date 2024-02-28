@@ -14,7 +14,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(Process)
 class ProcessAdmin(admin.ModelAdmin):
-    list_display = ('name', 'photo_preview', 'description')  # Отображаемые поля в списке брэндов
+    list_display = ('name', 'photo_preview', 'description', 'steps')  # Отображаемые поля в списке брэндов
 
     def photo_preview(self, obj):
         return obj.photo.url if obj.photo else None  # Отображение превью изображения в админке

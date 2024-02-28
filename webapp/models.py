@@ -220,6 +220,7 @@ class Process(models.Model):
     name = models.CharField(max_length=100)  # Поле для названия брэнда
     photo = models.ImageField(upload_to='process_photos/')  # Поле для фото брэнда, сохраняемое в папке 'procces_photos/'
     description = RichTextField(verbose_name='description', default='Описание')
+    steps = models.IntegerField(verbose_name='Steps', default=0)
 
     def __str__(self):
         return self.name  # Возвращает название процесса в админке Django

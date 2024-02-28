@@ -136,68 +136,88 @@
     <!--*END MAIL FORM*-->
 
     <!--Start working process area-->
-    <section class="working-process-area background-image-about">
+    <section class="working-process-area background-image-process">
         <div class="container">
-            <div class="sec-title text-center">
+            <div class="sec-title text-center sec-title-proces">
                 <h1>Процесс Работы</h1>
             </div>
             <div class="row">
                 <!--Start single item-->
                 {% for main_proccesses in main_process %}
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-iten text-center">
-                        <div class="img-box dasded">
-                            <img src="{{ main_proccesses.photo.url}}" alt="Awesome Image" class="img-fixed-size-proccess">
-                            <div class="count">
-                                <h3>1</h3>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-iten text-center">
+                            <div class="img-box dasded">
+                                <img src="{{ main_proccesses.photo.url }}" alt="Awesome Image"
+                                     class="img-fixed-size-proccess">
+                                <div class="count">
+                                    <h3>{{ main_proccesses.steps }}</h3>
+                                </div>
+                            </div>
+                            <div class="text-box sec-title-proces">
+                                <h2>{{ main_proccesses.name }}</h2>
+                                <p>{{ main_proccesses.description | safe }}</p>
                             </div>
                         </div>
-                        <div class="text-box">
-                            <h3>{{ main_proccesses.name }}</h3>
-                            <p>{{ main_proccesses.description | safe }}</p>
-                        </div>
                     </div>
-                </div>
                 {% endfor %}
-                <!--End single item-->
-
-                <!--Start single item-->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-iten text-center">
-                        <div class="img-box dasded">
-                            <img src="{% static 'webapp/images/working-process/3.png' %}" alt="Awesome Image">
-                            <div class="count">
-                                <h3>3</h3>
-                            </div>
-                        </div>
-                        <div class="text-box">
-                            <h3>Диагностика</h3>
-                            <p>диагностика неисправностей и составление технического заключения о ремонтопригодности.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--End single item-->
-
-                <!--Start single item-->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-iten text-center">
-                        <div class="img-box dasded">
-                            <img src="{% static 'webapp/images/working-process/4.png' %}" alt="Awesome Image">
-                            <div class="count">
-                                <h3>4</h3>
-                            </div>
-                        </div>
-                        <div class="text-box">
-                            <h3>Ремонт</h3>
-                            <p>Ремонтируем оборудование, проверяем работоспособность на испытательном стенде и оправляем его вам.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single item-->
             </div>
         </div>
     </section>
     <!--End working process area-->
+
+        <!--Start fact counter area-->
+    <section class="fact-counter-area background-image-process">
+        <div class="container">
+            <div class="row">
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="2456" data-speed="5000"
+                                  data-refresh-interval="50">2456</span></h1>
+                        <span class="border"></span>
+                        <h3>Mobiles Repaired</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="146" data-speed="5000"
+                                  data-refresh-interval="50">146</span><i class="fa fa-plus" aria-hidden="true"></i>
+                        </h1>
+                        <span class="border"></span>
+                        <h3>Expert Technicians</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="853" data-speed="5000"
+                                  data-refresh-interval="50">853</span><i class="fa fa-plus" aria-hidden="true"></i>
+                        </h1>
+                        <span class="border"></span>
+                        <h3>Happy Customers</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="2381" data-speed="5000"
+                                  data-refresh-interval="50">2381</span></h1>
+                        <span class="border"></span>
+                        <h3>Desktop Repaired</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+
+            </div>
+        </div>
+    </section>
+    <!--End fact counter area-->
+
 
     <!--Start about us area-->
     <section class="about-us-area">
@@ -653,7 +673,6 @@
         </div>
     </section>
     <!--End latest blog area-->
-    <!-- HTML-форма, оформленная с помощью стилей Bootstrap 4 -->
 
 
 {% endblock %}
