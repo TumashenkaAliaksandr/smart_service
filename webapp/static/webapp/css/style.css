@@ -1310,7 +1310,7 @@ select:focus {
   z-index: 1;
 }
 .fact-counter-area::before {
-  background: rgba(21, 37, 69, 0.95) none repeat scroll 0 0;
+  background: rgba(15, 18, 23, 0.95) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
