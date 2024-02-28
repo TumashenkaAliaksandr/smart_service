@@ -214,3 +214,16 @@ class Callback(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Process(models.Model):
+    name = models.CharField(max_length=100)  # Поле для названия брэнда
+    photo = models.ImageField(upload_to='process_photos/')  # Поле для фото брэнда, сохраняемое в папке 'procces_photos/'
+    description = RichTextField(verbose_name='description', default='Описание')
+
+    def __str__(self):
+        return self.name  # Возвращает название процесса в админке Django
+
+    class Meta:
+        verbose_name = "Our Process"
+        verbose_name_plural = "Our Process"

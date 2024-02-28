@@ -12,6 +12,16 @@ class BrandAdmin(admin.ModelAdmin):
     photo_preview.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
 
+@admin.register(Process)
+class ProcessAdmin(admin.ModelAdmin):
+    list_display = ('name', 'photo_preview', 'description')  # Отображаемые поля в списке брэндов
+
+    def photo_preview(self, obj):
+        return obj.photo.url if obj.photo else None  # Отображение превью изображения в админке
+
+    photo_preview.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+
 @admin.register(ServicesMain)
 class ServicesMainAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
@@ -71,6 +81,7 @@ class Shop_BcmAdmin(admin.ModelAdmin):
 
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
+
 @admin.register(Shop_Repair_Operator)
 class Shop_Repair_OperatorAdmin(admin.ModelAdmin):
     list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
@@ -79,6 +90,7 @@ class Shop_Repair_OperatorAdmin(admin.ModelAdmin):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке
 
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
 
 @admin.register(Shop_Inverter)
 class Shop_InverterAdmin(admin.ModelAdmin):

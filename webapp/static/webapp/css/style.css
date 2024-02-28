@@ -960,6 +960,21 @@ select:focus {
     object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
 }
 
+.img-fixed-size-proccess {
+  width: 330px;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .img-fixed-size-proccess {
+        width: 100%; /* Установите желаемую ширину */
+        height: 100px; /* Установите желаемую высоту */
+        object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+    }
+
+}
+
 @media screen and (max-width: 767px) {
     .img-fixed-size {
         width: 100%; /* Установите желаемую ширину */

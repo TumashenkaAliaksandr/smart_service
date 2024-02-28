@@ -143,37 +143,24 @@
             </div>
             <div class="row">
                 <!--Start single item-->
+                {% for main_proccesses in main_process %}
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-iten text-center">
                         <div class="img-box dasded">
-                            <img src="{% static 'webapp/images/working-process/1.png' %}" alt="Awesome Image">
+                            <img src="{{ main_proccesses.photo.url}}" alt="Awesome Image" class="img-fixed-size-proccess">
                             <div class="count">
                                 <h3>1</h3>
                             </div>
                         </div>
                         <div class="text-box">
-                            <h3>Damaged Device</h3>
-                            <p>Repair plus provide a high range of service for your digital device</p>
+                            <h3>{{ main_proccesses.name }}</h3>
+                            <p>{{ main_proccesses.description | safe }}</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
                 <!--End single item-->
-                <!--Start single item-->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-iten text-center">
-                        <div class="img-box dasded">
-                            <img src="{% static 'webapp/images/working-process/2.png' %}" alt="Awesome Image">
-                            <div class="count">
-                                <h3>2</h3>
-                            </div>
-                        </div>
-                        <div class="text-box">
-                            <h3>Hand Over to Us</h3>
-                            <p>We have a over 48 branches in the US, you can easily reach us</p>
-                        </div>
-                    </div>
-                </div>
-                <!--End single item-->
+
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-iten text-center">
@@ -184,12 +171,13 @@
                             </div>
                         </div>
                         <div class="text-box">
-                            <h3>Repair the Device</h3>
-                            <p>Our expert technicians will repair your device very quick and quality</p>
+                            <h3>Диагностика</h3>
+                            <p>диагностика неисправностей и составление технического заключения о ремонтопригодности.</p>
                         </div>
                     </div>
                 </div>
                 <!--End single item-->
+
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-iten text-center">
@@ -200,8 +188,8 @@
                             </div>
                         </div>
                         <div class="text-box">
-                            <h3>Get Back From Us</h3>
-                            <p>Get back your device with high range of service & On time.</p>
+                            <h3>Ремонт</h3>
+                            <p>Ремонтируем оборудование, проверяем работоспособность на испытательном стенде и оправляем его вам.</p>
                         </div>
                     </div>
                 </div>

@@ -19,11 +19,13 @@ def index(request):
     main_serv = ServicesMain.objects.all()
     brands = Brand.objects.all()
     favorites = Favors.objects.all()
+    main_process = Process.objects.all()
 
     context = {
         'main_serv': main_serv,
         'brands': brands,
         'favorites': favorites,
+        'main_process': main_process,
     }
 
     return render(request, 'webapp/index.html', context=context)
