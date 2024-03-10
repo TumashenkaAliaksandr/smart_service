@@ -3,13 +3,13 @@
 
 
 {% block content %}
-<!--Start breadcrumb area-->     
-<section class="breadcrumb-area">
-	<div class="container text-center">
-		<h1>News Single</h1>
-	</div>
-</section>
-<!--End breadcrumb area-->
+
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/blog/ecu_bredcrumps.jpg' %}{% endif %}');">
+        <div class="container text-center">
+            <h1>Наши Новости</h1>
+        </div>
+    </section>
 
 <!--Start breadcrumb bottom area-->
 <section class="breadcrumb-botton-area">
@@ -39,7 +39,7 @@
                     <!--Start single blog post-->
                     <div class="single-blog-item">
                         <div class="img-holder">
-                            <img src="{% static 'blog/images/blog/1.jpg' %}" alt="Awesome Image">
+                            <img src="{% static 'webapp/images/blog/1.jpg' %}" alt="Awesome Image">
                         </div>
                         <div class="text-holder">
                             <div class="date-box">

@@ -41,7 +41,7 @@
     <!--End call to action area-->
 
     <!--Start services area-->
-    <section class="call-to-action-area-two">
+    <section class="call-to-action-area">
         <div class="container">
             <div class="row">
                 <div class="related-product">
@@ -52,7 +52,7 @@
                         <!--Start single product item-->
                         {% for main_services in main_serv|slice:":8" %}
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-product-item">
+                                <div class="single-product-item single-item-services">
                                     <div class="img-holder">
                                         <img src="{{ main_services.image.url }}" class="img-fixed-size"
                                              alt="Awesome Product Image">
@@ -173,42 +173,42 @@
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-item text-center">
-                        <h1><span class="timer" data-from="1" data-to="2456" data-speed="5000"
-                                  data-refresh-interval="50">2456</span></h1>
+                        <h1><span class="timer" data-from="1" data-to="1997 " data-speed="5000"
+                                  data-refresh-interval="50">21</span><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></h1>
                         <span class="border"></span>
-                        <h3>Mobiles Repaired</h3>
+                        <h3>Ремонтируем Электронику</h3>
                     </div>
                 </div>
                 <!--End single item-->
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-item text-center">
-                        <h1><span class="timer" data-from="1" data-to="146" data-speed="5000"
+                        <h1><span class="timer" data-from="1" data-to="300" data-speed="5000"
                                   data-refresh-interval="50">146</span><i class="fa fa-plus" aria-hidden="true"></i>
                         </h1>
                         <span class="border"></span>
-                        <h3>Expert Technicians</h3>
+                        <h3>Блоков Эбу</h3>
                     </div>
                 </div>
                 <!--End single item-->
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-item text-center">
-                        <h1><span class="timer" data-from="1" data-to="853" data-speed="5000"
+                        <h1><span class="timer" data-from="1" data-to="1000" data-speed="5000"
                                   data-refresh-interval="50">853</span><i class="fa fa-plus" aria-hidden="true"></i>
                         </h1>
                         <span class="border"></span>
-                        <h3>Happy Customers</h3>
+                        <h3>Электро Транспорт</h3>
                     </div>
                 </div>
                 <!--End single item-->
                 <!--Start single item-->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-item text-center">
-                        <h1><span class="timer" data-from="1" data-to="2381" data-speed="5000"
-                                  data-refresh-interval="50">2381</span></h1>
+                        <h1><span class="timer" data-from="1" data-to="100" data-speed="5000"
+                                  data-refresh-interval="50">2381</span><i class="fa fa-puzzle-piece" aria-hidden="true"></i></h1>
                         <span class="border"></span>
-                        <h3>Desktop Repaired</h3>
+                        <h3>Сложные Решения</h3>
                     </div>
                 </div>
                 <!--End single item-->
@@ -586,10 +586,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="sec-title-two pull-left">
-                        <h1>Latest News</h1>
+                        <h1>Наши Новости</h1>
                     </div>
                     <div class="button pull-right">
-                        <a href="../../../blog/templates/blog/blog.html">Read More News<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                        <a href="{% url 'blog:blog' %}">Узнать Больше Новостей<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

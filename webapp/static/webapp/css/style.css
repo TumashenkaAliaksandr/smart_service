@@ -883,11 +883,11 @@ select:focus {
 ***/
 .call-to-action-area {
   background: #f3fff3;
-  padding: 40px 0 40px;
+  padding: 45px 0 35px;
 }
 
 .call-to-action-area-mailform {
-  /*background: #f3fff3;*/
+  background: #f3fff3;
   padding: 40px 0 40px;
 }
 
@@ -904,10 +904,18 @@ select:focus {
 
 .call-to-action-area .single-item {
   margin-bottom: 40px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f3fff3;
   padding: 20px 0px 15px;
   box-shadow: 0 0 10px rgba(0 0 0 / 30%);
 }
+
+.call-to-action-area .single-item-services {
+  margin-bottom: 40px;
+  border: 1px solid #f4f4f4;
+  padding: 0px 0px 13px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 30%);
+}
+
 .call-to-action-area .single-item .img-holder {
   display: block;
   overflow: hidden;
@@ -5105,7 +5113,7 @@ select:focus {
   padding-top: 80px;
 }
 .single-product-item{
-  background: #f7f7f7;
+  background: #f1efef;
   margin-bottom: 40px;
   transition: all 0.7s ease;
 }
@@ -5166,7 +5174,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 }
 
 .single-product-item .title-holder {
-  padding: 13px 15px 15px;
+  padding: 15px 15px 15px;
 }
 
 @media only screen and (max-width: 736px) {

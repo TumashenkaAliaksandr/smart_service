@@ -5,21 +5,20 @@
 {% block content %}
 
     <!--Start breadcrumb area-->
-    <section class="breadcrumb-area">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/blog/ecu_bredcrumps.jpg' %}{% endif %}');">
         <div class="container text-center">
-            <h1>Latest News</h1>
+            <h1>Наши Новости</h1>
         </div>
     </section>
-    <!--End breadcrumb area-->
 
     <!--Start breadcrumb bottom area-->
     <section class="breadcrumb-botton-area">
         <div class="container">
             <div class="left pull-left">
                 <ul>
-                    <li><a href="../../../webapp/templates/webapp/index.html">Home</a></li>
+                    <li><a href="{% url 'webapp:home' %}">Главная</a></li>
                     <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                    <li>News</li>
+                    <li>Новости</li>
                 </ul>
             </div>
             <div class="right pull-right">
