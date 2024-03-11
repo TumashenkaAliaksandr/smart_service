@@ -2504,7 +2504,7 @@ select:focus {
 }
 .sidebar-wrapper .single-sidebar .sidebar-title {
   overflow: hidden;
-  padding-bottom: 36px;
+  padding-bottom: 41px;
   margin-top: -4px;
 }
 .sidebar-wrapper .single-sidebar .sidebar-title h1 {
@@ -2697,9 +2697,9 @@ select:focus {
   margin-right: -3px;
   margin-top: -5px;
 }
-.single-sidebar.popular-tag .sidebar-title {
-  padding-bottom: 41px;
-}
+/*.single-sidebar.popular-tag .sidebar-title {*/
+/*  padding-bottom: 41px;*/
+/*}*/
 .single-sidebar .popular-tag li {
   display: inline-block;
   margin: 0 3px 10px;
