@@ -198,6 +198,24 @@ button{
   margin: 0;
 }
 
+.sec-title-proces h1 {
+  color: #08da08;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.sec-title-proces h2 {
+  color: #08da08;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
 
 .sec-title-two {
   margin-top: -1px;
@@ -210,7 +228,7 @@ button{
   font-weight: 700;
   line-height: 32px;
   margin: 0;
-  text-transform: capitalize;    
+  text-transform: capitalize;
 }
 .sec-title-two .border {
   background: #ececec none repeat scroll 0 0;
@@ -328,16 +346,16 @@ select:focus {
 }
 
 #contact-form input[type="text"].error{
-  border-color: red;    
+  border-color: red;
 }
 #contact-form input[type="email"].error{
-  border-color: red;    
+  border-color: red;
 }
 #contact-form select.error {
   border-color: red;
 }
 #contact-form textarea.error{
-  border-color: red;    
+  border-color: red;
 }
 
 /* Post pagination styles */
@@ -384,12 +402,12 @@ select:focus {
 .overlay .box{
   display: table;
   height: 100%;
-  width: 100%;    
+  width: 100%;
 }
 .overlay .box .content{
   display: table-cell;
   text-align: center;
-  vertical-align: middle;    
+  vertical-align: middle;
 }
 
 
@@ -423,14 +441,14 @@ select:focus {
   width: 90px;
 }
 .top-bar-area .topinfo .select-items .single-select-item.extras .bootstrap-select{
-  width: 90px;    
+  width: 90px;
 }
 .top-bar-area .topinfo .select-items .single-select-item.extras .bootstrap-select.btn-group .dropdown-toggle .caret{
   position: absolute;
   top: 50%;
   right: 10px;
   margin-top: -2px;
-  vertical-align: middle;    
+  vertical-align: middle;
 }
 
 
@@ -536,7 +554,7 @@ select:focus {
 .header-contact-info ul li .iocn-holder, .header-contact-info ul li .text-holder{
   display: table-cell;
   vertical-align: middle;
-} 
+}
 .header-contact-info ul li .text-holder {
   padding-left: 15px;
 }
@@ -600,7 +618,7 @@ select:focus {
 }
 .main-menu .navigation > li.dropdown > a {}
 .main-menu .navigation > li.dropdown > a:after {}
-.main-menu .navigation > li:hover > a, 
+.main-menu .navigation > li:hover > a,
 .main-menu .navigation > li.current > a {
   color: #43ea65;
   opacity: 1;
@@ -802,7 +820,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Rev Slider Wrapper style
 =============================================
@@ -854,18 +872,22 @@ select:focus {
   background: url(../images/working-process/ecu_banner_white.jpg);
 }
 
-/*** 
+.background-image-process{
+  background: url(../images/working-process/ecu_serv_ban.png);
+}
+
+/***
 =============================================
     Call to action Area style
 =============================================
 ***/
 .call-to-action-area {
   background: #f3fff3;
-  padding: 40px 0 40px;
+  padding: 45px 0 35px;
 }
 
 .call-to-action-area-mailform {
-  /*background: #f3fff3;*/
+  background: #f3fff3;
   padding: 40px 0 40px;
 }
 
@@ -882,14 +904,22 @@ select:focus {
 
 .call-to-action-area .single-item {
   margin-bottom: 40px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f3fff3;
   padding: 20px 0px 15px;
   box-shadow: 0 0 10px rgba(0 0 0 / 30%);
 }
+
+.call-to-action-area .single-item-services {
+  margin-bottom: 40px;
+  border: 1px solid #f4f4f4;
+  padding: 0px 0px 13px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 30%);
+}
+
 .call-to-action-area .single-item .img-holder {
   display: block;
   overflow: hidden;
-  position: relative;   
+  position: relative;
 }
 .call-to-action-area .single-item .img-holder img {
   -webkit-transition: all 0.7s ease;
@@ -905,7 +935,7 @@ select:focus {
   height: 45px;
   line-height: 48px;
   transition: all 500ms ease 0s;
-  width: 45px;   
+  width: 45px;
 }
 
 .action h4 {
@@ -934,7 +964,7 @@ select:focus {
   margin: 18px 0 0;
 }
 .call-to-action-area .single-item .text-holder p{
-    
+
 }
 
 .call-to-action-area .single-item:hover a h5{
@@ -958,6 +988,21 @@ select:focus {
     width: 330px; /* Установите желаемую ширину */
     height: 180px; /* Установите желаемую высоту */
     object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+}
+
+.img-fixed-size-proccess {
+  width: 330px;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .img-fixed-size-proccess {
+        width: 100%; /* Установите желаемую ширину */
+        height: 100px; /* Установите желаемую высоту */
+        object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1037,7 +1082,7 @@ select:focus {
     animation: slideInFromLeft 1s ease-out; /* Применяем анимацию */
 }
 
-/*** 
+/***
 =============================================
     Categories Area style
 =============================================
@@ -1096,7 +1141,7 @@ select:focus {
 }
 
 .categories-area .sec-title h1{
-    
+
 }
 .categories-area .single-item {
   margin-bottom: 30px;
@@ -1148,7 +1193,7 @@ select:focus {
 .categories-area .single-item .icon-holder .icon-box {
   display: table;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 .categories-area .single-item .icon-holder .icon-box .icon{
   display: table-cell;
@@ -1175,18 +1220,18 @@ select:focus {
   transition: all 500ms ease;
 }
 .categories-area .single-item .text-holder p{
-  transition: all 500ms ease;    
+  transition: all 500ms ease;
 }
 .categories-area .single-item:hover .text-holder h5{
   color: #ffffff;
 }
 .categories-area .single-item:hover .text-holder p{
-  color: #fff;    
+  color: #fff;
 }
 
 
 
-/*** 
+/***
 =============================================
     About Us Area style
 =============================================
@@ -1220,7 +1265,7 @@ select:focus {
   transition: all 0.7s ease;
 }
 .about-us-area .about-content .text-holder h3:hover{
-  text-shadow: 2px 1px 1px #222; 
+  text-shadow: 2px 1px 1px #222;
 }
 .about-us-area .about-content .text-holder h3 span{
   color: #43ea65;
@@ -1253,11 +1298,11 @@ select:focus {
   text-transform: capitalize;
 }
 .about-us-area .choose-us-content ul li .text-holder p{
-  line-height: 24px;    
+  line-height: 24px;
 }
 
 
-/*** 
+/***
 =============================================
     Fact counter Area style
 =============================================
@@ -1273,7 +1318,7 @@ select:focus {
   z-index: 1;
 }
 .fact-counter-area::before {
-  background: rgba(21, 37, 69, 0.95) none repeat scroll 0 0;
+  background: rgba(15, 18, 23, 0.95) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1338,7 +1383,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Appoinment Area style
 =============================================
@@ -1377,7 +1422,7 @@ select:focus {
   background: rgb(16, 166, 46, 0.7) none repeat scroll 0 0;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  opacity: 0;    
+  opacity: 0;
 }
 .appoinment-area .products .single-product ul li .img-holder .overlay-box .box{
   display: table;
@@ -1401,12 +1446,12 @@ select:focus {
 }
 .appoinment-area .products .single-product ul:hover li .img-holder .overlay-box{
   height: 100%;
-  opacity: 1;    
+  opacity: 1;
 }
 
 
 .appoinment-area .appoinment {
-  
+
 }
 .appoinment-area .appoinment .appoinment-form {
   border: 3px solid #f7f7f7;
@@ -1526,7 +1571,7 @@ select:focus {
 .ui-datepicker .ui-datepicker-prev {
   left: 5px;
 }
-.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
   border-radius: 30%;
   height: 20px;
@@ -1539,7 +1584,7 @@ select:focus {
 .ui-datepicker .ui-datepicker-next {
   right: 5px;
 }
-.ui-datepicker .ui-datepicker-prev:hover, 
+.ui-datepicker .ui-datepicker-prev:hover,
 .ui-datepicker .ui-datepicker-next:hover {
   top: 7px;
   background: #fff;
@@ -1568,7 +1613,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Latest blog Area style
 =============================================
@@ -1610,12 +1655,12 @@ select:focus {
 .latest-blog-area .single-latest-blog .img-holder{
   display: block;
   overflow: hidden;
-  position: relative;     
+  position: relative;
 }
 .latest-blog-area .single-latest-blog .img-holder img {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;     
+  width: 100%;
 }
 .latest-blog-area .single-latest-blog .img-holder .overlay-box{
   position: absolute;
@@ -1626,7 +1671,7 @@ select:focus {
   background: rgb(16, 166, 46, 0.5) none repeat scroll 0 0;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  opacity: 0;        
+  opacity: 0;
 }
 .latest-blog-area .single-latest-blog .img-holder .overlay-box .box{
   display: table;
@@ -1647,11 +1692,11 @@ select:focus {
   height: 45px;
   line-height: 48px;
   transition: all 500ms ease 0s;
-  width: 45px;    
+  width: 45px;
 }
 .latest-blog-area .single-latest-blog:hover .img-holder .overlay-box{
   height: 100%;
-  opacity: 1;   
+  opacity: 1;
 }
 .latest-blog-area .single-latest-blog:hover .img-holder img {
   -webkit-transform:scale(1.3);
@@ -1672,7 +1717,7 @@ select:focus {
   transition: all 500ms ease;
   position: relative;
   z-index: 1;
-} 
+}
 .latest-blog-area .single-latest-blog .text-holder:before{
   position: absolute;
   bottom: 0;
@@ -1682,7 +1727,7 @@ select:focus {
   background: #ffffff;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  opacity: 0; 
+  opacity: 0;
   content: "";
   z-index: -1;
 }
@@ -1738,7 +1783,7 @@ select:focus {
 }
 
 
-/*** 
+/***
 =============================================
     Testimonial Area style
 =============================================
@@ -1773,7 +1818,7 @@ select:focus {
 .testimonial-carousel .single-item:hover .img-holder{
   background: #0d2d1a;
   border-color: #0d2d1a;
-} 
+}
 .testimonial-carousel .single-item .text-holder {
   border: 1px solid #f7f7f7;
   margin-top: -48px;
@@ -1819,9 +1864,9 @@ select:focus {
   background: #0d2d1a;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  opacity: 0; 
+  opacity: 0;
   content: "";
-  z-index: -1;    
+  z-index: -1;
 }
 .testimonial-carousel .single-item:hover .client-info{
   border-color: #0d2d1a;
@@ -1907,7 +1952,7 @@ select:focus {
   background: #43ea65;
 }
 .testimonial-area .owl-theme .owl-nav div .fa:hover{
-  color: #fff;    
+  color: #fff;
 }
 .testimonial-area .owl-theme .owl-nav div .fa {
   color: #ececec;
@@ -1919,7 +1964,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Brand Area style
 =============================================
@@ -1930,7 +1975,7 @@ select:focus {
   padding-top: 50px;
 }
 .brand-area .brand .owl-stage-outer{
-  z-index:10;		
+  z-index:10;
 }
 .brand-area .brand .single-item {
   border: 2px solid #eaeaea;
@@ -1951,7 +1996,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Footer area style
 =============================================
@@ -2027,7 +2072,7 @@ select:focus {
 
 .single-footer-widget .services-list{ }
 .single-footer-widget .services-list li{
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
   padding-left: 15px;
   position: relative;
 }
@@ -2041,7 +2086,7 @@ select:focus {
   font-size: 16px;
   position: absolute;
   top: 1px;
-  left: 0; 
+  left: 0;
   transition: all 500ms ease;
 }
 .single-footer-widget .services-list li a{
@@ -2074,7 +2119,7 @@ select:focus {
   font-weight: 400;
 }
 .single-footer-widget .subscribe-form form {
-  position: relative;  
+  position: relative;
 }
 .single-footer-widget .subscribe-form form input[type="text"] {
   background: #0d2d1a;
@@ -2109,7 +2154,7 @@ select:focus {
   background: #fff;
   color: #1b1b1b;
 }
-.single-footer-widget .subscribe-form form input[type=text]:focus + button, 
+.single-footer-widget .subscribe-form form input[type=text]:focus + button,
 .single-footer-widget .subscribe-form form button:hover {
   background: #43ea65 none repeat scroll 0 0;
   color: #1b1b1b;
@@ -2170,7 +2215,7 @@ select:focus {
 }
 
 .single-footer-widget .footer-contact-info li .text-holder {
-  
+
 }
 .single-footer-widget .footer-contact-info li .text-holder h5 {
   color: #c1c1c1;
@@ -2224,7 +2269,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Breadcrumb area style
 =============================================
@@ -2244,7 +2289,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Breadcrumb botton area style
 =============================================
@@ -2293,7 +2338,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Area style
 =============================================
@@ -2329,7 +2374,7 @@ select:focus {
 .single-blog-item .img-holder img {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;      
+  width: 100%;
 }
 .single-blog-item .overlay .box .content a i {
   background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
@@ -2344,12 +2389,12 @@ select:focus {
 }
 .single-blog-item:hover .img-holder .overlay{
   -webkit-transform: scale(1);
-  transform: scale(1);    
+  transform: scale(1);
 }
 .single-blog-item:hover .img-holder img{
   -webkit-transform:scale(1.3);
-  transform:scale(1.3);    
-} 
+  transform:scale(1.3);
+}
 .single-blog-item .overlay .box .content a:hover i{
   background: #0d2d1a;
   color: #43ea65;
@@ -2459,8 +2504,8 @@ select:focus {
 }
 .sidebar-wrapper .single-sidebar .sidebar-title {
   overflow: hidden;
-  padding-bottom: 36px;
-  margin-top: -4px;
+  padding-bottom: 41px;
+  margin-top: -2px;
 }
 .sidebar-wrapper .single-sidebar .sidebar-title h1 {
   color: #3d3d3d;
@@ -2520,7 +2565,7 @@ select:focus {
   background: #10a62e;
   color: #fff;
 }
-.sidebar-wrapper .single-sidebar .search-form input[type="text"]:focus + button, 
+.sidebar-wrapper .single-sidebar .search-form input[type="text"]:focus + button,
 .sidebar-wrapper .single-sidebar .search-form button:hover {
     background: #0d2d1a none repeat scroll 0 0;
     color: #fff;
@@ -2611,12 +2656,12 @@ select:focus {
 
 
 .single-sidebar .blog-archive {
-  margin-top: -8px;    
+  margin-top: -8px;
 }
 .single-sidebar .blog-archive li {
   border-bottom: 1px solid #f7f7f7;
   margin-bottom: 12px;
-  padding-bottom: 13px;  
+  padding-bottom: 13px;
 }
 .single-sidebar .blog-archive li:last-child {
   margin-bottom: 0;
@@ -2636,7 +2681,7 @@ select:focus {
   font-size: 16px;
   position: absolute;
   top: -2px;
-  left: 0;  
+  left: 0;
   transition: all 500ms ease;
 }
 .single-sidebar .blog-archive li a:hover{
@@ -2652,9 +2697,9 @@ select:focus {
   margin-right: -3px;
   margin-top: -5px;
 }
-.single-sidebar.popular-tag .sidebar-title {
-  padding-bottom: 41px;
-}
+/*.single-sidebar.popular-tag .sidebar-title {*/
+/*  padding-bottom: 41px;*/
+/*}*/
 .single-sidebar .popular-tag li {
   display: inline-block;
   margin: 0 3px 10px;
@@ -2679,13 +2724,13 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Single Area style
 =============================================
 ***/
 .blog-single-area .single-blog-item:hover .img-holder img {
-  transform: none;    
+  transform: none;
 }
 .blog-single-area .single-blog-item .text-holder .text-box .blog-title:hover{
   color: #3d3d3d;
@@ -2718,7 +2763,7 @@ select:focus {
   vertical-align: top;
 }
 .blog-single-area .middle-content-box .text-holder {
-  padding-left: 30px; 
+  padding-left: 30px;
   position: relative;
 }
 .blog-single-area .middle-content-box .text-holder:before{
@@ -2732,7 +2777,7 @@ select:focus {
   padding-right:20px ;
   position: absolute;
   top: -3px;
-  left: 30px;    
+  left: 30px;
 }
 .blog-single-area .middle-content-box .text-holder {
   padding-left: 30px;
@@ -2779,7 +2824,7 @@ select:focus {
 }
 
 .blog-single-area .tag-social-share-box .social-share {
-  
+
 }
 .blog-single-area .tag-social-share-box .social-share h5 {
   color: #3d3d3d;
@@ -2852,7 +2897,7 @@ select:focus {
   text-transform: capitalize;
 }
 .blog-single-area .author-box .text-holder p{
- 
+
 }
 
 .blog-single-area .author-box .text-holder .social-link {
@@ -2942,7 +2987,7 @@ select:focus {
   color: #3d3d3d;
   font-size: 28px;
   font-weight: 700;
-  text-transform: capitalize;  
+  text-transform: capitalize;
 }
 .blog-single-area .add-comment-box .add-rating-box {
   padding-bottom: 17px;
@@ -2954,7 +2999,7 @@ select:focus {
   margin: 0 0 3px;
 }
 .blog-single-area .add-comment-box .add-rating-box ul {
-  
+
 }
 .blog-single-area .add-comment-box .add-rating-box ul li {
   border-right: 1px solid #ebebeb;
@@ -2994,7 +3039,7 @@ select:focus {
   font-weight: 400;
   height: 50px;
   padding: 0 15px;
-  width: 100%;  
+  width: 100%;
   margin-bottom: 12px;
   transition: all 500ms ease;
 }
@@ -3022,7 +3067,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Contact Area style
 =============================================
@@ -3102,7 +3147,7 @@ select:focus {
   position: relative;
 }
 .contact-area .accordion-box .accordion .accord-content.collapsed{
-	display:block;	
+	display:block;
 }
 
 .contact-area .contact-info-list {
@@ -3143,7 +3188,7 @@ select:focus {
 }
 
 .contact-area .contact-form {
-  
+
 }
 .contact-area .contact-form form input[type="text"],
 .contact-area .contact-form form input[type="email"],
@@ -3181,12 +3226,12 @@ select:focus {
   border-top-color: #0d2d1a;
   border-left-color: #0d2d1a;
   border-right-color: #0d2d1a;
-  
+
 }
 
 
 
-/*** 
+/***
 =============================================
     Google map Area style
 =============================================
@@ -3201,7 +3246,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Video Gallery Area style
 =============================================
@@ -3211,7 +3256,7 @@ select:focus {
   padding-bottom: 80px;
 }
 .video-gallery-area .text-holder {
-  
+
 }
 .video-gallery-area .text-holder h2 {
   color: #43ea65;
@@ -3256,11 +3301,11 @@ select:focus {
 .video-gallery-area .video-gallery .overlay-gallery .icon-holder{
   display: table;
   height: 100%;
-  width: 100%;    
+  width: 100%;
 }
 .video-gallery-area .video-gallery .overlay-gallery .icon-holder .icon{
   display: table-cell;
-  vertical-align: middle;    
+  vertical-align: middle;
 }
 .video-gallery-area .video-gallery .overlay-gallery .icon-holder .icon a img{
   width: auto;
@@ -3288,7 +3333,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Core Value Area style
 =============================================
@@ -3332,7 +3377,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Working Process Area style
 =============================================
@@ -3374,7 +3419,7 @@ select:focus {
   position: absolute;
   top: 13px;
   left: -5px;
-  background: #43ea65;
+  background: #08da08;
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -3419,7 +3464,7 @@ select:focus {
 .single-team-member .img-holder img{
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;       
+  width: 100%;
 }
 .single-team-member:hover .img-holder img {
   -webkit-transform:scale(1.1);
@@ -3450,7 +3495,7 @@ select:focus {
   text-align: center;
 }
 .single-team-member .img-holder .overlay-one .overlay-inner .content ul{
-    
+
 }
 .single-team-member .img-holder .overlay-one .overlay-inner .content ul li{
   display: inline-block;
@@ -3492,7 +3537,7 @@ select:focus {
 
 .single-team-member:hover .img-holder .overlay-one {
   top:0px;
-  opacity:1; 
+  opacity:1;
 }
 .single-team-member:hover .img-holder .phone  {
   left: 0;
@@ -3513,12 +3558,12 @@ select:focus {
   color: #43ea65;
 }
 .single-team-member .text-holder .text{
-  margin-top: 10px;    
+  margin-top: 10px;
 }
 
 
 
-/*** 
+/***
 =============================================
    Faq Single Area style
 =============================================
@@ -3582,7 +3627,7 @@ select:focus {
   position: relative;
 }
 .faq-single-area .accordion-box .accordion .accord-content.collapsed{
-	display:block;	
+	display:block;
 }
 .faq-single-area .accordion-box .accordion .accord-content p {
   color: #9a9a9a;
@@ -3605,7 +3650,7 @@ select:focus {
   position: absolute;
   top: 0;
   width: 1000%;
-  z-index: -1;    
+  z-index: -1;
 }
 .faq-single-area .question-form .sec-title-two {
   padding-bottom: 30px;
@@ -3645,7 +3690,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Faq Content Area style
 =============================================
@@ -3715,17 +3760,17 @@ select:focus {
 }
 .faq-content-area .faq-content .single-item:hover .text a{
   color: #43ea65;
-} 
+}
 
 
 
-/*** 
+/***
 =============================================
    Faq Content Area style
 =============================================
 ***/
 .testimonial-section{
-  padding: 80px 0 30px;    
+  padding: 80px 0 30px;
 }
 .testimonial-section .single-testimonial-item{
   margin-bottom: 50px;
@@ -3792,11 +3837,11 @@ select:focus {
 }
 .testimonial-section .single-testimonial-item:hover .client-info .img-box{
   border-color: #43ea65;
-} 
+}
 
 
 
-/*** 
+/***
 =============================================
    Pricing Plan One Area style
 =============================================
@@ -3814,10 +3859,10 @@ select:focus {
   margin: 20px 0 0;
 }
 .pricing-plan-one-area .single-pricing-box {
-  
+
 }
 .pricing-plan-one-area .single-pricing-box .pricing-plan {
-  
+
 }
 .pricing-plan-one-area .single-pricing-box .pricing-plan .table-top {
   background: #43ea65 none repeat scroll 0 0;
@@ -3841,7 +3886,7 @@ select:focus {
 }
 .pricing-plan-one-area .single-pricing-box .pricing-plan .table-heading {
   background: #f7f7f7 none repeat scroll 0 0;
-  width: 100%;  
+  width: 100%;
 }
 .pricing-plan-one-area .single-pricing-box .pricing-plan .table-heading tr{}
 .pricing-plan-one-area .single-pricing-box .pricing-plan .table-heading tr th {
@@ -3880,13 +3925,13 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Pricing Plan Two Area style
 =============================================
 ***/
 .pricing-plan-two-area {
-  padding-bottom: 80px;  
+  padding-bottom: 80px;
 }
 .pricing-plan-two-area .sec-title-two {
   padding-bottom: 40px;
@@ -3916,10 +3961,10 @@ select:focus {
   position: relative;
 }
 .pricing-plan-two-area .pricing-plan table .table-heading {
-  
+
 }
 .pricing-plan-two-area .pricing-plan table .table-heading tr {
-  
+
 }
 .pricing-plan-two-area .pricing-plan table .table-heading tr th {
   border-bottom: 2px solid #f7f7f7;
@@ -3955,7 +4000,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Service Single Area style
 =============================================
@@ -4038,7 +4083,7 @@ select:focus {
 }
 #service-single-area .service-single-sidebar .service-lists li a:hover::before,
 #service-single-area .service-single-sidebar .service-lists li.active a::before{
-  width: 5px;  
+  width: 5px;
 }
 #service-single-area .service-single-sidebar .service-lists .allservice a:hover i{
   color: #fff;
@@ -4062,7 +4107,7 @@ select:focus {
   background: #0d2d1a;
   opacity: .75;
   content: "";
-  z-index: -1; 
+  z-index: -1;
 }
 #service-single-area .service-single-sidebar .repair-time h3 {
   color: #ffffff;
@@ -4095,7 +4140,7 @@ select:focus {
 }
 
 #service-single-area .service-single-content .title {
-  padding-bottom: 29px;  
+  padding-bottom: 29px;
 }
 #service-single-area .service-single-content .title h2 {
   color: #3d3d3d;
@@ -4120,7 +4165,7 @@ select:focus {
 }
 
 #service-single-area .service-single-content .middle-content {
-  padding-top: 60px;  
+  padding-top: 60px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4160,7 +4205,7 @@ select:focus {
 
 
 #service-single-area .service-single-content .bottom-content {
-  padding-top: 13px;  
+  padding-top: 13px;
 }
 #service-single-area .service-single-content .bottom-content .text-holder {
   margin-left: 25px;
@@ -4192,7 +4237,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Not found area style
 =============================================
@@ -4273,7 +4318,7 @@ select:focus {
   background: #0d2d1a;
   color: #fff;
 }
-.not-found-content .search-form input[type="text"]:focus + button, 
+.not-found-content .search-form input[type="text"]:focus + button,
 .not-found-content .search-form button:hover {
   background: #43ea65 none repeat scroll 0 0;
   color: #fff;
@@ -4281,7 +4326,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Checkout Area style
 =============================================
@@ -4331,7 +4376,7 @@ select:focus {
   background: #f7f7f7;
   display: block;
   padding: 20px 28px 21px;
-  position: relative; 
+  position: relative;
   margin-bottom: 60px;
 }
 .checkout-area .coupon:before {
@@ -4341,17 +4386,17 @@ select:focus {
   width: 2px;
   height: 100%;
   background: #43ea65;
-  content: "";  
+  content: "";
 }
 .checkout-area .coupon h5 {
   color: #3d3d3d;
   font-size: 16px;
-  font-weight: 400;  
+  font-weight: 400;
 }
 .checkout-area .coupon h5 a {
   color: #43ea65;
   display: inline-block;
-  padding-left: 15px;  
+  padding-left: 15px;
 }
 
 
@@ -4479,7 +4524,7 @@ select:focus {
   display: block;
   max-width: 100%;
 }
-.checkout-area .table .cart-table tbody tr .product-column .column-box .prod-thumb, 
+.checkout-area .table .cart-table tbody tr .product-column .column-box .prod-thumb,
 .checkout-area .table .cart-table tbody tr .product-column .column-box .product-title{
   display: table-cell;
   vertical-align: middle;
@@ -4623,7 +4668,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Login Register Area style
 =============================================
@@ -4742,10 +4787,10 @@ select:focus {
 }
 
 .login-register-area .form .social-icon li a:hover i{
-  background: #18387b;   
+  background: #18387b;
 }
 .login-register-area .form .social-icon li a:hover i.twitter{
-  background: #12addf;    
+  background: #12addf;
 }
 .login-register-area .form .social-icon li a:hover i.gplus{
     background: #c62d1a;
@@ -4753,7 +4798,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Cart area  style
 =============================================
@@ -4820,7 +4865,7 @@ select:focus {
   display: block;
   max-width: 100%;
 }
-.cart-area .cart-table tbody tr .prod-column .column-box .prod-thumb, 
+.cart-area .cart-table tbody tr .prod-column .column-box .prod-thumb,
 .cart-area .cart-table tbody tr .prod-column .column-box .title{
   display: table-cell;
   vertical-align: middle;
@@ -5036,7 +5081,7 @@ select:focus {
   color: #fff;
 }
 .cart-bottom button.checkout-btn{
-  padding: 18px 38px 15px; 
+  padding: 18px 38px 15px;
   margin-top: 30px;
 }
 .cart-bottom button.checkout-btn:hover{
@@ -5049,7 +5094,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Shop area  style
 =============================================
@@ -5068,14 +5113,14 @@ select:focus {
   padding-top: 80px;
 }
 .single-product-item{
-  background: #f7f7f7;
+  background: #f1efef;
   margin-bottom: 40px;
   transition: all 0.7s ease;
 }
 .single-product-item:hover{
 -webkit-box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 -moz-box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
-box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);    
+box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 }
 .single-product-item .img-holder{
   display: block;
@@ -5086,7 +5131,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 .single-product-item .img-holder img{
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;        
+  width: 100%;
 }
 .single-product-item .img-holder .overlay-box {
   background: rgba(21, 37, 69, 0.8) none repeat scroll 0 0;
@@ -5109,7 +5154,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   vertical-align: middle;
 }
 .single-product-item .img-holder .overlay-box .box .content a {
-  padding: 13px 25px 13px; 
+  padding: 13px 25px 13px;
   border: none;
   transition: all 500ms ease;
   transition-delay: 0.15s;
@@ -5121,15 +5166,15 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 
 .single-product-item:hover .img-holder .overlay-box{
   height: 100%;
-  opacity: 1;    
+  opacity: 1;
 }
 .single-product-item:hover .img-holder img{
   -webkit-transform:scale(1.3);
-  transform:scale(1.3);    
+  transform:scale(1.3);
 }
 
 .single-product-item .title-holder {
-  padding: 13px 15px 15px;
+  padding: 15px 15px 15px;
 }
 
 @media only screen and (max-width: 736px) {

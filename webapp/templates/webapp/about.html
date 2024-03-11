@@ -3,6 +3,7 @@
 
 
 {% block content %}
+
     <!--Start breadcrumb area-->
     <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
         <div class="container text-center">
@@ -24,44 +25,52 @@
     </section>
     <!--End breadcrumb bottom area-->
 
-<!--Start video gallery area-->
-<section class="video-gallery-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="text-holder">
-                    <h2>"We provide full and specific solutions for our every customers."</h2>
-                    <div class="top-text">
-                        <p>Started in the year 1974 with a vision of providing repair solutions to customers and dealers all over USA. Repair Plus, based in Newyork, USA, aims to be one of the best Phone /Laptops & Desktops repair company and leading provider of spare components and tools within USA.</p>
-                    </div>
-                    <div class="bottom-text">
-                        <p>Our commitment to bring professionalism, good service & trust to the Phone repair service & maintenance business. We take immense pride in sending some of the most of professional technicians.</p>
-                        <div class="certified-logo">
-                            <img src="{% static 'webapp/images/resources/certified-logo.png' %}" alt="Certified Logo">
+    <!--Start video gallery area-->
+    <section class="video-gallery-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-holder">
+                        <h2>"We provide full and specific solutions for our every customers."</h2>
+                        <div class="top-text">
+                            <p>Started in the year 1974 with a vision of providing repair solutions to customers and
+                                dealers all over USA. Repair Plus, based in Newyork, USA, aims to be one of the best
+                                Phone /Laptops & Desktops repair company and leading provider of spare components and
+                                tools within USA.</p>
+                        </div>
+                        <div class="bottom-text">
+                            <p>Our commitment to bring professionalism, good service & trust to the Phone repair service
+                                & maintenance business. We take immense pride in sending some of the most of
+                                professional technicians.</p>
+                            <div class="certified-logo">
+                                <img src="{% static 'webapp/images/resources/certified-logo.png' %}"
+                                     alt="Certified Logo">
+                            </div>
+                        </div>
+                        <div class="signature">
+                            <img src="{% static 'webapp/images/resources/signature.png' %}" alt="Signature">
                         </div>
                     </div>
-                    <div class="signature">
-                        <img src="{% static 'webapp/images/resources/signature.png' %}" alt="Signature">
-                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="video-gallery">
-                    <img src="{% static 'webapp/images/resources/video-gallery.jpg' %}" alt="Awesome Video Gallery">
-                    <div class="overlay-gallery">
-                        <div class="icon-holder">
-                            <div class="icon">
-                                <a class="html5lightbox" title="RepairPlus Gallery" href="https://www.youtube.com/watch?v=KssOT2QVg-M"><img src="{% static 'webapp/images/icon/play-btn.png' %}" alt="Play Button"/></a>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="video-gallery">
+                        <img src="{% static 'webapp/images/resources/video-gallery.jpg' %}" alt="Awesome Video Gallery">
+                        <div class="overlay-gallery">
+                            <div class="icon-holder">
+                                <div class="icon">
+                                    <a class="html5lightbox" title="RepairPlus Gallery"
+                                       href="https://www.youtube.com/watch?v=KssOT2QVg-M"><img
+                                            src="{% static 'webapp/images/icon/play-btn.png' %}" alt="Play Button"/></a>
+                                </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
+
             </div>
-            
         </div>
-    </div>
-</section>
-<!--End video gallery area-->
+    </section>
+    <!--End video gallery area-->
 
     <!--*Mail Form*-->
     <section class="call-to-action-area-mailform services-area">
@@ -105,300 +114,317 @@
     </section>
     <!--*END MAIL FORM*-->
 
-<!--Start core value area-->
-<section class="core-value-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 content pull-right">
-                <div class="text-holder">
-                    <div class="sec-title-two">
-                        <h1>Our Core Values</h1>
+    <!--Start core value area-->
+    <section class="core-value-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 content pull-right">
+                    <div class="text-holder">
+                        <div class="sec-title-two">
+                            <h1>Our Core Values</h1>
+                            <span class="border"></span>
+                        </div>
+                        <div class="row">
+                            <!--Start single item-->
+                            <div class="col-md-6">
+                                <div class="single-item">
+                                    <div class="icon-box">
+                                        <span class="flaticon-thumb-up"></span>
+                                    </div>
+                                    <div class="text-box">
+                                        <h3>Positive & Optimistic</h3>
+                                        <p>How all this mistaken idea denouncing seds pleasurepraising pain was born and
+                                            will give you a complete account of the system.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End single item-->
+                            <!--Start single item-->
+                            <div class="col-md-6">
+                                <div class="single-item">
+                                    <div class="icon-box">
+                                        <span class="flaticon-star"></span>
+                                    </div>
+                                    <div class="text-box">
+                                        <h3>Wow Customer Service</h3>
+                                        <p>Some great pleasure take trivial example, whichof ever undertakes laborious
+                                            physical except to obtain some advantage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End single item-->
+                        </div>
+                        <div class="row">
+                            <!--Start single item-->
+                            <div class="col-md-6">
+                                <div class="single-item">
+                                    <div class="icon-box">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                    <div class="text-box">
+                                        <h3>Love Customer</h3>
+                                        <p>The master-builder of human happiness no one rejects, dislikes,avoids
+                                            pleasure itself, because it is pleasure extremely.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End single item-->
+                            <!--Start single item-->
+                            <div class="col-md-6">
+                                <div class="single-item">
+                                    <div class="icon-box">
+                                        <span class="flaticon-slices-of-bread"></span>
+                                    </div>
+                                    <div class="text-box">
+                                        <h3>Have Integrity</h3>
+                                        <p>Chooses to enjoy a pleasure that annoying consequences, or one who avoids a
+                                            pain that no resultant pleasure works.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End single item-->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 image pull-left">
+                    <div class="img-holder">
+                        <img src="{% static 'webapp/images/resources/core-value.png' %}" alt="Awesome Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End core value area-->
+
+    <!--Start working process area-->
+    <section class="working-process-area background-image-process">
+        <div class="container">
+            <div class="sec-title text-center sec-title-proces">
+                <h1>Процесс Работы</h1>
+            </div>
+            <div class="row">
+                <!--Start single item-->
+                {% for main_proccesses in main_process %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-iten text-center">
+                            <div class="img-box dasded">
+                                <img src="{{ main_proccesses.photo.url }}" alt="Awesome Image"
+                                     class="img-fixed-size-proccess">
+                                <div class="count">
+                                    <h3>{{ main_proccesses.steps }}</h3>
+                                </div>
+                            </div>
+                            <div class="text-box sec-title-proces">
+                                <h2>{{ main_proccesses.name }}</h2>
+                                <p>{{ main_proccesses.description | safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!--End single item-->
+            </div>
+        </div>
+    </section>
+    <!--End working process area-->
+
+    <!--Start fact counter area-->
+    <section class="fact-counter-area background-image-process">
+        <div class="container">
+            <div class="row">
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="1997 " data-speed="5000"
+                                  data-refresh-interval="50">21</span><i class="fa fa-calendar-plus-o"
+                                                                         aria-hidden="true"></i></h1>
                         <span class="border"></span>
+                        <h3>Ремонтируем Электронику</h3>
                     </div>
-                    <div class="row">
-                        <!--Start single item-->
-                        <div class="col-md-6">
-                            <div class="single-item">
-                                <div class="icon-box">
-                                    <span class="flaticon-thumb-up"></span>
-                                </div>
-                                <div class="text-box">
-                                    <h3>Positive & Optimistic</h3>
-                                    <p>How all this mistaken idea denouncing seds pleasurepraising pain was born and will give you a complete account of the system.</p>
-                                </div>  
-                            </div>
-                        </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="col-md-6">
-                            <div class="single-item">
-                                <div class="icon-box">
-                                    <span class="flaticon-star"></span>
-                                </div>
-                                <div class="text-box">
-                                    <h3>Wow Customer Service</h3>
-                                    <p>Some great pleasure take trivial example, whichof ever undertakes laborious physical except to obtain some advantage.</p>
-                                </div>  
-                            </div>
-                        </div>
-                        <!--End single item-->
-                    </div>
-                    <div class="row">
-                        <!--Start single item-->
-                        <div class="col-md-6">
-                            <div class="single-item">
-                                <div class="icon-box">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                                <div class="text-box">
-                                    <h3>Love Customer</h3>
-                                    <p>The master-builder of human happiness no one rejects, dislikes,avoids pleasure itself, because it is pleasure extremely.</p>
-                                </div>  
-                            </div>
-                        </div>
-                        <!--End single item-->
-                        <!--Start single item-->
-                        <div class="col-md-6">
-                            <div class="single-item">
-                                <div class="icon-box">
-                                    <span class="flaticon-slices-of-bread"></span>
-                                </div>
-                                <div class="text-box">
-                                    <h3>Have Integrity</h3>
-                                    <p>Chooses to enjoy a pleasure that  annoying consequences, or one who avoids a pain that no resultant pleasure works.</p>
-                                </div>  
-                            </div>
-                        </div>
-                        <!--End single item-->
-                    </div>
-                    
                 </div>
-            </div>
-            <div class="col-md-4 image pull-left">
-                <div class="img-holder">
-                    <img src="{% static 'webapp/images/resources/core-value.png' %}" alt="Awesome Image">
-                </div> 
-            </div>
-        </div>
-    </div>    
-</section>
-<!--End core value area-->
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="300" data-speed="5000"
+                                  data-refresh-interval="50">146</span><i class="fa fa-plus" aria-hidden="true"></i>
+                        </h1>
+                        <span class="border"></span>
+                        <h3>Блоков Эбу</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="1000" data-speed="5000"
+                                  data-refresh-interval="50">853</span><i class="fa fa-plus" aria-hidden="true"></i>
+                        </h1>
+                        <span class="border"></span>
+                        <h3>Электро Транспорт</h3>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-item text-center">
+                        <h1><span class="timer" data-from="1" data-to="100" data-speed="5000"
+                                  data-refresh-interval="50">2381</span><i class="fa fa-puzzle-piece"
+                                                                           aria-hidden="true"></i></h1>
+                        <span class="border"></span>
+                        <h3>Сложные Решения</h3>
+                    </div>
+                </div>
+                <!--End single item-->
 
-<!--Start working process area-->
-<section class="working-process-area background-image-about">
-    <div class="container">
-        <div class="sec-title text-center">
-            <h1>Working Process</h1>
+            </div>
         </div>
-        <div class="row">
-            <!--Start single item-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-iten text-center">
-                    <div class="img-box dasded">
-                        <img src="{% static 'webapp/images/working-process/1.png' %}" alt="Awesome Image">
-                        <div class="count">
-                            <h3>1</h3>
-                        </div>
-                    </div>
-                    <div class="text-box">
-                        <h3>Damaged Device</h3>
-                        <p>Repair plus provide a high range of service for your digital device</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-iten text-center">
-                    <div class="img-box dasded">
-                        <img src="{% static 'webapp/images/working-process/2.png' %}" alt="Awesome Image">
-                        <div class="count">
-                            <h3>2</h3>
-                        </div>
-                    </div>
-                    <div class="text-box">
-                        <h3>Hand Over to Us</h3>
-                        <p>We have a over 48 branches in the US, you can easily reach us</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-iten text-center">
-                    <div class="img-box dasded">
-                        <img src="{% static 'webapp/images/working-process/3.png' %}" alt="Awesome Image">
-                        <div class="count">
-                            <h3>3</h3>
-                        </div>
-                    </div>
-                    <div class="text-box">
-                        <h3>Repair the Device</h3>
-                        <p>Our expert technicians will repair your device very quick and quality</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-            <!--Start single item-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-iten text-center">
-                    <div class="img-box dasded">
-                        <img src="{% static 'webapp/images/working-process/4.png' %}" alt="Awesome Image">
-                        <div class="count">
-                            <h3>4</h3>
-                        </div>
-                    </div>
-                    <div class="text-box">
-                        <h3>Get Back From Us</h3>
-                        <p>Get back your device with high range of service & On time.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End single item-->
-        </div>
-    </div>
-</section>
-<!--End working process area-->
+    </section>
+    <!--End fact counter area-->
 
-<!--Start team area-->
-<section class="team-area">
-    <div class="container">
-        <div class="sec-title-two">
-            <h1>Team Members</h1>
-            <span class="border"></span>
+    <!--Start team area-->
+    <section class="team-area">
+        <div class="container">
+            <div class="sec-title-two">
+                <h1>Team Members</h1>
+                <span class="border"></span>
+            </div>
+            <div class="row">
+                <!--Start single team member-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-team-member">
+                        <div class="img-holder">
+                            <img src="{% static 'webapp/images/about/team/1.jpg' %}" alt="Awesome Image">
+                            <div class="overlay-one">
+                                <div class="overlay-inner">
+                                    <div class="content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone">
+                                <a href="#">
+                                    <span class="flaticon-call-answer"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Richard Antony</h3>
+                            <span>Service Manager</span>
+                            <div class="text">
+                                <p>On the other hands, we denounces with righteours indignations and dislike men
+                                    demoralized by the charms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End single team member-->
+                <!--Start single team member-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-team-member">
+                        <div class="img-holder">
+                            <img src="{% static 'webapp/images/about/team/2.jpg' %}" alt="Awesome Image">
+                            <div class="overlay-one">
+                                <div class="overlay-inner">
+                                    <div class="content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone">
+                                <a href="#">
+                                    <span class="flaticon-call-answer"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Willaim Rickmen</h3>
+                            <span>Repair Man</span>
+                            <div class="text">
+                                <p>Foresee the pains and troubler thats are bound to ensue; and equall blame seds
+                                    belongs to those duty Gardern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End single team member-->
+                <!--Start single team member-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-team-member">
+                        <div class="img-holder">
+                            <img src="{% static 'webapp/images/about/team/3.jpg' %}" alt="Awesome Image">
+                            <div class="overlay-one">
+                                <div class="overlay-inner">
+                                    <div class="content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone">
+                                <a href="#">
+                                    <span class="flaticon-call-answer"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Sunny Vandosky</h3>
+                            <span>Quality Checker</span>
+                            <div class="text">
+                                <p>When our power of choices is ut untram and when nothing prevent our being able to do
+                                    what we like best.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End single team member-->
+                <!--Start single team member-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-team-member">
+                        <div class="img-holder">
+                            <img src="{% static 'webapp/images/about/team/4.jpg' %}" alt="Awesome Image">
+                            <div class="overlay-one">
+                                <div class="overlay-inner">
+                                    <div class="content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone">
+                                <a href="#">
+                                    <span class="flaticon-call-answer"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Charles Nicholes</h3>
+                            <span>Branch Manager</span>
+                            <div class="text">
+                                <p>Certain circumstances us and owings too the claims of duty ut or of business it will
+                                    frequently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End single team member-->
+            </div>
         </div>
-        <div class="row">
-            <!--Start single team member-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/about/team/1.jpg' %}" alt="Awesome Image">
-                        <div class="overlay-one">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-	                    </div>
-	                    <div class="phone">
-	                        <a href="#">
-                                <span class="flaticon-call-answer"></span>
-	                        </a>
-	                    </div>
-                    </div>
-                    <div class="text-holder">
-                        <h3>Richard Antony</h3>
-                        <span>Service Manager</span>
-                        <div class="text">
-                            <p>On the other hands, we denounces with  righteours indignations and dislike men demoralized  by the charms.</p>
-                        </div>
-                    </div>    
-                </div> 
-            </div>
-            <!--End single team member-->
-            <!--Start single team member-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/about/team/2.jpg' %}" alt="Awesome Image">
-                        <div class="overlay-one">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-	                    </div>
-	                    <div class="phone">
-	                        <a href="#">
-                                <span class="flaticon-call-answer"></span>
-	                        </a>
-	                    </div>
-                    </div>
-                    <div class="text-holder">
-                        <h3>Willaim Rickmen</h3>
-                        <span>Repair Man</span>
-                        <div class="text">
-                            <p>Foresee the pains and troubler thats are bound to ensue; and equall blame seds belongs to those duty Gardern.</p>
-                        </div>
-                    </div>    
-                </div> 
-            </div>
-            <!--End single team member-->
-            <!--Start single team member-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/about/team/3.jpg' %}" alt="Awesome Image">
-                        <div class="overlay-one">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-	                    </div>
-	                    <div class="phone">
-	                        <a href="#">
-                                <span class="flaticon-call-answer"></span>
-	                        </a>
-	                    </div>
-                    </div>
-                    <div class="text-holder">
-                        <h3>Sunny Vandosky</h3>
-                        <span>Quality Checker</span>
-                        <div class="text">
-                            <p>When our power of choices is ut untram and when nothing prevent our being able to do what we like best.</p>
-                        </div>
-                    </div>    
-                </div> 
-            </div>
-            <!--End single team member-->
-            <!--Start single team member-->
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <div class="img-holder">
-                        <img src="{% static 'webapp/images/about/team/4.jpg' %}" alt="Awesome Image">
-                        <div class="overlay-one">
-                            <div class="overlay-inner">
-                                <div class="content">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-	                    </div>
-	                    <div class="phone">
-	                        <a href="#">
-                                <span class="flaticon-call-answer"></span>
-	                        </a>
-	                    </div>
-                    </div>
-                    <div class="text-holder">
-                        <h3>Charles Nicholes</h3>
-                        <span>Branch Manager</span>
-                        <div class="text">
-                            <p>Certain circumstances us and owings too the claims of duty ut or of business it will frequently.</p>
-                        </div>
-                    </div>    
-                </div> 
-            </div>
-            <!--End single team member-->
-        </div>
-    </div>
-</section>
-<!--End team area-->
+    </section>
+    <!--End team area-->
 
 {% endblock %}

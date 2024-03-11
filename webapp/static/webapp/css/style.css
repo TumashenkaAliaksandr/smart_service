@@ -2505,7 +2505,7 @@ select:focus {
 .sidebar-wrapper .single-sidebar .sidebar-title {
   overflow: hidden;
   padding-bottom: 41px;
-  margin-top: -4px;
+  margin-top: -2px;
 }
 .sidebar-wrapper .single-sidebar .sidebar-title h1 {
   color: #3d3d3d;
