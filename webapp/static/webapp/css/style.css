@@ -2280,6 +2280,23 @@ select:focus {
   padding-top: 55px;
   background-position: right;
 }
+
+.breadcrumb-area-cover {
+  background: #f7f7f7 none repeat scroll 0 0;
+  height: 200px;
+  padding-top: 55px;
+  background-position: right;
+  background-size: cover;
+}
+
+.breadcrumb-area-cover h1{
+  color: #e1ffed;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
 .breadcrumb-area h1 {
   color: #e1ffed;
   font-size: 40px;
@@ -3259,11 +3276,11 @@ select:focus {
   
 }
 .video-gallery-area .text-holder h2 {
-  color: #43ea65;
-  font-size: 30px;
+  color: #10a62e;
+  font-size: 35px;
   font-weight: 400;
   line-height: 40px;
-  margin: -7px 0 22px;
+  margin: 0px 0 22px;
 }
 .video-gallery-area .text-holder .top-text {
   margin: 0 0 15px;
@@ -3342,10 +3359,13 @@ select:focus {
   background: #f7f7f7;
   padding-top: 60px;
 }
-.core-value-area .img-holder {}
+.core-value-area .img-holder {
+  margin-right: 30px;
+}
 .core-value-area .img-holder img {
-  margin-left: 30px;
+  margin-left: 21px;
   width: auto;
+  margin-right: 21px;
 }
 
 .core-value-area .text-holder {}

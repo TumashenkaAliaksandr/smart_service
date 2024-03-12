@@ -5,7 +5,7 @@
 {% block content %}
 
     <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
+    <section class="breadcrumb-area-cover" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_nano5.jpg' %}{% endif %}');">
         <div class="container text-center">
             <h1>О Нас</h1>
         </div>
@@ -41,9 +41,15 @@
                                 А также занимаемся обслуживанием и восстановленем электротранспорта.</p>
                         </div>
                         <div class="bottom-text">
-                            <p>Our commitment to bring professionalism, good service & trust to the Phone repair service
-                                & maintenance business. We take immense pride in sending some of the most of
-                                professional technicians.</p>
+                            <p>В наше время, промышленное производство немыслимо без использования современных систем электронного управления и сложных технологических механизмов. Но даже самое передовое оборудование, подвергаясь постоянным нагрузкам, требует регулярного обслуживания и ремонта. Однако обращение в дилерские центры производителей зачастую становится дорогостоящим решением, не всегда приносящим ожидаемые результаты.
+
+Наша компания специализируется на ремонте приводной техники, промышленного оборудования и электроники. Мы предлагаем комплексные услуги по восстановлению и ремонту различной сложной электроники на уровне компонентов. Наша команда готова решать как простые, так и самые сложные задачи по восстановлению промышленной электроники и автоматики. Мы беремся за ремонт устройств любой мощности и комплектности, включая устройства, снятые с производства, без технической документации и схем подключения.
+
+Наши специалисты помогут вам снизить нагрузку на оборудование, оптимизировать энергопотребление и предотвратить перегрев и перегрузку производственного оборудования. Мы также предлагаем консультации по выбору, подключению и настройке промышленного электронного оборудования.
+
+Наши услуги помогут вам избежать неприятных простоев и сбоев в работе оборудования, а также существенно сэкономить средства и время, что является важным фактором в любой промышленности.
+
+Мы оказываем услуги не только в городах Полоцк и Новополоцк, но и по всей Витебской области и в других регионах Беларуси. Доставка осуществляется транспортными компаниями, а также мы можем выезжать к вам на объект (условия обсуждаются индивидуально).</p>
                             <div class="certified-logo">
                                 <img src="{% static 'webapp/images/resources/certified-logo.png' %}"
                                      alt="Certified Logo">
@@ -134,9 +140,9 @@
                                         <span class="flaticon-thumb-up"></span>
                                     </div>
                                     <div class="text-box">
-                                        <h3>Positive & Optimistic</h3>
-                                        <p>How all this mistaken idea denouncing seds pleasurepraising pain was born and
-                                            will give you a complete account of the system.</p>
+                                        <h3>Безупречная Репутация</h3>
+                                        <p>Мы гордимся своей долголетней историей успешных проектов и довольных клиентов,
+                                            что подтверждает нашу надежность и профессионализм.</p>
                                     </div>
                                 </div>
                             </div>
@@ -148,9 +154,9 @@
                                         <span class="flaticon-star"></span>
                                     </div>
                                     <div class="text-box">
-                                        <h3>Wow Customer Service</h3>
-                                        <p>Some great pleasure take trivial example, whichof ever undertakes laborious
-                                            physical except to obtain some advantage.</p>
+                                        <h3>Высокое качество Услуг</h3>
+                                        <p>Работаем только с проверенными запчастями и передовыми технологиями,
+                                            что гарантирует надежность и долговечность наших ремонтных работ.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,12 +167,12 @@
                             <div class="col-md-6">
                                 <div class="single-item">
                                     <div class="icon-box">
-                                        <span class="flaticon-heart"></span>
+                                        <span class="fa fa-money"></span>
                                     </div>
                                     <div class="text-box">
-                                        <h3>Love Customer</h3>
-                                        <p>The master-builder of human happiness no one rejects, dislikes,avoids
-                                            pleasure itself, because it is pleasure extremely.</p>
+                                        <h3>Конкурентные Цены</h3>
+                                        <p>Наша политика ценообразования основана на честности и прозрачности,
+                                            что позволяет нам предлагать конкурентоспособные тарифы и гибкую систему скидок.</p>
                                     </div>
                                 </div>
                             </div>
@@ -175,12 +181,12 @@
                             <div class="col-md-6">
                                 <div class="single-item">
                                     <div class="icon-box">
-                                        <span class="flaticon-slices-of-bread"></span>
+                                        <span class="fa fa-cogs"></span>
                                     </div>
                                     <div class="text-box">
-                                        <h3>Have Integrity</h3>
-                                        <p>Chooses to enjoy a pleasure that annoying consequences, or one who avoids a
-                                            pain that no resultant pleasure works.</p>
+                                        <h3>Глубокое Понимание Технологий</h3>
+                                        <p>Наши специалисты обладают высокой экспертизой в области промышленной электроники и автоматики,
+                                            что позволяет нам эффективно решать самые сложные задачи.</p>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +197,7 @@
                 </div>
                 <div class="col-md-4 image pull-left">
                     <div class="img-holder">
-                        <img src="{% static 'webapp/images/resources/core-value.png' %}" alt="Awesome Image">
+                        <img src="{% static 'webapp/images/resources/ecu_priemushestva.jpg' %}" alt="Awesome Image">
                     </div>
                 </div>
             </div>

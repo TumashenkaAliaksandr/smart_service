@@ -161,10 +161,10 @@
                             <li {% if request.resolver_match.url_name == 'about' %} class="current" {% endif %}class="dropdown"><a href="{% url 'webapp:about' %}">О Нас</a></li>
                             <li {% if request.resolver_match.url_name == 'shop' %} class="current" {% endif %} class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
                                 <ul>
-                                    <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="{% url 'webapp:encoders' %}">Single Product</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="shop.html">Диагностика</a></li>
+                                    <li><a href="{% url 'webapp:encoders' %}">Настройка Оборудования</a></li>
+                                    <li><a href="shopping-cart.html">Обслуживание Оборудования</a></li>
+                                    <li><a href="checkout.html">Сотрудничество</a></li>
                                     <li><a href="account.html">My Account</a></li>
                                 </ul>
                             </li>
