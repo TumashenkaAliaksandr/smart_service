@@ -878,7 +878,7 @@ select:focus {
 
 
 .background-image-footer{
-  background: url(../images/working-process/ecu_nano6.jpg);
+  background: url(../images/working-process/ecu_footer.jpg);
 }
 
 /*** 
@@ -2009,7 +2009,7 @@ select:focus {
 
 .footer-area {
   /*background: #0d2d1a none repeat scroll 0 0;*/
-  padding-top: 60px;
+  padding-top: 0px;
   overflow: hidden;
   background-attachment: fixed;
   background-position: center top;
@@ -2066,8 +2066,34 @@ select:focus {
   -moz-box-shadow: 1px 5px 8px #011809;
   -webkit-box-shadow: 1px 5px 8px #011809;
   box-shadow: 1px 5px 8px #011809;
-  opacity: 0.8;
+  opacity: 0.83;
 }
+
+
+.footer-area .footer-widget-two {
+  display: block;
+  padding-left: 30px;
+  padding-top: 40px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 30px;
+
+}
+.footer-area .footer-widget-two::before {
+  background: #0b3b1c none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1000%;
+  z-index: -1;
+  /*-moz-box-shadow: 1px 5px 8px #011809;*/
+  /*-webkit-box-shadow: 1px 5px 8px #011809;*/
+  /*box-shadow: 1px 5px 8px #011809;*/
+  opacity: 0.57;
+}
+
 .single-footer-widget .title {
   padding-bottom: 25px;
   margin-top: -4px;

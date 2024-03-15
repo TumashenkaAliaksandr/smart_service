@@ -229,145 +229,152 @@
 <!--End Brand area-->
 
 <!--Start footer area-->
-<footer class="footer-area background-image-footer">
-    <div class="container">
-        <div class="row">
-            <!--Start single footer widget-->
-            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-                <div class="single-footer-widget pd-bottom">
-                    <div class="footer-logo">
-                        <a href="{% url 'webapp:home' %}">
-                            <img src="{% static 'webapp/images/footer/ecu_favicon_two.png' %}" alt="Awesome Footer Logo">
-                        </a>
-                    </div>
-                    <div class="repairplus-info">
-                        <p class="top">Оказываем услуги по восстановлению Промышленной Электроники,<br>Ремонту Блоков Управления Двигателя<br>для автомобилей ЛЮБОЙ МАРКИ и<br>Грузового Транспорта в том числе!</p>
-                        <p>А также занимаемся обслуживанием и восстановленем электротранспорта.</p>
-                        <div class="button">
-                            <a class="thm-btn bg-1" href="{% url 'webapp:contact' %}">Оставить Заявку</a>
+<footer class="footer-area">
+    <div class="footer-widget-two background-image-footer">
+        <div class="container">
+            <div class="row">
+                <!--Start single footer widget-->
+                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <div class="single-footer-widget pd-bottom">
+                        <div class="footer-logo">
+                            <a href="{% url 'webapp:home' %}">
+                                <img src="{% static 'webapp/images/footer/ecu_favicon_two.png' %}"
+                                     alt="Awesome Footer Logo">
+                            </a>
+                        </div>
+                        <div class="repairplus-info">
+                            <p class="top">Оказываем услуги по восстановлению Промышленной Электроники,<br>Ремонту
+                                Блоков Управления Двигателя<br>для автомобилей ЛЮБОЙ МАРКИ и<br>Грузового Транспорта в
+                                том числе!</p>
+                            <p>А также занимаемся обслуживанием и восстановленем электротранспорта.</p>
+                            <div class="button">
+                                <a class="thm-btn bg-1" href="{% url 'webapp:contact' %}">Оставить Заявку</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--End single footer widget-->
-            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
-                <div class="footer-widget">
-                    <div class="row">
-                        <!--Start single footer widget-->
-                        <div class="col-lg-3 col-md-4 col-sm-12">
-                            <div class="single-footer-widget">
-                                <div class="title">
-                                    <h3>Наши Услуги</h3>
+                <!--End single footer widget-->
+                <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="footer-widget">
+                        <div class="row">
+                            <!--Start single footer widget-->
+                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                <div class="single-footer-widget">
+                                    <div class="title">
+                                        <h3>Наши Услуги</h3>
+                                    </div>
+                                    {% for main_services_footer in main_serv %}
+                                        {% if forloop.counter <= 4 %}
+                                            <ul class="services-list">
+                                                <li>
+                                                    <a href="{{ main_services_footer.link }}">{{ main_services_footer.name }}</a>
+                                                </li>
+                                            </ul>
+                                        {% endif %}
+                                    {% endfor %}
                                 </div>
-                                {% for main_services_footer in main_serv %}
-                                    {% if forloop.counter <= 4 %}
-                                        <ul class="services-list">
-                                            <li>
-                                                <a href="{{ main_services_footer.link }}">{{ main_services_footer.name }}</a>
-                                            </li>
-                                        </ul>
-                                    {% endif %}
-                                {% endfor %}
                             </div>
-                        </div>
-                        <!--Start single footer widget-->
-                        <!--Start single footer widget-->
-                        <div class="col-lg-5 col-md-4 col-sm-12">
-                            <div class="single-footer-widget subscribe-form-widget">
-                                <div class="title">
-                                    <h3>Наши соцети</h3>
+                            <!--Start single footer widget-->
+                            <!--Start single footer widget-->
+                            <div class="col-lg-5 col-md-4 col-sm-12">
+                                <div class="single-footer-widget subscribe-form-widget">
+                                    <div class="title">
+                                        <h3>Наши соцети</h3>
+                                    </div>
+                                    <div class="footer-social-links">
+                                        <ul>
+                                            <li><a href="https://www.instagram.com/smart_service_novopolock/"><i
+                                                    class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o"
+                                                                                  aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i
+                                                    class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="subscribe-form">
+                                        <p></p>
+                                        <p>Подпишитесь на наши Новости!</p>
+                                        <form action="#">
+                                            <input name="email" placeholder="Введите свою Почту..." type="text">
+                                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                        <h4>Мы не занимаемся рассылкой спама.</h4>
+                                    </div>
                                 </div>
-                                <div class="footer-social-links">
-                                    <ul>
-                                        <li><a href="https://www.instagram.com/smart_service_novopolock/"><i
-                                                class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o"
-                                                                              aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i
-                                                class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            </div>
+                            <!--End single footer widget-->
+                            <!--Start single footer widget-->
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="single-footer-widget contact-info-widget">
+                                    <div class="title">
+                                        <h3>Контакты</h3>
+                                    </div>
+                                    <ul class="footer-contact-info">
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-home-page"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>г.Минск</span><br> ул. Кирова 3, Дом Быта</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-call-answer"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Наш Телефон</span><br> +375(29)590-77-77</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-envelope"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Наша Почта</span><br>ecuservice@gmail.com</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-holder">
+                                                <span class="flaticon-clock"></span>
+                                            </div>
+                                            <div class="text-holder">
+                                                <h5><span>Время работы</span><br>Пн - Пт: 10.00 до 19.00</h5>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="subscribe-form">
-                                    <p> </p>
-                                    <p>Подпишитесь на наши Новости!</p>
-                                    <form action="#">
-                                        <input name="email" placeholder="Введите свою Почту..." type="text">
-                                        <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                    </form>
-                                    <h4>Мы не занимаемся рассылкой спама.</h4>
-                                </div>
                             </div>
+                            <!--End single footer widget-->
                         </div>
-                        <!--End single footer widget-->
-                        <!--Start single footer widget-->
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="single-footer-widget contact-info-widget">
-                                <div class="title">
-                                    <h3>Контакты</h3>
-                                </div>
-                                <ul class="footer-contact-info">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>г.Минск</span><br> ул. Кирова 3, Дом Быта</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Наш Телефон</span><br> +375(29)590-77-77</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Наша Почта</span><br>ecuservice@gmail.com</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-clock"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Время работы</span><br>Пн - Пт: 10.00 до 19.00</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End single footer widget-->
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!--Start footer botton-->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="footer-bottom">
-                    <div class="copyright-text pull-left">
-                        <p>Copyrights © 2024 All Rights Reserved by <a href="https://t.me/ultravioletpartyeyes">PhoenixPegasus.</a></p>
-                    </div>
-                    <div class="payment-method pull-right">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-paypal" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cc-discover" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+            <!--Start footer botton-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-bottom">
+                        <div class="copyright-text pull-left">
+                            <p>Copyrights © 2024 All Rights Reserved by <a href="https://t.me/ultravioletpartyeyes">PhoenixPegasus.</a>
+                            </p>
+                        </div>
+                        <div class="payment-method pull-right">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-paypal" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-discover" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
 
+                    </div>
                 </div>
             </div>
+            <!--End footer botton-->
         </div>
-        <!--End footer botton-->
     </div>
 </footer>
 <!--End footer area-->
