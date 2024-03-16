@@ -199,6 +199,29 @@ class Shop_Repair_Operator(models.Model):
         verbose_name_plural = "Repair of operator panels"
 
 
+class BlockCpcFour(models.Model):
+    """Block CPC4 model"""
+    name = models.CharField(max_length=100, verbose_name='name')
+    name_two = models.CharField(max_length=100, verbose_name='name_two', default='Второй Заголовок')
+    description = RichTextField()
+    description_two = RichTextField()
+    description_three = RichTextField(verbose_name='description three', default='Описание')
+    client_visit = RichTextField(blank=True, null=True)
+    image = models.ImageField(upload_to='services', verbose_name='photo')
+    image_two = models.ImageField(upload_to='services', verbose_name='photo_two', default='default_image.jpg')
+    image_three = models.ImageField(upload_to='services', verbose_name='photo_three', default='default_image_three.jpg')
+    is_main = models.BooleanField(default=False)
+    link = models.URLField()  # Поле для хранения ссылки
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Price', default=0.00)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Block CPC4"
+        verbose_name_plural = "Block CPC4"
+
+
 class Brand(models.Model):
     name = models.CharField(max_length=100)  # Поле для названия брэнда
     photo = models.ImageField(upload_to='brand_photos/')  # Поле для фото брэнда, сохраняемое в папке 'brand_photos/'

@@ -174,6 +174,20 @@ def indastrial_electroniks(request):
     return render(request, 'webapp/services/industrial-electronics.html', context=context)
 
 
+def cpc_four(request):
+    main_serv = list(ServicesMain.objects.all())
+    random.shuffle(main_serv)  # Перемешиваем список объектов
+    main_cpc_four = BlockCpcFour.objects.all()
+    brands = Brand.objects.all()
+
+    context = {
+        'main_serv': main_serv,
+        'main_cpc_four': main_cpc_four,
+        'brands': brands,
+    }
+    return render(request, 'webapp/services/cpc4.html', context=context)
+
+
 def errors(request):
     return render(request, 'webapp/404.html')
 

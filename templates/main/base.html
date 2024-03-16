@@ -151,6 +151,7 @@
                             <li {% if request.resolver_match.url_name in "['services', 'encoders', 'board', 'inverter', 'indastrial-electroniks', 'bloks-bcm', 'electro-transport']" %}class="current"{% endif %} class="dropdown"><a href="{% url 'webapp:services' %}">Услуги</a>
                                 <ul>
                                     <li {% if request.resolver_match.url_name == 'indastrial-electroniks' %}class="current"{% endif %}><a href="{% url 'webapp:indastrial-electroniks' %}">Промышленная Электроника</a></li>
+                                    <li {% if request.resolver_match.url_name == 'cpc-four' %}class="current"{% endif %}><a href="{% url 'webapp:cpc-four' %}">Ремонт CPC4</a></li>
                                     <li {% if request.resolver_match.url_name == 'encoders' %}class="current"{% endif %}><a href="{% url 'webapp:encoders' %}">Ремонт Датчиков</a></li>
                                     <li {% if request.resolver_match.url_name == 'board' %}class="current"{% endif %}><a href="{% url 'webapp:board' %}">Ремонт Электронных Плат</a></li>
                                     <li {% if request.resolver_match.url_name == 'inverter' %}class="current"{% endif %}><a href="{% url 'webapp:inverter' %}">Ремонт Частотных Преобразователей</a></li>

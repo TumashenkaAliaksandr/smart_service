@@ -106,6 +106,20 @@ class Shop_InverterAdmin(admin.ModelAdmin):
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
 
+@admin.register(BlockCpcFour)
+class BlockCpcFourAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget}
+    }
+
+    list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+
+    def image(self, obj):
+        return obj.image.url if obj.image else None  # Отображение превью изображения в админке
+
+    image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+
 @admin.register(Favors)
 class FavorsAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов

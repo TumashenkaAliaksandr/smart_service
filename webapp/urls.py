@@ -20,6 +20,7 @@ urlpatterns = [
     path('errors/', errors, name='errors'),
     path('success/', success, name='success'),
     path('game-repair/', game_repair, name='game-repair'),
+    path('cpc-four/', cpc_four, name='cpc-four'),
 ]
 
 if settings.DEBUG:
