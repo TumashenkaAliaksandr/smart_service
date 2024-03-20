@@ -161,6 +161,7 @@
 {#                        </div>#}
 {#                    </div>#}
 {#                </div>#}
+                {% for main_errors in main_cpc_four %}
                 <div class="col-md-6">
                     <div class="choose-us-content">
                         <div class="sec-title-two">
@@ -173,7 +174,7 @@
                                     <span class="flaticon-settings"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Перестала Работать Дроссельная Заслонка</h4>
+                                    <h4>{{ main_errors.errors_name }}</h4>
                                 </div>
                             </li>
                             <li>
@@ -181,7 +182,7 @@
                                     <span class="flaticon-wrench"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Автомобиль Не Заводиться</h4>
+                                    <h4>{{ main_errors.errors_name_two }}</h4>
                                 </div>
                             </li>
                             <li>
@@ -189,7 +190,7 @@
                                     <span class="flaticon-customer-support"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Ошибка в CPC SPN 609 FMI 12</h4>
+                                    <h4>{{ main_errors.errors_name_three }}</h4>
                                 </div>
                             </li>
                             <li>
@@ -197,7 +198,7 @@
                                     <span class="flaticon-customer-support"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Горит лампа Check Engine из-за CPC.</h4>
+                                    <h4>{{ main_errors.errors_name_four }}</h4>
                                 </div>
                             </li>
                             <li>
@@ -205,7 +206,7 @@
                                     <span class="flaticon-customer-support"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Горит лампа ABS из-за CPC.</h4>
+                                    <h4>{{ main_errors.errors_name_five }}</h4>
                                 </div>
                             </li>
                             <li>
@@ -213,12 +214,13 @@
                                     <span class="flaticon-customer-support"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h4>Горит лампа DEF из-за CPC</h4>
+                                    <h4>{{ main_errors.errors_name_six }}</h4>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
