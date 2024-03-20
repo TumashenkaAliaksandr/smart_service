@@ -203,6 +203,12 @@ class BlockCpcFour(models.Model):
     """Block CPC4 model"""
     name = models.CharField(max_length=100, verbose_name='name')
     name_two = models.CharField(max_length=100, verbose_name='name_two', default='Второй Заголовок')
+    errors_name = models.CharField(max_length=100, verbose_name='errors_name', default='Причина Ошибки 1')
+    errors_name_two = models.CharField(max_length=100, verbose_name='errors_name_two', default='Причина Ошибки 2')
+    errors_name_three = models.CharField(max_length=100, verbose_name='errors_name_three', default='Причина Ошибки 3')
+    errors_name_four = models.CharField(max_length=100, verbose_name='errors_name_four', default='Причина Ошибки 4')
+    errors_name_five = models.CharField(max_length=100, verbose_name='errors_name_five', default='Причина Ошибки 5')
+    errors_name_six = models.CharField(max_length=100, verbose_name='errors_name_six', default='Причина Ошибки 6')
     description = RichTextField()
     description_two = RichTextField()
     description_three = RichTextField(verbose_name='description three', default='Описание')

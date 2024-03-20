@@ -185,7 +185,7 @@ def cpc_four(request):
         'main_cpc_four': main_cpc_four,
         'brands': brands,
     }
-    return render(request, 'webapp/services/cpc4.html', context=context)
+    return render(request, 'webapp/services/blocks/cpc4.html', context=context)
 
 
 def errors(request):
