@@ -213,6 +213,8 @@ class BlockCpcFour(models.Model):
     description_two = RichTextField()
     description_three = RichTextField(verbose_name='description three', default='Описание')
     description_four = RichTextField(verbose_name='description four', default='Описание')
+    description_six = RichTextField(verbose_name='description six', default='Описание')
+    description_seven = RichTextField(verbose_name='description seven', default='Описание')
     client_visit = RichTextField(blank=True, null=True)
     image = models.ImageField(upload_to='services', verbose_name='photo')
     image_two = models.ImageField(upload_to='services', verbose_name='photo_two', default='default_image.jpg')

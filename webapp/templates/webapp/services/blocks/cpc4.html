@@ -126,38 +126,36 @@
     </section>
 
     <!--Start about us area-->
+    {% for main_errors in main_cpc_four %}
     <section class="about-us-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-content">
                         <div class="sec-title-two">
-                            <h1>Ошибки Блока</h1>
+                            <h1>Информация по ремонту Блока</h1>
                             <span class="border"></span>
                         </div>
                         <ul>
                             <li>
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/about/1.jpg' %}" alt="Awesome Image">
+                                <div class="img-holder img-fixed-size-cpc">
+                                    <img src="{{ main_errors.image_three.url }}" alt="Awesome Image">
                                 </div>
                             </li>
-{#                            <li>#}
-{#                                <div class="img-holder">#}
-{#                                    <img src="{% static 'webapp/images/about/2.jpg' %}" alt="Awesome Image">#}
-{#                                </div>#}
-{#                            </li>#}
-{#                            <li>#}
-{#                                <div class="img-holder">#}
-{#                                    <img src="{% static 'webapp/images/about/3.jpg' %}" alt="Awesome Image">#}
-{#                                </div>#}
-{#                            </li>#}
-                            <div class="text-holder">
-                                <p>Our commitment to bring professionalism, good service & trust to the Phone repair
-                                    service
-                                    & maintenance business. We take immense pride in sending some of the most of
-                                    professional technicians to yours phone to fix things that aren't workings. </p>
-                            </div>
+                            {#                            <li>#}
+                            {#                                <div class="img-holder">#}
+                            {#                                    <img src="{% static 'webapp/images/about/2.jpg' %}" alt="Awesome Image">#}
+                            {#                                </div>#}
+                            {#                            </li>#}
+                            {#                            <li>#}
+                            {#                                <div class="img-holder">#}
+                            {#                                    <img src="{% static 'webapp/images/about/3.jpg' %}" alt="Awesome Image">#}
+                            {#                                </div>#}
+                            {#                            </li>#}
                         </ul>
+                        <div class="text-holder">
+                            <p>{{ main_errors.description_four | safe }}</p>
+                        </div>
                         <div class="text-holder">
                             <p>Our commitment to bring professionalism, good service & trust to the Phone repair service
                                 & maintenance business. We take immense pride in sending some of the most of
@@ -167,69 +165,68 @@
                         </div>
                     </div>
                 </div>
-                {% for main_errors in main_cpc_four %}
-                <div class="col-md-6">
-                    <div class="choose-us-content">
-                        <div class="sec-title-two">
-                            <h1>CPC-4</h1>
-                            <span class="border"></span>
+                    <div class="col-md-6">
+                        <div class="choose-us-content">
+                            <div class="sec-title-two">
+                                <h1>CPC-4</h1>
+                                <span class="border"></span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-settings"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name }}</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-wrench"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name_two }}</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-customer-support"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name_three }}</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-customer-support"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name_four }}</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-customer-support"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name_five }}</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="iocn-holder">
+                                        <span class="flaticon-customer-support"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h4>{{ main_errors.errors_name_six }}</h4>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-settings"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name }}</h4>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-wrench"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name_two }}</h4>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-customer-support"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name_three }}</h4>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-customer-support"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name_four }}</h4>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-customer-support"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name_five }}</h4>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="iocn-holder">
-                                    <span class="flaticon-customer-support"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h4>{{ main_errors.errors_name_six }}</h4>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-                {% endfor %}
             </div>
         </div>
     </section>
+     {% endfor %}
     <!--End about us area-->
 
     <!--*Mail Form*-->
