@@ -419,6 +419,16 @@ select:focus {
   background: #10a62e  none repeat scroll 0 0;
   padding: 7px 0 8px;
 }
+
+@media screen and (max-width: 767px) {
+  .top-bar-area {
+    background: #10a62e none repeat scroll 0 0;
+    padding: 7px 0 8px;
+    display: none;
+  }
+
+}
+
 .top-bar-area .welcome p {
   color: #ffffff;
   font-family: "Roboto",sans-serif;
@@ -521,6 +531,13 @@ select:focus {
 ===============================================*/
 .header-area {
   padding: 36px 0 36px;
+}
+
+@media (max-width: 960px) {
+  .header-area {
+    padding: 36px 0 36px;
+    display: none;
+  }
 }
 .header-contact-info ul {
   margin: 5px 0;
@@ -735,6 +752,7 @@ select:focus {
 /* Search Box style   */
 .top-search-box {
   position: relative;
+  padding-bottom: 13px;
 }
 .top-search-box button {
   background: #10a62e;
@@ -755,7 +773,7 @@ select:focus {
 }
 .top-search-box button i.fa-search {
   position: relative;
-  top: -2px;
+  top: 0px;
 }
 .top-search-box .search-box {
   background: #43ea65 none repeat scroll 0 0;
