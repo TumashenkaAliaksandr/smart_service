@@ -588,6 +588,31 @@ select:focus {
   font-size: 14px;
   font-weight: 400;
 }
+
+/*New mobile version*/
+.header-contact-info ul li .iocn-holder, .header-contact-info ul li .text-holder-mobile{
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-contact-info ul li .text-holder-mobile {
+  padding-left: 15px;
+}
+.header-contact-info ul li .text-holder-mobile h5 {
+  color: #3d3d3d;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 20px;
+  margin: 0 0 5px;
+}
+.header-contact-info ul li .text-holder-mobile h6{
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+
 .header-contact-info ul li:hover .iocn-holder span::before{
   border-color: #0d2d1a;
 }
