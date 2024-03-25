@@ -424,7 +424,7 @@ select:focus {
   .top-bar-area {
     background: #10a62e none repeat scroll 0 0;
     padding: 7px 0 8px;
-    display: none;
+    /*display: none;*/
   }
 
 }
@@ -518,7 +518,7 @@ select:focus {
 }
 .top-social-links ul li a i{
   color: #ffffff;
-  font-size: 14px;
+  font-size: 17px;
   transition: all 500ms ease;
 }
 .top-social-links ul li a:hover i{

@@ -1205,6 +1205,16 @@
     margin-right: 10px;
   }
 
+  .top-social-links ul li a i {
+    color: #ffffff;
+    font-size: 27px;
+    transition: all 500ms ease;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: 5px;
+    margin-right: 15px;
+  }
+
 
     
     
