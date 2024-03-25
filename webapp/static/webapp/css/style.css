@@ -909,6 +909,8 @@ select:focus {
   padding: 45px 0 35px;
 }
 
+
+
 .call-to-action-area-mailform {
   background: #f3fff3;
   padding: 40px 0 40px;
@@ -1030,7 +1032,7 @@ select:focus {
 @media screen and (max-width: 767px) {
     .img-fixed-size-proccess {
         width: 100%; /* Установите желаемую ширину */
-        height: 100px; /* Установите желаемую высоту */
+        height: 100%; /* Установите желаемую высоту */
         object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
     }
 
@@ -1038,8 +1040,7 @@ select:focus {
 
 @media screen and (max-width: 767px) {
     .img-fixed-size {
-        width: 100%; /* Установите желаемую ширину */
-        height: 100px; /* Установите желаемую высоту */
+        height: 100%; /* Установите желаемую высоту */
         object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
     }
 
@@ -3479,8 +3480,8 @@ select:focus {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 63px;
-  padding-top: 80px;
+  padding-bottom: 35px;
+  padding-top: 65px;
   position: relative;
   z-index: 1;
 }
@@ -5209,6 +5210,15 @@ select:focus {
   margin-bottom: 40px;
   transition: all 0.7s ease;
 }
+
+@media (max-width: 960px) {
+  .single-product-item {
+    background: #f1efef;
+    transition: all 0.7s ease;
+    height: 33%;
+  }
+}
+
 .single-product-item:hover{
 -webkit-box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 -moz-box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
@@ -5219,6 +5229,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #e4e3e3;
+  height: auto;
 }
 .single-product-item .img-holder img{
   -webkit-transition: all 0.7s ease;
@@ -5831,7 +5842,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
   padding-top: 55px;
 }
 .related-product .sec-title-two {
-  padding-bottom: 34px;
+  padding-bottom: 35px;
 }
 .related-product .sec-title-two h3 {
   color: #3d3d3d;
