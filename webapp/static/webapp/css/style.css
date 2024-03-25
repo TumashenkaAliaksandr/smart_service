@@ -748,6 +748,15 @@ select:focus {
   font-weight: 700;
 }
 
+/* slider */
+@media only screen and (max-width: 767px) {
+  .rev_slider_wrapper {
+    position: relative;
+    z-index: 0;
+    display: none;
+  }
+}
+
 
 /* Search Box style   */
 .top-search-box {
@@ -914,6 +923,19 @@ select:focus {
 .call-to-action-area-mailform {
   background: #f3fff3;
   padding: 40px 0 40px;
+}
+
+.call-to-action-area-mailform-for-comp {
+  background: #f3fff3;
+  padding: 0px 0 40px;
+  display: none; /* Скрываем блок на компьютере */
+}
+
+/* Медиа-запрос для мобильных устройств (ширина меньше или равна 768px) */
+@media screen and (max-width: 768px) {
+  .call-to-action-area-mailform-for-comp {
+    display: block; /* Показываем блок на мобильных устройствах */
+  }
 }
 
 
