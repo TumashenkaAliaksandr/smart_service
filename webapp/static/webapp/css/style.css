@@ -5901,8 +5901,8 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 
 #newsletter .mailpoet_form {
     margin-top: 5px;
-    margin-right: 15px;
-    position: relative;
+    margin-right: 5px;
+    position: fixed;
     overflow:hidden;
     background: #fff;
     height: 27%;
@@ -5915,10 +5915,15 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
         position: relative;
         overflow: hidden;
         background: #fff;
-        height: 28%;
+        height: 30%;
         top: 0px;
     }
 }
+
+/*.mailpoet_submit {*/
+/*    position: absolute; !* Делаем кнопку абсолютно позиционированной *!*/
+/*    bottom: 0; !* Располагаем кнопку внизу контейнера формы *!*/
+/*}*/
 
 #newsletter .mailpoet_form input.mailpoet_text {
     border: none;
@@ -5957,8 +5962,8 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 @media (max-width: 480px) {
     #newsletter input[type="submit"] {
         width: 100%;
-        position: inherit;
-        height: 30%;
+        position: absolute;
+        height: 25%;
     }
 
   #newsletter .news-content{text-align: center;}
