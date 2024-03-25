@@ -615,9 +615,10 @@
   display: inline-block;
   float: right !important;
   padding-bottom: 0;
-  padding-top: 0;
+  /*padding-top: 25px;*/
   z-index: 5;
   width: 100%;
+  margin-right: 10px;
 }
 .main-menu .navigation li {
   margin-left: 0;
@@ -648,10 +649,12 @@
   display:block;
   text-align:right;
   width:100%;
-  padding:13px 0px;
+  padding:15px 0px;
   right:0px;
   z-index:12;
-}        
+  padding-bottom: 10px;
+}
+
 .main-menu .navbar-header .navbar-toggle {
   border: 2px solid #0e9727;
   display: inline-block;
@@ -1187,7 +1190,22 @@
     z-index: 999;
   }
 
-    
+  .mainmenu-area.stricky-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    background: #0d2d1a;
+    transition: all 0.7s ease 0s;
+    -moz-box-shadow: -1px 5px 11px #011809;
+    -webkit-box-shadow: -1px 5px 11px #011809;
+    box-shadow: -1px 5px 11px #011809;
+    padding-top: 25px;
+    margin-right: 10px;
+  }
+
+
     
     
     

@@ -291,18 +291,18 @@ button{
   -webkit-box-shadow: -1px 5px 11px #011809;
   box-shadow: -1px 5px 11px #011809;
 }
-.mainmenu-area.stricky-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  background: #0d2d1a;
-  transition: all 0.7s ease 0s;
-  /*-moz-box-shadow: 3px 1px 3px #0a1327;*/
-  /*-webkit-box-shadow: 3px 1px 3px #0a1327;*/
-  /*box-shadow: 3px 1px 3px #0a1327;*/
-}
+/*.mainmenu-area.stricky {*/
+/*  position: relative;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  z-index: 10000;*/
+/*  background: #0d2d1a;*/
+/*  transition: all 0.7s ease 0s;*/
+/*  !*-moz-box-shadow: 3px 1px 3px #0a1327;*!*/
+/*  !*-webkit-box-shadow: 3px 1px 3px #0a1327;*!*/
+/*  !*box-shadow: 3px 1px 3px #0a1327;*!*/
+/*}*/
 
 
 
@@ -536,7 +536,7 @@ select:focus {
 @media (max-width: 960px) {
   .header-area {
     padding: 36px 0 36px;
-    display: none;
+    /*display: none;*/
   }
 }
 .header-contact-info ul {
@@ -599,6 +599,8 @@ select:focus {
 ===============================================*/
 .mainmenu-area {
   background: #0d2d1a;
+  padding-bottom: 7px;
+  padding-top: 10px;
 }
 .main-menu {
   float: left;
@@ -761,7 +763,8 @@ select:focus {
 /* Search Box style   */
 .top-search-box {
   position: relative;
-  padding-bottom: 13px;
+  padding-bottom: 15px;
+  margin-right: 9px;
 }
 .top-search-box button {
   background: #10a62e;
@@ -923,6 +926,18 @@ select:focus {
 .call-to-action-area-mailform {
   background: #f3fff3;
   padding: 40px 0 40px;
+}
+
+.call-to-action-area-mailform-index {
+  background: #f3fff3;
+  padding: 40px 0 40px;
+}
+
+/* Медиа-запрос для мобильных устройств (ширина меньше или равна 768px) */
+@media screen and (max-width: 768px) {
+  .call-to-action-area-mailform-index {
+    display: none; /* Не показываем блок на мобильных устройствах */
+  }
 }
 
 .call-to-action-area-mailform-for-comp {
