@@ -961,7 +961,7 @@ select:focus {
 /* Медиа-запрос для мобильных устройств (ширина меньше или равна 768px) */
 @media screen and (max-width: 768px) {
   .call-to-action-area-mailform-index {
-    display: none; /* Не показываем блок на мобильных устройствах */
+    /*display: none; !* Не показываем блок на мобильных устройствах *!*/
   }
 }
 
