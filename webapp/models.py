@@ -260,3 +260,14 @@ class Process(models.Model):
     class Meta:
         verbose_name = "Our Process"
         verbose_name_plural = "Our Process"
+
+
+class OfficeContact(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=200)
+    phone_number = models.CharField(max_length=20)
+    email = models.EmailField()
+    opening_hours = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

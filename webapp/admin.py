@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.shortcuts import render
+
 from .models import *
 from ckeditor.widgets import CKEditorWidget
 
@@ -130,3 +132,5 @@ class FavorsAdmin(admin.ModelAdmin):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке
 
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
+
+admin.site.register(OfficeContact)
