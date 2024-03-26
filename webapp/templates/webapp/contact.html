@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_kasmonaftnobg.png' %}{% endif %}');">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_banner_serv1.jpg' %}{% endif %}');">
         <div class="container text-center news-content">
             <h1>Контакты</h1>
         </div>
@@ -17,13 +17,13 @@
     <div class="container">
         <div class="left pull-left">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{% url 'webapp:home' %}">Главная</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>Contact</li>
+                <li>Контакты</li>
             </ul>    
         </div>
         <div class="right pull-right">
-            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Поделиться</a>
         </div>  
     </div>
 </section>
@@ -172,7 +172,7 @@
                 id="contact-google-map"
                 data-map-lat="55.5364"
                 data-map-lng="28.6630"
-                data-icon-path="images/resources/map-marker.png"
+                data-icon-path="../webapp/images/resources/map-marker.png"
                 data-map-title="Новополоцк, Беларусь, Витебская область, Дом Быта"
                 data-map-zoom="12"
                 data-markers='{

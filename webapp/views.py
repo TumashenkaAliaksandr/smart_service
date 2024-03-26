@@ -48,7 +48,7 @@ def about(request):
 
 
 def contact(request):
-
+    offices = OfficeContact.objects.all()
     main_serv = ServicesMain.objects.all()
     brands = Brand.objects.all()
 
@@ -71,6 +71,7 @@ def contact(request):
     context = {
         'main_serv': main_serv,
         'brands': brands,
+        'offices': offices,
     }
 
     return render(request, 'webapp/contact.html', context=context)  # Шаблон с формой обратной связи
