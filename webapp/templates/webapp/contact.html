@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_banner_serv1.jpg' %}{% endif %}');">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_green_mail.jpg' %}{% endif %}');">
         <div class="container text-center news-content">
             <h1>Контакты</h1>
         </div>
@@ -36,7 +36,7 @@
             <div class="col-md-4">
                 <div class="contact-info">
                     <div class="title">
-                        <h2>Contact Details</h2>
+                        <h2>Контакты</h2>
                     </div>
                     <div class="accordion-box">
                         <!--Start single accordion box-->
@@ -129,7 +129,7 @@
                     <div class="title">
                         <h2>Contact Details</h2>
                     </div>
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
+                    <form id="contact-form" name="contact_form" class="default-form" action="/webapp/inc/sendmail.php" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" name="form_name" value="" placeholder="Your Name*" required="">
@@ -177,7 +177,7 @@
                 data-map-zoom="12"
                 data-markers='{
             "marker-1": [55.5364, 28.6630, "<h4>Город Новополоцк, Беларусь</h4><p>Витебская область, Дом Быта</p>"],
-            "marker-2": [55.5364, 28.6630, "<h4>Еще один офис</h4><p>Дополнительная информация о втором офисе</p>","images/resources/map-marker.png"]
+            "marker-2": [55.5364, 28.6630, "<h4>Еще один офис</h4><p>Дополнительная информация о втором офисе</p>","../webapp/images/resources/map-marker.png"]
         }'>
 
         </div>
