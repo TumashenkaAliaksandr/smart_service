@@ -555,23 +555,20 @@
 ***/  
 .header-area .logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-@media (max-width: 960px) {
   .logo-mobile {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
-}
 
 
-  @media (max-width: 960px) {
   .call-to-action-area {
-  background: #f3fff3;
-  padding: 15px 0 15px;
-}
-}
+    background: #f3fff3;
+    padding: 15px 0 15px;
+  }
+
 
 
 .header-contact-info ul {
@@ -584,7 +581,7 @@
   display: block;
   float: none;
   margin-right: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }    
     
     
@@ -598,7 +595,7 @@
 .customer-care {
   margin: 0;
   padding-left: 35px;
-  margin-top: -15px;
+  margin-top: -20px;
 }  
 .top-search-box button {
   height: 42px;
@@ -1214,6 +1211,16 @@
     margin-left: 5px;
     margin-right: 15px;
   }
+
+  .newsletter .mailpoet_form {
+  margin-top: 5px;
+  margin-right: 5px;
+  position: fixed;
+  overflow: hidden;
+  background: #fff;
+  height: 27%;
+  box-shadow: 1px 4px 5px #222;
+}
 
 
     
