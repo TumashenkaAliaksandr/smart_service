@@ -528,13 +528,24 @@
 ***/
 .top-bar-area .welcome p {
   text-align: center;
-  margin: 5px 0;
-}    
+  margin: 10px 0;
+  margin-top: 4%;
+}
+
+.top-bar-area {
+  background: #118b4c none repeat scroll 0 0;
+  padding: 7px 0 8px;
+  /*display: none;*/
+}
+
 .top-bar-area .topinfo {
   position: static;
+  margin-bottom: 3px;
+  margin-top: 10px;
 }
+
 .top-bar-area .topinfo .select-items {
-  width: 250px;
+  /*width: auto;*/
   margin: 0 auto;
   float: none;
 }    
@@ -546,7 +557,12 @@
 .top-social-links ul {
   float: none;
   text-align: center;
-}           
+}
+
+.top-social-links-mail ul {
+  float: none;
+  text-align: center;
+}
     
 /*** 
 =============================================
@@ -1204,12 +1220,23 @@
 
   .top-social-links ul li a i {
     color: #ffffff;
-    font-size: 27px;
+    font-size: 30px;
     transition: all 500ms ease;
-    margin-top: 13px;
+    margin-top: 18px;
     margin-bottom: 13px;
     margin-left: 5px;
-    margin-right: 15px;
+    margin-right: 21px;
+  }
+
+  .top-social-links-mail ul li a i {
+    color: #ffffff;
+    font-size: 19px;
+    transition: all 500ms ease;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    /*margin-left: 5px;*/
+    /*margin-right: 21px;*/
+    position: center;
   }
 
   .newsletter .mailpoet_form {

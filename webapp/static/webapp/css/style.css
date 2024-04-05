@@ -420,14 +420,14 @@ select:focus {
   padding: 7px 0 8px;
 }
 
-@media screen and (max-width: 767px) {
-  .top-bar-area {
-    background: #10a62e none repeat scroll 0 0;
-    padding: 7px 0 8px;
-    /*display: none;*/
-  }
+/*@media screen and (max-width: 767px) {*/
+/*  .top-bar-area {*/
+/*    background: #118b4c none repeat scroll 0 0;*/
+/*    padding: 7px 0 8px;*/
+/*    !*display: none;*!*/
+/*  }*/
 
-}
+/*}*/
 
 .top-bar-area .welcome p {
   color: #ffffff;
@@ -440,7 +440,8 @@ select:focus {
 
 .top-bar-area .topinfo {
   position: relative;
-  left: 100px;
+  left: 75%;
+  color: #e1e1e1;
 }
 .top-bar-area .topinfo .select-items {
   width: 230px;
@@ -518,9 +519,20 @@ select:focus {
 }
 .top-social-links ul li a i{
   color: #ffffff;
-  font-size: 17px;
+  font-size: 21px;
   transition: all 500ms ease;
 }
+
+.top-social-links-mail ul li a i{
+  color: #ffffff;
+  font-size: 13px;
+  transition: all 500ms ease;
+}
+
+.top-social-links-mail ul li a:hover i{
+  color: #0d2d1a;
+}
+
 .top-social-links ul li a:hover i{
   color: #0d2d1a;
 }
