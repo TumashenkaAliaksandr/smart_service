@@ -636,8 +636,8 @@ select:focus {
 ===============================================*/
 .mainmenu-area {
   background: #0d2d1a;
-  padding-bottom: 7px;
-  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 .main-menu {
   float: left;
