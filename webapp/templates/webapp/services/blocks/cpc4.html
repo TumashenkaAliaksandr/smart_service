@@ -5,7 +5,7 @@
 {% block content %}
 
     <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_proc_back.jpg' %}{% endif %}');">
+    <section class="breadcrumb-area-cpc" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_mers1.jpeg' %}{% endif %}');">
         <div class="container text-center">
             <h1>Ремонт Блока CPC4 Mercedes</h1>
         </div>
@@ -73,10 +73,10 @@
                                 <div class="col-md-7">
                                     <div class="text-holder">
                                         <div class="title">
-                                            <h2>{{ main_cpc4.name_two }}</h2>
+                                            <h2>{{ main_cpc4.name_three }}</h2>
                                         </div>
                                         <div class="text">
-                                            <p>{{ main_cpc4.description_two | safe  }}</p>
+                                            <p>{{ main_cpc4.description_six | safe  }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -157,9 +157,8 @@
                             <p>{{ main_errors.description_four | safe }}</p>
                         </div>
                         <div class="text-holder">
-                            <h3>Общий ремонт контроллера
-                                <span>CPC4</span></h3>
-                            <p>{{ main_errors.description_six | safe }}</p>
+                            <h2>{{ main_errors.name_two }}</h2>
+                            <p>{{ main_errors.description_two | safe }}</p>
 {#                            <h3>Save time, Save money, With Quality Phone Repair Service,#}
 {#                                <span>Purchase - RepairPlus</span></h3>#}
                         </div>

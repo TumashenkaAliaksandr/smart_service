@@ -542,7 +542,7 @@ select:focus {
     Header Area Css
 ===============================================*/
 .header-area {
-  padding: 36px 0 36px;
+  padding: 33px 0 33px;
 }
 
 @media (max-width: 960px) {
@@ -554,7 +554,7 @@ select:focus {
 .header-contact-info ul {
   margin: 5px 0;
   overflow: hidden;
-  margin-left: 75px;
+  margin-left: 17%;
 }
 .header-contact-info ul li {
   display: inline-block;
@@ -2421,6 +2421,36 @@ select:focus {
     Breadcrumb area style
 =============================================
 ***/
+.breadcrumb-area-cpc {
+  background: #f7f7f7 none repeat scroll 0 0;
+  height: 200px;
+  padding-top: 55px;
+  background-position: center;
+}
+
+.breadcrumb-area-cover-cpc {
+  background: #f7f7f7 none repeat scroll 0 0;
+  height: 200px;
+  padding-top: 55px;
+  background-position: right;
+  background-size: cover;
+}
+
+.breadcrumb-area-cover-cpc h1{
+  color: #e1ffed;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+.breadcrumb-area-cpc h1 {
+  color: #e1ffed;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 .breadcrumb-area {
   background: #f7f7f7 none repeat scroll 0 0;
   height: 200px;

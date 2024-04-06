@@ -114,7 +114,7 @@ class BlockCpcFourAdmin(admin.ModelAdmin):
         models.TextField: {'widget': CKEditorWidget}
     }
 
-    list_display = ('name', 'name_two', 'errors_name', 'errors_name_two', 'errors_name_three', 'errors_name_four', 'errors_name_five', 'errors_name_six',
+    list_display = ('name', 'name_two', 'name_three', 'errors_name', 'errors_name_two', 'errors_name_three', 'errors_name_four', 'errors_name_five', 'errors_name_six',
                     'description', 'description_two', 'description_three', 'description_four', 'description_six', 'description_seven', 'client_visit', 'image', 'image_two', 'image_three',
                     'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 

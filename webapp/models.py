@@ -203,6 +203,7 @@ class BlockCpcFour(models.Model):
     """Block CPC4 model"""
     name = models.CharField(max_length=100, verbose_name='name')
     name_two = models.CharField(max_length=100, verbose_name='name_two', default='Второй Заголовок')
+    name_three = models.CharField(max_length=100, verbose_name='name_three', default='Третий Заголовок')
     errors_name = models.CharField(max_length=100, verbose_name='errors_name', default='Причина Ошибки 1')
     errors_name_two = models.CharField(max_length=100, verbose_name='errors_name_two', default='Причина Ошибки 2')
     errors_name_three = models.CharField(max_length=100, verbose_name='errors_name_three', default='Причина Ошибки 3')
