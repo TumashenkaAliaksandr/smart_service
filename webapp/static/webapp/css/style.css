@@ -2494,6 +2494,7 @@ select:focus {
 .breadcrumb-botton-area {
   border-bottom: 1px solid #f0f0f0;
   padding: 13px 0 7px;
+  background-color: azure;
 }
 .breadcrumb-botton-area .left { }
 .breadcrumb-botton-area .left ul {
@@ -4324,13 +4325,14 @@ select:focus {
   margin-bottom: 10px;
 }
 #service-single-area .service-single-sidebar .service-lists .allservice a {
-  background: #f7f7f7 none repeat scroll 0 0;
+  background: #f1f1f1 none repeat scroll 0 0;
   color: #3d3d3d;
   display: block;
   font-size: 14px;
   font-weight: 700;
   padding: 16px 20px 16px;
   text-transform: uppercase;
+  opacity: 0.95;
 }
 #service-single-area .service-single-sidebar .service-lists .allservice a i {
   color: #999999;
@@ -4345,7 +4347,7 @@ select:focus {
   position: relative;
 }
 #service-single-area .service-single-sidebar .service-lists li a {
-  background: #f7f7f7 none repeat scroll 0 0;
+  background: #f1f1f1 none repeat scroll 0 0;
   display: block;
   padding: 16px 20px 16px;
   color: #3d3d3d;
@@ -4355,6 +4357,7 @@ select:focus {
   position: relative;
   transition: all 500ms ease;
   transition-delay: 0.10s;
+  opacity: 0.95;
 }
 #service-single-area .service-single-sidebar .service-lists li a::before {
   background: #43ea65 none repeat scroll 0 0;
