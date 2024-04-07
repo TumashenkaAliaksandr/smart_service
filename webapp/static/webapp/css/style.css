@@ -943,6 +943,9 @@ select:focus {
   background: url(../images/working-process/ecu_serv_ban.png);
 }
 
+.background-image-process-fon{
+  background: url(../images/working-process/ecu_mers_concept.jpg);
+}
 
 .background-image-footer{
   background: url(../images/working-process/ecu_footer.jpg);
@@ -3642,6 +3645,98 @@ select:focus {
 .working-process-area .single-iten:hover .img-box {
   border: 2px dashed #43ea65;
 }
+
+/*для светлого фона*/
+.working-process-area-fon {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 35px;
+  padding-top: 65px;
+  position: relative;
+  z-index: 1;
+}
+.working-process-area-fon::before {
+  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.working-process-area-fon {
+  /*background: #fff;*/
+  padding: 80px 0 70px;
+}
+
+.working-process-area-fon .about-content{  }
+.working-process-area-fon .about-content ul {
+  overflow: hidden;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.working-process-area-fon .about-content ul li {
+  display: inline-block;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  display: block;
+}
+.working-process-area-fon .about-content .text-holder p {
+  margin: 23px 0 13px;
+}
+.working-process-area-fon .about-content .text-holder h3{
+  color: #3d3d3d;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.working-process-area-fon .about-content .text-holder h3:hover{
+  text-shadow: 2px 1px 1px #222;
+}
+.working-process-area-fon .about-content .text-holder h3 span{
+  color: #43ea65;
+}
+
+.working-process-area-fon .choose-us-content { }
+.working-process-area-fon .choose-us-content ul li {
+  padding-left: 40px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.working-process-area-fon .choose-us-content ul li:last-child{
+  padding-bottom: 0;
+}
+.working-process-area-fon .choose-us-content ul li .iocn-holder {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.working-process-area-fon .choose-us-content ul li .iocn-holder span:before{
+  color: #43ea65;
+  font-size: 25px;
+}
+.working-process-area-fon .choose-us-content ul li .text-holder {}
+.working-process-area-fon .choose-us-content ul li .text-holder h4 {
+  color: #3d3d3d;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 19px;
+  text-transform: capitalize;
+}
+.working-process-area-fon .choose-us-content ul li .text-holder p{
+  line-height: 24px;
+}
+
+
+
+/*конец*/
 
 
 .team-area{
