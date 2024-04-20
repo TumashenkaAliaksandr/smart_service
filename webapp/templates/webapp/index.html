@@ -56,27 +56,28 @@
             <div class="row">
                 <!--Start single item-->
                 {% for main_favorites in favorites %}
-                <div class="col-md-4">
-                    <div class="single-item text-center">
-                        <a href="{{ main_favorites.link }}">
-                            <h5>{{ main_favorites.name }}</h5>
-                        </a>
-                        <div class="img-holder">
-                            <img src="{{ main_favorites.image.url }}"
-                                 class="img-fixed-size-three" alt="Awesome Image">
-                            <div class="overlay">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="{{ main_favorites.link }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <div class="col-md-4">
+                        <div class="single-item text-center">
+                            <a href="{{ main_favorites.link }}">
+                                <h5>{{ main_favorites.name }}</h5>
+                            </a>
+                            <div class="img-holder">
+                                <img src="{{ main_favorites.image.url }}"
+                                     class="img-fixed-size-three" alt="Awesome Image">
+                                <div class="overlay">
+                                    <div class="box">
+                                        <div class="content">
+                                            <a href="{{ main_favorites.link }}"><i class="fa fa-link"
+                                                                                   aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="action text-holder">
-                            <h4>{{ main_favorites.description | safe }}</h4>
+                            <div class="action text-holder">
+                                <h4>{{ main_favorites.description | safe }}</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
                 {% endfor %}
                 <!--End single item-->
             </div>

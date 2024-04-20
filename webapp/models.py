@@ -265,10 +265,12 @@ class Process(models.Model):
 
 class OfficeContact(models.Model):
     name = models.CharField(max_length=100)
-    address = models.CharField(max_length=200)
-    phone_number = models.CharField(max_length=20)
+    address = models.CharField(max_length=200, default='область')
+    city_address = models.CharField(max_length=200, default='город')
+    phone_number = models.CharField(max_length=20, default='офис тел')
     email = models.EmailField()
-    opening_hours = models.CharField(max_length=100)
+    opening_hours = models.CharField(max_length=100, default='часы работы')
+    lunch = models.CharField(max_length=100, default='обед')
 
     def __str__(self):
         return self.name

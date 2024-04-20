@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_contact_center.jpg' %}{% endif %}');">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_phone_chuvak.jpg' %}{% endif %}');">
         <div class="container text-center news-content">
             <h1>Контакты</h1>
         </div>
@@ -40,8 +40,9 @@
                     </div>
                     <div class="accordion-box">
                         <!--Start single accordion box-->
+                        {% for main_contact in offices %}
                         <div class="accordion accordion-block">
-                            <div class="accord-btn active"><h4>Corporate Office</h4></div>
+                            <div class="accord-btn active"><h4>{{ main_contact.name }}</h4></div>
                             <div class="accord-content collapsed">
                                 <ul class="contact-info-list">
                                     <li>
@@ -49,7 +50,7 @@
                                             <span class="flaticon-home-page"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA 10002</h5>
+                                            <h5><span>{{ main_contact.address }}</span><br> {{ main_contact.city_address }}</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -57,7 +58,7 @@
                                             <span class="flaticon-call-answer"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Call Us</span><br>+321 4567 89 012 &amp; 79 023</h5>
+                                            <h5><span>Наш телефон</span><br>{{ main_contact.phone_number }}</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -65,7 +66,7 @@
                                             <span class="flaticon-envelope"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
+                                            <h5><span>Почта</span><br>{{ main_contact.email }}</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -73,12 +74,21 @@
                                             <span class="flaticon-clock"></span>
                                         </div>
                                         <div class="text-holder">
-                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
+                                            <h5><span>Время работы</span><br>{{ main_contact.opening_hours}}</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-slices-of-bread"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <h5><span>Обед</span><br>{{ main_contact.lunch}}</h5>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+
                         <!--End single accordion box-->
                         <!--Start single accordion box-->
                         <div class="accordion accordion-block">
@@ -120,7 +130,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <!--End single accordion box--> 
+                        <!--End single accordion box-->
+                        {% endfor %}
                     </div>
                 </div>
             </div>
