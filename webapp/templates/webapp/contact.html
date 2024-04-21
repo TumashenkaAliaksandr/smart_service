@@ -29,170 +29,181 @@
 </section>
 <!--End breadcrumb bottom area-->
 
-<!--Start contact area-->
-<section class="contact-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="contact-info">
-                    <div class="title">
-                        <h2>Контакты</h2>
-                    </div>
-                    <div class="accordion-box">
-                        <!--Start single accordion box-->
-                        {% for main_contact in offices %}
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn active"><h4>{{ main_contact.name }}</h4></div>
-                            <div class="accord-content collapsed">
-                                <ul class="contact-info-list">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>{{ main_contact.address }}</span><br> {{ main_contact.city_address }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Наш телефон</span><br>{{ main_contact.phone_number }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Почта</span><br>{{ main_contact.email }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-clock"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Время работы</span><br>{{ main_contact.opening_hours}}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-slices-of-bread"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Обед</span><br>{{ main_contact.lunch}}</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+    <!--Start contact area-->
+    <section class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <div class="title">
+                            <h2>Контакты</h2>
                         </div>
+                        <div class="accordion-box">
+                            <!--Start single accordion box-->
+                            {% for main_contact in offices %}
+                                <div class="accordion accordion-block">
+                                    <div class="accord-btn active"><h4>{{ main_contact.name }}</h4></div>
+                                    <div class="accord-content collapsed">
+                                        <ul class="contact-info-list">
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-home-page"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5>
+                                                        <span>{{ main_contact.address }}</span><br> {{ main_contact.city_address }}
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-call-answer"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Наш телефон</span><br>{{ main_contact.phone_number }}</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-envelope"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Почта</span><br>{{ main_contact.email }}</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-clock"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Время работы</span><br>{{ main_contact.opening_hours }}
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-slices-of-bread"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Обед</span><br>{{ main_contact.lunch }}</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>Regional Office</h4></div>
-                            <div class="accord-content">
-                                <ul class="contact-info-list">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA 10002</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Call Us</span><br>+321 4567 89 012 &amp; 79 023</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-clock"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                <!--End single accordion box-->
+                                <!--Start single accordion box-->
+                                <div class="accordion accordion-block">
+                                    <div class="accord-btn"><h4>Regional Office</h4></div>
+                                    <div class="accord-content">
+                                        <ul class="contact-info-list">
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-home-page"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA
+                                                        10002</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-call-answer"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Call Us</span><br>+321 4567 89 012 &amp; 79 023</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-envelope"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon-holder">
+                                                    <span class="flaticon-clock"></span>
+                                                </div>
+                                                <div class="text-holder">
+                                                    <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--End single accordion box-->
+                            {% endfor %}
                         </div>
-                        <!--End single accordion box-->
-                        {% endfor %}
                     </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <div class="contact-form">
-                    <div class="title">
-                        <h2>Contact Details</h2>
-                    </div>
-                    <form id="contact-form" name="contact_form" class="default-form" action="/webapp/inc/sendmail.php" method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_name" value="" placeholder="Your Name*" required="">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="form_email" value="" placeholder="Your Mail*" required="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_phone" value="" placeholder="Phone">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="form_subject" value="" placeholder="Subject">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <textarea name="form_message" placeholder="Your Message.." required=""></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                <button class="thm-btn bg-1" type="submit" data-loading-text="Please wait...">send message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End contact area-->
-
-    <!--Start Google map area-->
-    <section class="google-map-area">
-        <div
-                class="google-map"
-                id="contact-google-map"
-                data-map-lat="55.5364"
-                data-map-lng="28.6630"
-                data-icon-path="../webapp/images/resources/map-marker.png"
-                data-map-title="Новополоцк, Беларусь, Витебская область, Дом Быта"
-                data-map-zoom="12"
-                data-markers='{
+                <div class="col-md-8">
+                    <div class="title"><h2>Мы на карте</h2></div>
+                    <!--Start Google map area-->
+                    <section class="google-map-area">
+                        <div
+                                class="google-map"
+                                id="contact-google-map"
+                                data-map-lat="55.5364"
+                                data-map-lng="28.6630"
+                                data-icon-path="../webapp/images/resources/map-marker.png"
+                                data-map-title="Новополоцк, Беларусь, Витебская область, Дом Быта"
+                                data-map-zoom="12"
+                                data-markers='{
             "marker-1": [55.5364, 28.6630, "<h4>Город Новополоцк, Беларусь</h4><p>Витебская область, Дом Быта</p>"],
             "marker-2": [55.5364, 28.6630, "<h4>Еще один офис</h4><p>Дополнительная информация о втором офисе</p>","../webapp/images/resources/map-marker.png"]
         }'>
 
+                        </div>
+                    </section>
+                    <!--End Google map area-->
+                </div>
+            </div>
         </div>
     </section>
-    <!--End Google map area-->
+    <!--End contact area-->
+    <!--*Mail Form*-->
+    <section class="call-to-action-area-mailform-index services-area">
+        <div class="container">
+            <div class="row">
+                <!--*Newsletter*-->
+                <div id="newsletter" class="mail-form-animation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="news-content">
+                                    <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}"
+                                         class="img-fixed-size-for-mailform" alt="Awesome Logo">
+                                    <h2>Бесплатная Консультация</h2>
+                                    <p class="beige"><b>НАПИШИТЕ НАМ И В ТЕЧЕНИИ 10 МНУТ МЫ С ВАМИ СВЯЖЕМСЯ.</b></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="mailpoet_form">
+                                    <form target="_self" method="post" action="{% url 'webapp:contact' %}"
+                                          novalidate="">
+                                        {% csrf_token %}
+                                        <input type="text" class="mailpoet_text" name="name"
+                                               placeholder="Введите Ваше Имя">
+                                        <input type="email" class="mailpoet_text" name="email" title="Email"
+                                               placeholder="Введите Ваш Телефон">
+                                        <input type="text" class="mailpoet_text" name="description"
+                                               placeholder="Опишите проблему">
+                                        <div class="button">
+                                            <input type="submit" class="mailpoet_submit" value="Отправить Сообщение">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--*End Newsletter*-->
+            </div>
+        </div>
+    </section>
+    <!--*END MAIL FORM*-->
 
 {% endblock %}
