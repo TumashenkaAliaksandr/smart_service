@@ -6115,19 +6115,20 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 }
 
 #newsletter input[type="submit"] {
-    border: none;
-    background: #10a62e;
-    position: absolute;
-    /*top: 0px;*/
-    right: 0;
-    color: #fff;
-    margin: 0;
-    padding: 13px 20px 12px;
-    border-radius: 0;
-    width: 100%;
-    transition: background-color 0.3s; /* добавляем плавный переход */
-    left: 0;
-    bottom: 0;
+  border: none;
+  background: #10a62e;
+  position: absolute;
+  /*top: 0px;*/
+  right: 0px;
+  color: #fff;
+  margin: 0;
+  padding: 13px 20px 12px;
+  border-radius: 0;
+  width: 95%;
+  transition: background-color 0.3s;
+  left: 13px;
+  bottom: 0;
+
 }
 
 
@@ -6144,6 +6145,7 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
         width: 100%;
         position: absolute;
         height: 25%;
+        left: 0;
     }
 
   #newsletter .news-content{text-align: center;}
