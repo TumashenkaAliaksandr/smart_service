@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_contacts1.jpg' %}{% endif %}');">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_banner_contact.jpeg' %}{% endif %}');">
         <div class="container text-center news-content">
             <h1>Контакты</h1>
         </div>
@@ -140,22 +140,30 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="title"><h2>Мы на карте</h2></div>
+                    <div class="title-map"><h2>Мы на карте</h2></div>
                     <!--Start Google map area-->
                     <section class="google-map-area">
-                        <div
-                                class="google-map"
-                                id="contact-google-map"
-                                data-map-lat="55.5364"
-                                data-map-lng="28.6630"
-                                data-icon-path="../webapp/images/resources/map-marker.png"
-                                data-map-title="Новополоцк, Беларусь, Витебская область, Дом Быта"
-                                data-map-zoom="12"
-                                data-markers='{
-            "marker-1": [55.5364, 28.6630, "<h4>Город Новополоцк, Беларусь</h4><p>Витебская область, Дом Быта</p>"],
-            "marker-2": [55.5364, 28.6630, "<h4>Еще один офис</h4><p>Дополнительная информация о втором офисе</p>","../webapp/images/resources/map-marker.png"]
-        }'>
-
+{#                        <div#}
+{#                                class="google-map"#}
+{#                                id="contact-google-map"#}
+{#                                data-map-lat="55.5364"#}
+{#                                data-map-lng="28.6630"#}
+{#                                data-icon-path="../webapp/images/resources/map-marker.png"#}
+{#                                data-map-title="Новополоцк, Беларусь, Витебская область, Дом Быта"#}
+{#                                data-map-zoom="12"#}
+{#                                data-markers='{#}
+{#            "marker-1": [55.5364, 28.6630, "<h4>Город Новополоцк, Беларусь</h4><p>Витебская область, Дом Быта</p>"],#}
+{#            "marker-2": [55.5364, 28.6630, "<h4>Еще один офис</h4><p>Дополнительная информация о втором офисе</p>","../webapp/images/resources/map-marker.png"]#}
+{#        }'>#}
+{##}
+{#                        </div>#}
+                        <div class="map-container">
+                            <div class="map-wrapper">
+                                <iframe class="map-iframe"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2257.9433553685067!2d28.640930576458373!3d55.5333559088727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c485387b020b13%3A0x39a551c1c60f8ab0!2z0JTQvtC8INCR0YvRgtCw!5e0!3m2!1sru!2sby!4v1713770549794!5m2!1sru!2sby"
+                                        frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                     </section>
                     <!--End Google map area-->
