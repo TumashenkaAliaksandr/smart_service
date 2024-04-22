@@ -190,7 +190,7 @@
 {#                                    <li><a href="blog-single.html">Blog Single</a></li>#}
 {#                                </ul>#}
                             </li>
-                            <li><a href="{% url 'webapp:contact' %}">Контакты</a></li>
+                            <li {% if request.resolver_match.url_name == 'contact' %}class="current"{% endif %}><a href="{% url 'webapp:contact' %}">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
