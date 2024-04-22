@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_banner_contact.jpeg' %}{% endif %}');">
+    <section class="breadcrumb-area" style="background-image: url('{% if contact_banner_image %}{{ contact_banner_image.url }}{% else %}{% static 'webapp/images/resources/ecu_convert.jpg' %}{% endif %}');">
         <div class="container text-center news-content">
             <h1>Контакты</h1>
         </div>
@@ -30,13 +30,13 @@
 <!--End breadcrumb bottom area-->
 
     <!--Start contact area-->
-    <section class="contact-area">
+    <section id="contact" class="contact-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="contact-info">
                         <div class="title">
-                            <h2>Контакты</h2>
+                            <h2>ECU Service</h2>
                         </div>
                         <div class="accordion-box">
                             <!--Start single accordion box-->
@@ -93,48 +93,48 @@
                                 </div>
 
                                 <!--End single accordion box-->
-                                <!--Start single accordion box-->
-                                <div class="accordion accordion-block">
-                                    <div class="accord-btn"><h4>Regional Office</h4></div>
-                                    <div class="accord-content">
-                                        <ul class="contact-info-list">
-                                            <li>
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-home-page"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA
-                                                        10002</h5>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-call-answer"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <h5><span>Call Us</span><br>+321 4567 89 012 &amp; 79 023</h5>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-envelope"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-clock"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--End single accordion box-->
+{#                                <!--Start single accordion box-->#}
+{#                                <div class="accordion accordion-block">#}
+{#                                    <div class="accord-btn"><h4>Regional Office</h4></div>#}
+{#                                    <div class="accord-content">#}
+{#                                        <ul class="contact-info-list">#}
+{#                                            <li>#}
+{#                                                <div class="icon-holder">#}
+{#                                                    <span class="flaticon-home-page"></span>#}
+{#                                                </div>#}
+{#                                                <div class="text-holder">#}
+{#                                                    <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA#}
+{#                                                        10002</h5>#}
+{#                                                </div>#}
+{#                                            </li>#}
+{#                                            <li>#}
+{#                                                <div class="icon-holder">#}
+{#                                                    <span class="flaticon-call-answer"></span>#}
+{#                                                </div>#}
+{#                                                <div class="text-holder">#}
+{#                                                    <h5><span>Call Us</span><br>+321 4567 89 012 &amp; 79 023</h5>#}
+{#                                                </div>#}
+{#                                            </li>#}
+{#                                            <li>#}
+{#                                                <div class="icon-holder">#}
+{#                                                    <span class="flaticon-envelope"></span>#}
+{#                                                </div>#}
+{#                                                <div class="text-holder">#}
+{#                                                    <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>#}
+{#                                                </div>#}
+{#                                            </li>#}
+{#                                            <li>#}
+{#                                                <div class="icon-holder">#}
+{#                                                    <span class="flaticon-clock"></span>#}
+{#                                                </div>#}
+{#                                                <div class="text-holder">#}
+{#                                                    <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>#}
+{#                                                </div>#}
+{#                                            </li>#}
+{#                                        </ul>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <!--End single accordion box-->#}
                             {% endfor %}
                         </div>
                     </div>
@@ -173,7 +173,7 @@
     </section>
     <!--End contact area-->
     <!--*Mail Form*-->
-    <section class="call-to-action-area-mailform-index services-area">
+    <section id="contact" class="call-to-action-area-mailform-index services-area">
         <div class="container">
             <div class="row">
                 <!--*Newsletter*-->
