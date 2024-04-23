@@ -125,7 +125,21 @@
         </div>
     </section>
 
+
     <!--Start about us area-->
+    {% for main_errors in main_cpc_four %}
+        <section class="working-process-area-fon background-image-process-fon">
+        <div class="container">
+            <div class="sec-title text-center sec-title-proces">
+               <h1>{{ main_errors.name_two }}</h1>
+            </div>
+            <div class="description-block text-center">
+                <h4>{{ main_errors.description_two | safe }}</h4>
+            </div>
+        </div>
+        </section>
+    {% endfor %}
+
     {% for main_errors in main_cpc_four %}
     <section class="working-process-area-fon background-image-process-fon">
         <div class="container">
@@ -155,12 +169,6 @@
                         </ul>
                         <div class="text-holder">
                             <p>{{ main_errors.description_four | safe }}</p>
-                        </div>
-                        <div class="text-holder">
-                            <h2>{{ main_errors.name_two }}</h2>
-                            <p>{{ main_errors.description_two | safe }}</p>
-{#                            <h3>Save time, Save money, With Quality Phone Repair Service,#}
-{#                                <span>Purchase - RepairPlus</span></h3>#}
                         </div>
                     </div>
                 </div>
@@ -226,18 +234,6 @@
         </div>
     </section>
      {% endfor %}
-    {% for main_errors in main_cpc_four %}
-        <section class="working-process-area-fon background-image-process-fon">
-        <div class="container">
-            <div class="sec-title text-center sec-title-proces">
-               <h1>{{ main_errors.name_two }}</h1>
-            </div>
-            <div class="text-center">
-                <h4>{{ main_errors.description_two | safe }}</h4>
-            </div>
-        </div>
-        </section>
-    {% endfor %}
     {% for main_errors in main_cpc_four %}
     <section class="about-us-area">
         <div class="container">
