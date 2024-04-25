@@ -9,6 +9,7 @@ def blog(request):
     model_blog_main = BlogNews.objects.all()
     news_for_footer = BlogNews.objects.all()[:2]
     news = BlogNews.objects.all()
+    our_services = ServicesMain.objects.all()
 
     context = locals()
     return render(request, 'blog/blog.html', context=context)
