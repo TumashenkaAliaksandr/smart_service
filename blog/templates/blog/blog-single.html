@@ -135,7 +135,7 @@
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <form class="search-form" action="#">
-							<input placeholder="Search..." type="text">
+							<input placeholder="Поиск..." type="text">
 							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 						</form>
                     </div>
@@ -145,126 +145,91 @@
                         <div class="sidebar-title">
                             <h1>Наши Услуги</h1>
                         </div>
+                        {% for main_services in our_services|slice:":5" %}
                         <ul class="categories clearfix">
                             <li>
-                                <a href="#">
-                                    Smart Phones 
+                                <a href="{{ main_services.link }}">
+                                    {{ main_services.name|truncatechars:25 }}
                                     <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#"> 
-                                    Desktop & Mac
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
-                                </a>
-                            </li>  
-                            <li>
-                                <a href="#">
-                                    Game Console 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
-                                </a>
-                            </li>  
-                            <li>
-                                <a href="#">
-                                    Safety & Security 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
-                                </a>
-                            </li>  
-                            <li>
-                                <a href="#">
-                                    Uncategorized 
-                                    <span class="pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i> </span>
-                                </a>
-                            </li>     
                         </ul>
+                        {% endfor %}
                     </div>
                     <!--End single sidebar-->
+
                     <!--Start single sidebar--> 
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Recent Post</h1>
+                            <h1>Последние Новости</h1>
                         </div>
+                        {% for main_latest_news in news_blog_main|slice:":5" %}
                         <ul class="recent-post">
                             <li>
-                                <a href="#">
+                                <a href="{% url 'blog:single' pk=main_latest_news.id %}">
                                     <h5 class="post-title">
-                                        We offer the best in same day iPhone Repairs plymouth
+                                        {{ main_latest_news.title }}
                                     </h5>
                                 </a>
                                 <h6 class="post-date">
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    July 21, 2016
+                                    {{ main_latest_news.pub_date }}
                                 </h6>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <h5 class="post-title">
-                                        iPad Repairs For Schools/Universities Across The Usa
-                                    </h5>
-                                </a>
-                                <h6 class="post-date">
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    March 17, 2016
-                                </h6>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h5 class="post-title">
-                                        All Software Boxes & Dongles Available At Best Prices
-                                    </h5>
-                                </a>
-                                <h6 class="post-date">
-                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    January 10, 2016
-                                </h6>
-                            </li>
-                           
                         </ul>
+                        {% endfor %}
                     </div>
                     <!--End single sidebar-->
-                    <!--Start single-sidebar-->
+
+                    <!-- Start single-sidebar -->
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Blog Archives</h1>   
+                            <h1>Блог Архив</h1>
                         </div>
                         <ul class="blog-archive">
-                            <li><a href="#">August 2013  (5)</a></li>
-                            <li><a href="#">December 2013  (8)</a></li>
-                            <li><a href="#">January 2014  (4)</a></li>
-                            <li><a href="#">September 2014  (9)</a></li>
-                        </ul>    
-                    </div> 
-                    <!--End single-sidebar-->
+                            {% regroup news_blog_main|slice:":-5" by pub_date|date:"F Y" as blog_archive %}
+                            {% for month_year in blog_archive %}
+                                <li><a href="#">{{ month_year.grouper }} ({{ month_year.list|length }})</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- End single-sidebar -->
+
                     <!--Start single-sidebar-->
                     <div class="single-sidebar popular-tag">
                         <div class="sidebar-title">
-                            <h1>Popular Tags</h1> 
+                            <h1>Популярные теги</h1>
                         </div>
                         <ul class="popular-tag">
-                            <li><a href="#">Safe</a></li>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Pc&Laptops</a></li>
-                            <li><a href="#">Game Disk</a></li>
-                            <li><a href="#">Ideas</a></li>
-                            <li><a href="#">Repair</a></li>
-                            <li><a href="#">Processor</a></li>
-                            <li><a href="#">Unlocked</a></li>
-                            <li><a href="#">Software</a></li>
-                            <li><a href="#">TV</a></li>
-                            <li><a href="#">LED Screen</a></li>
+                            <li><a href="#">Электроника</a></li>
+                            <li><a href="#">Транспорт</a></li>
+                            <li><a href="#">Блоки Эбу</a></li>
+                            <li><a href="#">SPS4</a></li>
+                            <li><a href="#">Батарея</a></li>
+                            <li><a href="#">Датчики</a></li>
+                            <li><a href="#">Процессор</a></li>
+                            <li><a href="#">Залило водой</a></li>
+                            <li><a href="#">Чип</a></li>
+                            <li><a href="#">Телевизор</a></li>
+                            <li><a href="#">Преобразователи</a></li>
                         </ul>      
                     </div> 
                     <!--End single-sidebar-->
-                    <!--Start single-sidebar-->
+
+                    <!-- Start single-sidebar -->
                     <div class="single-sidebar facebook">
                         <div class="sidebar-title">
-                            <h1>Facebook</h1>  
+                            <h1>Наша инста</h1>
                         </div>
                         <div class="follow-us-content">
-                            <img src="{% static 'webapp/images/sidebar/fb-follow-us.jpg' %}" alt="Awesome Follow Us Image">
-                        </div>        
-                    </div> 
-                    <!--End single-sidebar-->
+                            <a href="https://www.instagram.com/smart_service_novopolock/">
+                                <img src="{% static 'webapp/images/resources/ecu_insta.jpg' %}"
+                                     alt="Awesome Follow Us Image">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End single-sidebar -->
+
                 </div>    
             </div>
             <!--End Sidebar Wrapper-->  
