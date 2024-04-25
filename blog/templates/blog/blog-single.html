@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                 <div class="blog-post">
-                    {% for main_news in news_blog_main %}
+                    {% for main_news in news %}
                     <!--Start single blog post-->
                     <div class="single-blog-item">
                         <div class="img-holder">
@@ -181,20 +181,6 @@
                         {% endfor %}
                     </div>
                     <!--End single sidebar-->
-
-                    <!-- Start single-sidebar -->
-                    <div class="single-sidebar">
-                        <div class="sidebar-title">
-                            <h1>Блог Архив</h1>
-                        </div>
-                        <ul class="blog-archive">
-                            {% regroup news_blog_main|slice:":-5" by pub_date|date:"F Y" as blog_archive %}
-                            {% for month_year in blog_archive %}
-                                <li><a href="#">{{ month_year.grouper }} ({{ month_year.list|length }})</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <!-- End single-sidebar -->
 
                     <!--Start single-sidebar-->
                     <div class="single-sidebar popular-tag">

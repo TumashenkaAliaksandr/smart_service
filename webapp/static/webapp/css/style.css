@@ -1782,12 +1782,12 @@ select:focus {
 .latest-blog-area .single-latest-blog .img-holder{
   display: block;
   overflow: hidden;
-  position: relative;     
+  position: relative;
 }
 .latest-blog-area .single-latest-blog .img-holder img {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;     
+  width: 100%;
 }
 .latest-blog-area .single-latest-blog .img-holder .overlay-box{
   position: absolute;
@@ -1800,6 +1800,8 @@ select:focus {
   transition: all 0.7s ease;
   opacity: 0;        
 }
+
+
 .latest-blog-area .single-latest-blog .img-holder .overlay-box .box{
   display: table;
   width: 100%;

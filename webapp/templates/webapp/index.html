@@ -49,7 +49,6 @@
     </section>
     <!--*END MAIL FORM*-->
 
-
     <!--Start call to action area-->
     <section class="call-to-action-area">
         <div class="container">
@@ -650,7 +649,7 @@
                 <div class="col-md-4">
                     <div class="single-latest-blog">
                         <div class="img-holder">
-                            <img src="{{ main_news.photo.url }}" alt="Awesome Image">
+                            <img src="{{ main_news.photo.url }}" class="img-fixed-size" alt="Awesome Image">
                             <div class="overlay-box">
                                 <div class="box">
                                     <div class="content">
@@ -672,56 +671,6 @@
                 </div>
                 <!--End single latest blog-->
                 {% endfor %}
-                <!--Start single latest blog-->
-                <div class="col-md-4">
-                    <div class="single-latest-blog">
-                        <div class="img-holder">
-                            <img src="{% static 'webapp/images/blog/lat-blog-2.jpg' %}" alt="Awesome Image">
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="../../../blog/templates/blog/blog-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Fletcher</a></li>
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i><a href="#">April 11, 2016</a></li>
-                            </ul>
-                            <a href="../../../blog/templates/blog/blog-single.html">
-                                <h3 class="blog-title">We offer the best in same day iPhone Repairs plymouth</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--End single latest blog-->
-                <!--Start single latest blog-->
-                <div class="col-md-4">
-                    <div class="single-latest-blog">
-                        <div class="img-holder">
-                            <img src="{% static 'webapp/images/blog/lat-blog-3.jpg' %}" alt="Awesome Image">
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="content">
-                                        <a href="../../../blog/templates/blog/blog-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Fletcher</a></li>
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i><a href="#">March 15, 2016</a></li>
-                            </ul>
-                            <a href="../../../blog/templates/blog/blog-single.html">
-                                <h3 class="blog-title">All Software Boxes and Dongles At Best Prices</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--End single latest blog-->
             </div>
         </div>
     </section>
