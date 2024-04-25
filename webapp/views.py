@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render
 
+from blog.models import BlogNews
 from webapp.models import *
 
 
@@ -20,12 +21,14 @@ def index(request):
     brands = Brand.objects.all()
     favorites = Favors.objects.all()
     main_process = Process.objects.all()
+    news = BlogNews.objects.all()
 
     context = {
         'main_serv': main_serv,
         'brands': brands,
         'favorites': favorites,
         'main_process': main_process,
+        'news': news,
     }
 
     return render(request, 'webapp/index.html', context=context)

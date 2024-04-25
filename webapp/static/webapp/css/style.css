@@ -450,6 +450,7 @@ select:focus {
   position: relative;
   left: 75%;
   color: #e1e1e1;
+  padding: 2px;
 }
 .top-bar-area .topinfo .select-items {
   width: 230px;

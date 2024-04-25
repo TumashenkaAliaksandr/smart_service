@@ -8,7 +8,6 @@ def blog(request):
     """these are views for Blog News list"""
     model_blog_main = BlogNews.objects.all()
     news_for_footer = BlogNews.objects.all()[:2]
-    news = BlogNews.objects.all()
     our_services = ServicesMain.objects.all()
 
     context = locals()

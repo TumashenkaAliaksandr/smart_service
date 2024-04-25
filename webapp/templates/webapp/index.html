@@ -265,7 +265,6 @@
     </section>
     <!--End fact counter area-->
 
-
     <!--Start core value area-->
     <section class="core-value-area">
         <div class="container">
@@ -647,30 +646,32 @@
             </div>
             <div class="row">
                 <!--Start single latest blog-->
+                {% for main_news in news %}
                 <div class="col-md-4">
                     <div class="single-latest-blog">
                         <div class="img-holder">
-                            <img src="{% static 'webapp/images/blog/lat-blog-1.jpg' %}" alt="Awesome Image">
+                            <img src="{{ main_news.photo.url }}" alt="Awesome Image">
                             <div class="overlay-box">
                                 <div class="box">
                                     <div class="content">
-                                        <a href="../../../blog/templates/blog/blog-single.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        <a href="{% url 'blog:single' pk=main_news.id %}"><i class="fa fa-link" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-holder">
                             <ul class="meta-info">
-                                <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Fletcher</a></li>
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i><a href="#">April 21, 2016</a></li>
+                                <li><i class="fa fa-user" aria-hidden="true"></i><a href="{% url 'blog:single' pk=main_news.id %}">{{ main_news.author }}</a></li>
+                                <li><i class="fa fa-clock-o" aria-hidden="true"></i><a href="{% url 'blog:single' pk=main_news.id %}">{{ main_news.pub_date }}</a></li>
                             </ul>
-                            <a href="../../../blog/templates/blog/blog-single.html">
-                                <h3 class="blog-title">iPad Repairs For Schools / Universities Across The Usa</h3>
+                            <a href="{% url 'blog:single' pk=main_news.id %}">
+                                <h3 class="blog-title">{{ main_news.title }}</h3>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!--End single latest blog-->
+                {% endfor %}
                 <!--Start single latest blog-->
                 <div class="col-md-4">
                     <div class="single-latest-blog">
