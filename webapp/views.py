@@ -95,7 +95,10 @@ def services(request):
 
 
 def shop(request):
-    return render(request, 'webapp/services/shop.html')
+    our_services = ServicesMain.objects.all()
+
+    context = locals()
+    return render(request, 'webapp/services/shop.html', context)
 
 
 def encoders(request):
