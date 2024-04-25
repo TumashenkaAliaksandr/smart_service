@@ -65,7 +65,7 @@
                                             <img src="{{ main_news.author_photo.url }}" alt="Awesome Image">
                                         </div>
                                         <div class="text-holder">
-                                            <p>{{ main_news.comment }}</p>
+                                            <p>{{ main_news.comment | safe }}</p>
                                             <h3>{{ main_news.author }}</h3>
                                             <h5>{{ main_news.comment_author }}</h5>
                                         </div>

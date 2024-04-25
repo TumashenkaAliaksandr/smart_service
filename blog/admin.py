@@ -12,6 +12,7 @@ class BlogNewsAdminForm(forms.ModelForm):
             'description': CKEditorWidget(),
             'description_company': CKEditorWidget(),
             'description_small': CKEditorWidget(),
+            'comment': CKEditorWidget(),
         }
 
 
