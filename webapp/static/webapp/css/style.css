@@ -2590,7 +2590,8 @@ section#contact {
 .single-blog-item .img-holder img {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  width: 100%;      
+  width: 100%;
+  height: 65%;
 }
 .single-blog-item .overlay .box .content a i {
   background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;

@@ -16,11 +16,11 @@
     <div class="container">
         <div class="left pull-left">
             <ul>
-                <li><a href="../../../webapp/templates/webapp/index.html">Home</a></li>
+                <li><a href="{% url 'webapp:home' %}">Главная</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li><a href="blog-single.html">News</a></li>
+                <li><a href="{% url 'blog:blog' %}">Блог</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>News Single</li>
+                <li>Новость</li>
             </ul>    
         </div>
         <div class="right pull-right">
@@ -36,27 +36,24 @@
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                 <div class="blog-post">
+                    {% for main_news in news_blog_main %}
                     <!--Start single blog post-->
                     <div class="single-blog-item">
                         <div class="img-holder">
-                            <img src="{% static 'webapp/images/blog/1.jpg' %}" alt="Awesome Image">
+                            <img src="{{ main_news.photo.url }}" alt="Awesome Image">
                         </div>
                         <div class="text-holder">
                             <div class="date-box">
-                                <h4>21 Aug</h4>
+                                <h4>{{ main_news.pub_date.day }} {{ main_news.pub_date|date:"M" }}</h4>
                             </div>
                             <div class="text-box">
-                                <h3 class="blog-title">iPad Repairs For Schools/Universities Across The Usa</h3>
+                                <h3 class="blog-title">{{ main_news.title }}</h3>
                                 <ul class="meta-info">
-                                    <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Mark Fletcher</a></li>
-                                    <li><i class="fa fa-tags" aria-hidden="true"></i><a href="#">Pin Number</a></li>
-                                    <li><i class="fa fa-eye" aria-hidden="true"></i><a href="#">55 Views</a></li>
-                                    <li><i class="fa fa-comments" aria-hidden="true"></i><a href="#">22 Comments</a></li>
+                                    <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">{{ main_news.author }}</a></li>
                                 </ul>
                                 <div class="text">
-                                    <p class="mar-bottom">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charm pleasure of the moment, so blinded by desire, that they cannot foresee the pain ut and trouble that are bound to ensue and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying uts through shrinking from toil and pain  These cases are perfectly simple and easy to distinguish.</p>
-                                    <p>Pleasures and praising pains was born and will give you a completed account of the systems seds, and seds expound the actual teaching of the great explorer the master-builder  Nor again is there anyones who loves or pursues desires to obtain pain of itself, because it is pain, but because occasionally.</p>
-                                    
+                                    <p class="mar-bottom">{{ main_news.description_small | safe }}</p>
+                                    <p>{{ main_news.description | safe }}</p>
                                 </div>
                             </div>
                             
@@ -65,12 +62,12 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="img-holder">
-                                            <img src="{% static 'webapp/images/blog/caption-img.jpg' %}" alt="Awesome Image">
+                                            <img src="{{ main_news.author_photo.url }}" alt="Awesome Image">
                                         </div>
                                         <div class="text-holder">
-                                            <p>They have got my project on time with the competition seds with a highly skilled, well-organized and seds denouncing of pleasures experienced team of professional.</p>
-                                            <h3>Dohn Gaskel</h3>
-                                            <h5>Manager</h5>
+                                            <p>{{ main_news.comment }}</p>
+                                            <h3>{{ main_news.author }}</h3>
+                                            <h5>{{ main_news.comment_author }}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +78,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="text">
-                                            <p>know how to pursue pleasure rationally encounter consequences that are extremely painful or again is there anyone who loves or pursues or desires to obtain pain of itself, because it pain, but because occasionally circumstances occur which toil and pain can  undertakes laborious physical exercise.</p>
+                                            <p>{{ main_news.location }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -92,15 +89,14 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="tag pull-left">
-                                            <p><span>Tags:</span> Repair, Processor, LED Screen</p>
+                                            <p><span>Тэги: </span> Ремонт, Электротранспорт, Батарея</p>
                                         </div>
                                         <div class="social-share pull-right">
-                                            <h5>Share<i class="fa fa-share-alt" aria-hidden="true"></i></h5>
+                                            <h5>Поделиться<i class="fa fa-share-alt" aria-hidden="true"></i></h5>
                                             <ul class="social-share-links">
                                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -112,15 +108,14 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="img-holder">
-                                            <img src="{% static 'webapp/images/blog/author.jpg' %}" alt="Awesome Image">
+                                            <img src="{{ main_news.logo_photo.url}}" alt="Awesome Image">
                                         </div>
                                         <div class="text-holder">
-                                            <h3>Mark Richardson</h3>
-                                            <p>We will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                                            <h3>{{ main_news.author }}</h3>
+                                            <p>{{ main_news.description_company | safe }}</p>
                                             <ul class="social-link">
                                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                             </ul>
                                         </div>
@@ -128,153 +123,10 @@
                                 </div>
                             </div>
                             <!--End author box-->
-                            <!--Start comment box-->
-                            <div class="comment-box">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="title">
-                                            <h3>Comments (2)</h3>
-                                        </div>
-                                        <!--Start single comment box-->
-                                        <div class="single-comment-box">
-                                            <div class="img-holder">
-                                                <img src="{% static 'webapp/images/blog/comment-1.jpg' %}" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-holder">
-                                                <div class="top">
-                                                    <div class="date pull-left">
-                                                        <h5>Steven Rich – Sep 17, 2016:</h5>
-                                                    </div>
-                                                    <div class="review-box pull-right">
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End single comment box-->
-                                        <!--Start single comment box-->
-                                        <div class="single-comment-box">
-                                            <div class="img-holder">
-                                                <img src="{% static 'webapp/images/blog/comment-2.jpg' %}" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-holder">
-                                                <div class="top">
-                                                    <div class="date pull-left">
-                                                        <h5>William Cobus – Aug 21, 2016:</h5>
-                                                    </div>
-                                                    <div class="review-box pull-right">
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star"></i></li>
-                                                            <li><i class="fa fa-star-half-o"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="text">
-                                                    <p>There anyone who loves or pursues or desires to obtain pain itself, because it is pain, because occasionally circumstances occur some great pleasure.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--End single comment box-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End comment box-->
-                            <!--Start add comment box-->
-                            <div class="add-comment-box">
-                                <div class="title">
-                                    <h3>Add Your Comments</h3>
-                                </div>
-                                <div class="add-rating-box">
-                                    <h4>Your Rating</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-star"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>   
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <form class="add-comment-form" action="#">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="field-label">First Name*</div>
-                                                    <input type="text" name="fname" placeholder="">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="field-label">Last Name*</div>
-                                                    <input type="text" name="lname" placeholder="">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="field-label">Email*</div>
-                                                    <input type="text" name="email" placeholder="">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="field-label">Your Comments*</div>
-                                                    <textarea name="comment"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <button class="thm-btn bg-1" type="submit">Submit Now</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--End add comment box-->
                         </div>    
                     </div>
                     <!--End single blog post-->
+                    {% endfor %}
                 </div>
             </div>
             <!--Start sidebar Wrapper-->
@@ -291,7 +143,7 @@
                     <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Categories</h1>
+                            <h1>Наши Услуги</h1>
                         </div>
                         <ul class="categories clearfix">
                             <li>

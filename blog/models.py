@@ -4,10 +4,12 @@ from django.conf import settings
 
 class BlogNews(models.Model):
     title = models.CharField(max_length=200, verbose_name='Name')
-    description_small = models.TextField(max_length=400, default='', verbose_name='Description_small')
-    description = models.TextField(verbose_name='Description')
+    description_small = models.TextField(max_length=500, default='', verbose_name='Description_small')
+    description = models.TextField(verbose_name='Description', default='')
+    description_company = models.TextField(verbose_name='Description_company', default='Описание для нижнего блока')
     location = models.CharField(max_length=200, verbose_name='Location', default='')
     photo = models.ImageField(upload_to='news_photos/', null=True, blank=True, verbose_name='Photo')
+    logo_photo = models.ImageField(upload_to='news_photos/', null=True, blank=True, verbose_name='Logo Photo')
     pub_date = models.DateTimeField(verbose_name='Publication Date')  # Added publication date field
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Author', related_name='news', null=True, blank=True)
     author_photo = models.ImageField(upload_to='author_photos/', null=True, blank=True, verbose_name='Author Photo')

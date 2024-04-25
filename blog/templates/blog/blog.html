@@ -34,44 +34,39 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                     <div class="blog-post">
+                        {% for main_post in model_blog_main %}
                         <!--Start single blog post-->
                         <div class="single-blog-item">
                             <div class="img-holder">
-                                <img src="{% static 'webapp/images/blog/1.jpg' %}" alt="Awesome Image">
+                                <img src="{{ main_post.photo.url }}" alt="Awesome Image">
                                 <div class=" overlay">
                                     <div class="box">
                                         <div class="content">
-                                            <a href="blog-single.html"><i class="fa fa-link"></i></a>
+                                            <a href="{% url 'blog:single' pk=main_post.id %}"><i class="fa fa-link"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-holder">
                                 <div class="date-box">
-                                    <h4>21 Aug</h4>
+                                    <h4>{{ main_post.pub_date.day }} {{ main_post.pub_date|date:"M" }}</h4>
                                 </div>
                                 <div class="text-box">
-                                    <a href="blog-single.html">
-                                        <h3 class="blog-title">iPad Repairs For Schools/Universities Across The Usa</h3>
+                                    <a href="{% url 'blog:single' pk=main_post.id %}">
+                                        <h3 class="blog-title">{{ main_post.title }}</h3>
                                     </a>
                                     <ul class="meta-info">
-                                        <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Mark Fletcher</a>
+                                        <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">{{ main_post.author }}</a>
                                         </li>
-                                        <li><i class="fa fa-tags" aria-hidden="true"></i><a href="#">Pin Number</a></li>
-                                        <li><i class="fa fa-eye" aria-hidden="true"></i><a href="#">55 Views</a></li>
-                                        <li><i class="fa fa-comments" aria-hidden="true"></i><a href="#">22 Comments</a>
-                                        </li>
+{#                                        <li><i class="fa fa-eye" aria-hidden="true"></i><a href="#">55 Views</a></li>#}
+{#                                        <li><i class="fa fa-comments" aria-hidden="true"></i><a href="#">22 Comments</a>#}
+{#                                        </li>#}
                                     </ul>
                                     <div class="text">
-                                        <p>Pleasures and praising pains was born and will give you a completed account
-                                            of
-                                            the systems seds, and seds expound the actual teaching of the great explorer
-                                            the
-                                            master-builder Nor again is there anyones who loves or pursues or desires to
-                                            obtain pain of itself occasionally circumstance.</p>
+                                        <p>{{ main_post.description_small | safe }}</p>
                                         <div class="bottom clearfix">
                                             <div class="readmore pull-left">
-                                                <a href="blog-single.html">Read More<i class="fa fa-caret-right"
+                                                <a href="{% url 'blog:single' pk=main_post.id %}">Читать<i class="fa fa-caret-right"
                                                                                        aria-hidden="true"></i></a>
                                             </div>
                                         </div>
@@ -80,6 +75,8 @@
                             </div>
                         </div>
                         <!--End single blog post-->
+                        {% endfor %}
+
                         <!--Start single blog post-->
                         <div class="single-blog-item">
                             <div class="img-holder">
