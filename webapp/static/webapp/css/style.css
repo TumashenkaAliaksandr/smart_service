@@ -186,7 +186,7 @@ button{
 
 .sec-title {
   margin-top: -2px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   position: relative;
 }
 .sec-title h1 {
@@ -951,6 +951,12 @@ select:focus {
 .background-image-process{
   background: url(../images/working-process/ecu_serv_ban.png);
 }
+.background-image-ourtop{
+  background: url(../images/working-process/ecu_smoke.gif);
+}
+.background-image-main{
+  background: url(../images/working-process/ecu_nano.gif);
+}
 
 .background-image-process-fon{
   background: url(../images/working-process/ecu_mers_concept.jpg);
@@ -966,10 +972,29 @@ select:focus {
 =============================================
 ***/
 .call-to-action-area {
-  background: #f3fff3;
+  /*background: rgba(243, 255, 243, 0.85);*/
   padding: 50px 0 10px;
 }
-
+.call-to-action-area-fon {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  position: relative;
+  z-index: 1;
+}
+.call-to-action-area-fon::before {
+  background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
 
 
 .call-to-action-area-mailform {
@@ -978,7 +1003,7 @@ select:focus {
 }
 
 .call-to-action-area-mailform-index {
-  background: #f3fff3;
+  /*background: #f3fff3;*/
   padding: 40px 0 40px;
 }
 
@@ -3598,7 +3623,7 @@ section#contact {
 =============================================
 ***/
 .core-value-area {
-  background: #f7f7f7;
+  /*background: #f7f7f7;*/
   padding-top: 60px;
 }
 .core-value-area .img-holder {
@@ -3720,7 +3745,7 @@ section#contact {
   z-index: 1;
 }
 .working-process-area-fon::before {
-  background: rgba(255, 255, 255, 0.95) none repeat scroll 0 0;
+  background: rgba(255, 255, 255, 0.91) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -3732,7 +3757,7 @@ section#contact {
 
 .working-process-area-fon {
   /*background: #fff;*/
-  padding: 80px 0 70px;
+  padding: 75px 0 21px;
 }
 
 .working-process-area-fon .about-content{  }
@@ -4510,7 +4535,7 @@ section#contact {
 
 /*для текста выезжаем в сервисе */
 .text-for-visit h5 {
-  font-size: 18px;
+  font-size: 21px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4532,7 +4557,8 @@ section#contact {
 
 #service-single-area .service-single-content .middle-content .text-holder {
   margin-right: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
+  margin-top: 10%;
 }
 #service-single-area .service-single-content .middle-content .img-holder {
   display: block;
