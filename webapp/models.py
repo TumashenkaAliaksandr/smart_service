@@ -274,3 +274,17 @@ class OfficeContact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Facts(models.Model):
+    name = models.CharField(max_length=100)  # Поле для названия факта
+    photo = models.ImageField(upload_to='facts_photos/')  # Поле для фото брэнда, сохраняемое в папке 'facts_photos/'
+    description = RichTextField(verbose_name='description', default='Описание')
+    icon_facts = models.CharField(max_length=100, verbose_name='Icon Class', default='flaticon-star')
+
+    def __str__(self):
+        return self.name  # Возвращает название процесса в админке Django
+
+    class Meta:
+        verbose_name = "Наши преимущества"
+        verbose_name_plural = "Наши преимущества"

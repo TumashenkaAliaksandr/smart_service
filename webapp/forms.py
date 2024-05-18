@@ -4,6 +4,8 @@ from django.contrib.auth.password_validation import validate_password
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from ckeditor.widgets import CKEditorWidget
+
 
 
 class ContactForm(forms.Form):
@@ -54,3 +56,11 @@ def contact(request):
 
     context['form'] = form
     return render(request, 'webapp/contact.html', context=context)
+
+
+class FactsAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Facts
+        fields = '__all__'

@@ -181,7 +181,6 @@
                                     <li><a href="{% url 'webapp:encoders' %}">Настройка Оборудования</a></li>
                                     <li><a href="shopping-cart.html">Обслуживание Оборудования</a></li>
                                     <li><a href="checkout.html">Сотрудничество</a></li>
-                                    <li><a href="account.html">My Account</a></li>
                                 </ul>
                             </li>
                             <li {% if request.resolver_match.url_name in "['blog', 'single']" %}class="current"{% endif %}><a href="{% url 'blog:blog' %}">Блог</a>

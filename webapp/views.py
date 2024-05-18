@@ -22,6 +22,7 @@ def index(request):
     favorites = Favors.objects.all()
     main_process = Process.objects.all()
     news = BlogNews.objects.all()
+    facts = Facts.objects.all()
 
     context = {
         'main_serv': main_serv,
@@ -29,6 +30,7 @@ def index(request):
         'favorites': favorites,
         'main_process': main_process,
         'news': news,
+        'facts': facts,
     }
 
     return render(request, 'webapp/index.html', context=context)
@@ -39,12 +41,16 @@ def about(request):
     brands = Brand.objects.all()
     favorites = Favors.objects.all()
     main_process = Process.objects.all()
+    news = BlogNews.objects.all()
+    facts = Facts.objects.all()
 
     context = {
         'main_serv': main_serv,
         'brands': brands,
         'favorites': favorites,
         'main_process': main_process,
+        'news': news,
+        'facts': facts,
     }
 
     return render(request, 'webapp/about.html', context=context)

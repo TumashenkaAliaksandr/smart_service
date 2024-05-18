@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 from .models import *
 from ckeditor.widgets import CKEditorWidget
+from .forms import FactsAdminForm
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
@@ -134,3 +135,12 @@ class FavorsAdmin(admin.ModelAdmin):
     image.short_description = 'Photo Preview'  # Название столбца с превью изображения
 
 admin.site.register(OfficeContact)
+
+
+class FactsAdmin(admin.ModelAdmin):
+    form = FactsAdminForm
+    list_display = ('name', 'description', 'photo', 'icon_facts')
+    search_fields = ('name', 'description')
+    list_filter = ('name',)
+
+admin.site.register(Facts, FactsAdmin)

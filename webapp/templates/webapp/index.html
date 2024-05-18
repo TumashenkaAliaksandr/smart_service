@@ -276,68 +276,21 @@
                         </div>
                         <div class="row">
                             <!--Start single item-->
-                            <div class="col-md-6">
-                                <div class="single-item">
-                                    <div class="icon-box">
-                                        <span class="flaticon-thumb-up"></span>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>Безупречная Репутация</h3>
-                                        <p>Мы гордимся своей долголетней историей успешных проектов и довольных
-                                            клиентов,
-                                            что подтверждает нашу надежность и профессионализм.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single item-->
-                            <!--Start single item-->
-                            <div class="col-md-6">
-                                <div class="single-item">
-                                    <div class="icon-box">
-                                        <span class="flaticon-star"></span>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>Высокое качество Услуг</h3>
-                                        <p>Работаем только с проверенными запчастями и передовыми технологиями,
-                                            что гарантирует надежность и долговечность наших ремонтных работ.</p>
+                            {% for main_facts in facts %}
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <div class="icon-box">
+                                            <span class="{{ main_facts.icon_facts }}"></span>
+                                        </div>
+                                        <div class="text-box">
+                                            <h3>{{ main_facts.name }}</h3>
+                                            <p>{{ main_facts.description|safe }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            {% endfor %}
                             <!--End single item-->
                         </div>
-                        <div class="row">
-                            <!--Start single item-->
-                            <div class="col-md-6">
-                                <div class="single-item">
-                                    <div class="icon-box">
-                                        <span class="fa fa-money"></span>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>Конкурентные Цены</h3>
-                                        <p>Наша политика ценообразования основана на честности и прозрачности,
-                                            что позволяет нам предлагать конкурентоспособные тарифы и гибкую систему
-                                            скидок.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single item-->
-                            <!--Start single item-->
-                            <div class="col-md-6">
-                                <div class="single-item">
-                                    <div class="icon-box">
-                                        <span class="fa fa-cogs"></span>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>Глубокое Понимание Технологий</h3>
-                                        <p>Наши специалисты обладают высокой экспертизой в области промышленной
-                                            электроники и автоматики,
-                                            что позволяет нам эффективно решать самые сложные задачи.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single item-->
-                        </div>
-
                     </div>
                 </div>
                 <div class="col-md-4 image pull-left">
