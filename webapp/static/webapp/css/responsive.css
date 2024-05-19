@@ -585,6 +585,10 @@
     padding: 15px 0 15px;
   }
 
+  .breadcrumb-botton-area-main {
+    display: none;
+  }
+
 
 .header-contact-info ul {
   margin: 5px 0;

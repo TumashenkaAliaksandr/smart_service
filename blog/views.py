@@ -1,7 +1,7 @@
 from blog.models import *
 from django.shortcuts import render
 
-from webapp.models import ServicesMain
+from webapp.models import ServicesMain, Brand
 
 
 def blog(request):
@@ -9,6 +9,7 @@ def blog(request):
     model_blog_main = BlogNews.objects.all()
     news_for_footer = BlogNews.objects.all()[:2]
     our_services = ServicesMain.objects.all()
+    brands = Brand.objects.all()
 
     context = locals()
     return render(request, 'blog/blog.html', context=context)
@@ -17,9 +18,11 @@ def blog(request):
 def blog_news(request, pk):
     """these are views for Blog News list"""
     news = BlogNews.objects.filter(pk=pk)
+    brands = Brand.objects.all()
 
     context = {
         'news': news,
+        'brands': brands,
     }
     return render(request, 'blog/blog.html', context=context)
 
@@ -29,11 +32,13 @@ def NewsDetailView(request, pk):
     news = BlogNews.objects.filter(pk=pk)
     news_blog_main = BlogNews.objects.all()
     our_services = ServicesMain.objects.all()
+    brands = Brand.objects.all()
 
     context = {
         'news': news,
         'news_blog_main': news_blog_main,
         'our_services': our_services,
+        'brands': brands,
     }
     return render(request, 'blog/blog-single.html', context=context)
 

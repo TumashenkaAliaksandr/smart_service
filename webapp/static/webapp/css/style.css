@@ -281,6 +281,16 @@ button{
     margin: 0 auto; /* Центрирование блока по горизонтали */
     word-wrap: break-word; /* Автоматический перенос слов */
 }
+
+.description-block-serv {
+    width: 100%; /* Примерная ширина блока, которую вы хотите установить */
+    /*max-width: 600px; !* Максимальная ширина блока *!*/
+    margin: 0 auto; /* Центрирование блока по горизонтали */
+    word-wrap: break-word; /* Автоматический перенос слов */
+}
+.description-block-serv h4 {
+    font-size: 21px;
+}
 /*End Desc sps4 block*/
 
 
@@ -965,6 +975,9 @@ select:focus {
 .background-image-main{
   background: url(../images/working-process/ecu_nano.gif);
 }
+.background-image-blog{
+  background: url(../images/working-process/ecu_car1.gif);
+}
 
 .background-image-process-fon{
   background: url(../images/working-process/ecu_mers_concept.jpg);
@@ -981,20 +994,20 @@ select:focus {
 ***/
 .call-to-action-area {
   /*background: rgba(243, 255, 243, 0.85);*/
-  padding: 50px 0 10px;
+  padding: 55px 0 10px;
 }
 .call-to-action-area-fon {
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 35px;
-  padding-top: 35px;
+  /*padding-bottom: 35px;*/
+  padding-top: 55px;
   position: relative;
   z-index: 1;
 }
 .call-to-action-area-fon::before {
-  background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
+  background: rgba(250, 255, 250, 0.97) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1015,6 +1028,24 @@ select:focus {
 }
 .call-to-action-area-fon-two::before {
   background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.call-to-action-area-fon-blog {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.call-to-action-area-fon-blog::before {
+  background: rgba(249, 255, 249, 0.96) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1180,6 +1211,13 @@ select:focus {
 @media screen and (max-width: 767px) {
     .img-fixed-size {
         height: 100%; /* Установите желаемую высоту */
+        object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .img-fixed-size-blog {
+        height: 21%; /* Установите желаемую высоту */
         object-fit: cover; /* Этот свойство сохраняет соотношение сторон и обрезает изображение по нужным размерам */
     }
 
@@ -2612,6 +2650,49 @@ section#contact {
   color: #0d2d1a;
 }
 
+.breadcrumb-botton-area-main {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 13px 0 7px;
+  background-color: whitesmoke;
+}
+.breadcrumb-botton-area-main .left { }
+.breadcrumb-botton-area-main .left ul {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.breadcrumb-botton-area-main .left ul li{
+  display: inline-block;
+  margin: 0 2px;
+  color: #10a62e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.breadcrumb-botton-area-main .left ul li a{
+  color: #3d3d3d;
+  transition: all 500ms ease;
+}
+.breadcrumb-botton-area-main .left ul li a:hover{
+  color: #43ea65;
+}
+.breadcrumb-botton-area-main .right {}
+.breadcrumb-botton-area-main .right a {
+  color: #10a62e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 500ms ease;
+}
+.breadcrumb-botton-area-main .right a i {
+  display: inline-block;
+  padding-right: 10px;
+}
+.breadcrumb-botton-area-main .right a:hover{
+  color: #0d2d1a;
+}
+
 
 
 /*** 
@@ -3150,7 +3231,7 @@ section#contact {
 
 
 .blog-single-area .author-box {
-  background: #f7f7f7 none repeat scroll 0 0;
+  background: #f1f1f1 none repeat scroll 0 0;
   display: block;
   padding: 30px 30px 22px;
   position: relative;
