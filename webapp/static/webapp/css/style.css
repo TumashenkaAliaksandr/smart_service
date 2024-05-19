@@ -189,6 +189,11 @@ button{
   padding-bottom: 35px;
   position: relative;
 }
+.sec-title-three {
+  margin-top: 40px;
+  padding-bottom: 35px;
+  position: relative;
+}
 .sec-title h1 {
   color: #ffffff;
   font-size: 34px;
@@ -954,6 +959,9 @@ select:focus {
 .background-image-ourtop{
   background: url(../images/working-process/ecu_smoke.gif);
 }
+.background-image-serpage{
+  background: url(../images/working-process/ecu_puz.gif);
+}
 .background-image-main{
   background: url(../images/working-process/ecu_nano.gif);
 }
@@ -986,6 +994,26 @@ select:focus {
   z-index: 1;
 }
 .call-to-action-area-fon::before {
+  background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.call-to-action-area-fon-two {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  position: relative;
+  z-index: 1;
+}
+.call-to-action-area-fon-two::before {
   background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
   content: "";
   height: 100%;
@@ -2134,7 +2162,7 @@ section#contact {
 =============================================
 ***/
 .brand-area {
-  background: #e3ffe3;
+  background: #f1f1f1;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -2142,20 +2170,24 @@ section#contact {
   z-index:10;		
 }
 .brand-area .brand .single-item {
-  border: 2px solid #eaeaea;
+  border: 2px solid #092b15;
   height: 100px;
   -webkit-transition: all 300ms ease-in 0s;
   transition: all 300ms ease-in 0s;
   text-align: center;
 }
 .brand-area .brand .single-item:hover{
-  border: 2px solid #24983b;
+  border: 2px solid #cee5d2;
 }
 .brand-area .brand .single-item:hover img{
   opacity: .9;
 }
 .brand-area .owl-controls {
   display: none;
+}
+
+.owl-item{
+  padding-bottom: 10px;
 }
 
 
@@ -3820,6 +3852,94 @@ section#contact {
   text-transform: capitalize;
 }
 .working-process-area-fon .choose-us-content ul li .text-holder p{
+  line-height: 24px;
+}
+
+.working-process-area-fon-two {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 35px;
+  padding-top: 65px;
+  position: relative;
+  z-index: 1;
+}
+.working-process-area-fon-two::before {
+  background: rgba(255, 255, 255, 0.97) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.working-process-area-fon-two {
+  /*background: #fff;*/
+  padding: 75px 0 21px;
+}
+
+.working-process-area-fon-two .about-content{  }
+.working-process-area-fon-two .about-content ul {
+  overflow: hidden;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.working-process-area-fon-two .about-content ul li {
+  display: inline-block;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  display: block;
+}
+.working-process-area-fon-two .about-content .text-holder p {
+  margin: 23px 0 13px;
+}
+.working-process-area-fon-two .about-content .text-holder h3{
+  color: #3d3d3d;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.working-process-area-fon-two .about-content .text-holder h3:hover{
+  text-shadow: 2px 1px 1px #222;
+}
+.working-process-area-fon-two .about-content .text-holder h3 span{
+  color: #43ea65;
+}
+
+.working-process-area-fon-two .choose-us-content { }
+.working-process-area-fon-two .choose-us-content ul li {
+  padding-left: 40px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.working-process-area-fon-two .choose-us-content ul li:last-child{
+  padding-bottom: 0;
+}
+.working-process-area-fon-two .choose-us-content ul li .iocn-holder {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.working-process-area-fon-two .choose-us-content ul li .iocn-holder span:before{
+  color: #43ea65;
+  font-size: 25px;
+}
+.working-process-area-fon-two .choose-us-content ul li .text-holder {}
+.working-process-area-fon-two .choose-us-content ul li .text-holder h4 {
+  color: #3d3d3d;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 19px;
+  text-transform: capitalize;
+  padding-top: 6px;
+}
+.working-process-area-fon-two .choose-us-content ul li .text-holder p{
   line-height: 24px;
 }
 
@@ -6131,6 +6251,18 @@ box-shadow: 0px 3px 4px -1px rgba(220,217,217,1);
 
 .related-product {
   padding-top: 55px;
+}
+.related-product-serv {
+  padding-top: 21px;
+}
+.related-product-serv .sec-title-two h3 {
+  color: #3d3d3d;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.related-product-serv .single-product-item {
+  margin-bottom: 25px;
 }
 .related-product .sec-title-two {
   padding-bottom: 35px;

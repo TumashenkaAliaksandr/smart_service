@@ -28,11 +28,26 @@
 </section>
 <!--End breadcrumb bottom area-->
 
+    <!--Start about us title area-->
+    {% for main_service in main_serv|slice:1 %}
+        <section class="call-to-action-area call-to-action-area-fon-two background-image-serpage">
+            <div class="container">
+                <div class="sec-title-three text-center sec-title-proces">
+                    <h1>{{ main_service.h1_name }}</h1>
+                </div>
+                <div class="description-block text-center">
+                    <h4>{{ main_service.h1_description | safe }}</h4>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <!--End about us title area-->
+
     <!--Start services area-->
-    <section class="call-to-action-area-two">
+    <section class="call-to-action-area call-to-action-area-fon-two background-image-serpage">
         <div class="container">
             <div class="row">
-                <div class="related-product">
+                <div class="related-product-serv">
                     <div class="sec-title-two">
                         <h3>Наши Услуги</h3>
                     </div>
@@ -62,7 +77,7 @@
                                             </div>
                                         </div>
                                         <div class="text-holder">
-                                            <p>{{ main_services.description }}</p>
+                                            <p>{{ main_services.description|safe }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +97,7 @@
     <!--End services area-->
 
     <!--*Mail Form*-->
-    <section class="call-to-action-area-mailform services-area">
+    <section class="call-to-action-area call-to-action-area-fon-two background-image-serpage">
         <div class="container">
             <div class="row">
                 <!--*Newsletter*-->

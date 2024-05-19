@@ -64,3 +64,13 @@ class FactsAdminForm(forms.ModelForm):
     class Meta:
         model = Facts
         fields = '__all__'
+
+
+class ServicesMainAdminForm(forms.ModelForm):
+    h1_description = forms.CharField(widget=CKEditorWidget())
+    description = forms.CharField(widget=CKEditorWidget())
+    description_two = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = ServicesMain
+        fields = '__all__'

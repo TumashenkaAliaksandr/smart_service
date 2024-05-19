@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.shortcuts import render
-
 from .models import *
 from ckeditor.widgets import CKEditorWidget
-from .forms import FactsAdminForm
+from .forms import FactsAdminForm, ServicesMainAdminForm
+
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
@@ -27,7 +26,8 @@ class ProcessAdmin(admin.ModelAdmin):
 
 @admin.register(ServicesMain)
 class ServicesMainAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+    form = ServicesMainAdminForm
+    list_display = ('name', 'h1_name', 'h1_description', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке

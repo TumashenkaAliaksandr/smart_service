@@ -24,7 +24,9 @@ class Favors(models.Model):
 class ServicesMain(models.Model):
     """Services model"""
     name = models.CharField(max_length=100, verbose_name='name')
-    description = models.TextField(verbose_name='description')
+    h1_name = models.CharField(max_length=100, verbose_name='h1_name', default='Имя')
+    h1_description = models.TextField(max_length=150, verbose_name='h1_description', default='Описание')
+    description = models.TextField(verbose_name='description', default='Описание')
     description_two = models.TextField(verbose_name='description_two', default='Описание')
     image = models.ImageField(upload_to='services', verbose_name='photo')
     is_main = models.BooleanField(default=False)
