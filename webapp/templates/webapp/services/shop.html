@@ -30,6 +30,7 @@
 </section>
 <!--End breadcrumb bottom area-->
 
+
 <!--Start blog area-->
 <section id="shop-area" class="main-shop-area">
     <div class="container">
@@ -53,14 +54,15 @@
                     </div>
                     <div class="row">
                         <!--Start single product item-->
+                        {% for main_services in our_services %}
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-product-item">
                                 <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/1.jpg' %}" alt="Awesome Product Image">
+                                    <img src="{{ main_services.image.url }}" alt="Awesome Product Image">
                                     <div class="overlay-box">
                                         <div class="box">
                                             <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
+                                                <a class="thm-btn bg-1" href="{{ main_services.link }}">Перейти к услуге</a>
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +71,7 @@
                                     <div class="top clearfix">
                                         <div class="product-title pull-left">
                                             <a href="shop-encoders.html">
-                                                <h5>Adapter Cable</h5>
+                                                <h5>{{ main_services.name }}</h5>
                                             </a>
                                         </div>
                                         <div class="review-box pull-right">
@@ -87,294 +89,7 @@
                            
                             </div>
                         </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/2.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Emily Player</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$24.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/3.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Poratbel Stand</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$19.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/4.jp' %}g" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Zan Speaker</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$24.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/5.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Ear Phone</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$27.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/6.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Tempered Glass</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$18.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/7.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Bluetooth</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$19.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/8.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>Adapter Cable</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$34.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
-                        <!--End single product item-->
-                        <!--Start single product item-->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-product-item">
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/9.jpg' %}" alt="Awesome Product Image">
-                                    <div class="overlay-box">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a class="thm-btn bg-1" href="shop-encoders.html">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="top clearfix">
-                                        <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
-                                                <h5>iphone Charger</h5>
-                                            </a>
-                                        </div>
-                                        <div class="review-box pull-right">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h4>$24.99</h4>
-                                </div>
-                           
-                            </div>
-                        </div>
+                        {% endfor %}
                         <!--End single product item-->
                     </div>
                     <!--Start post pagination-->
