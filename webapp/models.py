@@ -113,6 +113,8 @@ class Shop_Indastrial_Electroniks(models.Model):
     """Services model"""
     name = models.CharField(max_length=100, verbose_name='name')
     name_two = models.CharField(max_length=100, verbose_name='name_two', default='Второй Заголовок')
+    h1_name_ind = models.CharField(max_length=100, verbose_name='h1_name', default='Имя')
+    h1_description_ind = models.TextField(max_length=250, verbose_name='h1_description', default='Описание')
     description = RichTextField()
     description_two = RichTextField()
     description_three = RichTextField(verbose_name='description three', default='Описание')

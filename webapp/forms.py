@@ -74,3 +74,8 @@ class ServicesMainAdminForm(forms.ModelForm):
     class Meta:
         model = ServicesMain
         fields = '__all__'
+class IndastrialMainAdminForm(forms.ModelForm):
+    h1_description_ind = forms.CharField(widget=CKEditorWidget())
+    class Meta:
+        model = ServicesMain
+        fields = '__all__'

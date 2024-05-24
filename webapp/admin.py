@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import *
 from ckeditor.widgets import CKEditorWidget
-from .forms import FactsAdminForm, ServicesMainAdminForm
+from .forms import FactsAdminForm, ServicesMainAdminForm, IndastrialMainAdminForm
 
 
 @admin.register(Brand)
@@ -47,7 +47,8 @@ class Shop_EncodersAdmin(admin.ModelAdmin):
 
 @admin.register(Shop_Indastrial_Electroniks)
 class Shop_Indastrial_ElectroniksAdmin(admin.ModelAdmin):
-    list_display = ('name', 'name_two', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+    form = IndastrialMainAdminForm
+    list_display = ('name', 'name_two', 'h1_name_ind', 'h1_description_ind', 'description', 'description_two', 'description_three', 'client_visit', 'image', 'image_two', 'image_three', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке

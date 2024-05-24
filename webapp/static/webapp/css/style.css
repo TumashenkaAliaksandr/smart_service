@@ -211,10 +211,26 @@ button{
   text-transform: capitalize;
   margin: 0;
 }
+.sec-title-proces-two h1 {
+  color: #08da08;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
 
 .sec-title-proces h2 {
   color: #08da08;
   font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+.sec-title-proces-two h2 {
+  color: #08da08;
+  font-size: 20px;
   font-weight: 700;
   line-height: 30px;
   text-transform: capitalize;
@@ -290,6 +306,9 @@ button{
 }
 .description-block-serv h4 {
     font-size: 21px;
+}
+.description-block-serv-two h4 {
+    font-size: 17px;
 }
 /*End Desc sps4 block*/
 
@@ -515,9 +534,6 @@ select:focus {
 }
 
 
-
-
-
 .top-bar-area .rate {
   float: right;
   margin-right: 55px;
@@ -536,7 +552,7 @@ select:focus {
 }
 .top-social-links ul li {
   display: inline-block;
-  margin: 0 0 0 0px;
+  margin: 0 0 0 15px;
   line-height: 34px;
 }
 .top-social-links ul li a i{
@@ -1025,7 +1041,7 @@ select:focus {
   z-index: 1;
 }
 .call-to-action-area-fon-two::before {
-  background: rgba(243, 255, 243, 0.97) none repeat scroll 0 0;
+  background: rgba(250, 255, 250, 0.97) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;

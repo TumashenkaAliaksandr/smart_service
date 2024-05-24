@@ -27,8 +27,23 @@
     </section>
     <!--End breadcrumb bottom area-->
 
+    <!--Start about us title area-->
+    {% for main_service in title_indastrial|slice:1 %}
+        <section class="call-to-action-area call-to-action-area-fon-two background-image-serpage">
+            <div class="container">
+                <div class="sec-title-three text-center sec-title-proces-two">
+                    <h1>{{ main_service.h1_name_ind }}</h1>
+                </div>
+                <div class="description-block-serv-two text-center">
+                    <h4>{{ main_service.h1_description_ind | safe }}</h4>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <!--End about us title area-->
+
     <!--Start services area-->
-    <section class="call-to-action-area services-area">
+    <section class="call-to-action-area services-area call-to-action-area-fon-two background-image-serpage">
         <div class="container">
             <div class="row">
                 <!--Start single item-->
@@ -62,11 +77,11 @@
     <!--End services area-->
 
     <!--*Mail Form*-->
-    <section class="call-to-action-area-mailform services-area">
+    <section class="call-to-action-area-mailform-index services-area call-to-action-area-fon background-image-main">
         <div class="container">
             <div class="row">
                 <!--*Newsletter*-->
-                <div id="newsletter">
+                <div id="newsletter" class="mail-form-animation">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">

@@ -182,11 +182,13 @@ def indastrial_electroniks(request):
     brands = Brand.objects.all()
     main_serv = list(ServicesMain.objects.all())
     random.shuffle(main_serv)  # Перемешиваем список объектов
+    title_indastrial = Shop_Indastrial_Electroniks.objects.all()
 
     context = {
         'main_serv': main_serv,
         'main_inverter': main_inverter,
         'brands': brands,
+        'title_indastrial': title_indastrial,
     }
     return render(request, 'webapp/services/industrial-electronics.html', context=context)
 
