@@ -146,7 +146,7 @@
                         <div class="sidebar-title">
                             <h1>Наши Услуги</h1>
                         </div>
-                        {% for main_services in our_services|slice:":5" %}
+                        {% for main_services in our_services|slice:":8" %}
                         <ul class="categories clearfix">
                             <li>
                                 <a href="{{ main_services.link }}">
@@ -188,17 +188,17 @@
                             <h1>Популярные теги</h1>
                         </div>
                         <ul class="popular-tag">
-                            <li><a href="#">Электроника</a></li>
-                            <li><a href="#">Транспорт</a></li>
-                            <li><a href="#">Блоки Эбу</a></li>
-                            <li><a href="#">SPS4</a></li>
-                            <li><a href="#">Батарея</a></li>
-                            <li><a href="#">Датчики</a></li>
-                            <li><a href="#">Процессор</a></li>
-                            <li><a href="#">Залило водой</a></li>
-                            <li><a href="#">Чип</a></li>
-                            <li><a href="#">Телевизор</a></li>
-                            <li><a href="#">Преобразователи</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Электроника</a></li>
+                            <li><a href="{% url 'webapp:electro-transport' %}">Транспорт</a></li>
+                            <li><a href="{% url 'webapp:bloks-bcm' %}">Блоки Эбу</a></li>
+                            <li><a href="{% url 'webapp:cpc-four' %}">SPS4</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Батарея</a></li>
+                            <li><a href="{% url 'webapp:encoders' %}">Датчики</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Процессор</a></li>
+                            <li><a href="{% url 'blog:blog' %}">Залило водой</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Чип</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Телевизор</a></li>
+                            <li><a href="{% url 'webapp:inverter' %}">Преобразователи</a></li>
                         </ul>      
                     </div> 
                     <!--End single-sidebar-->

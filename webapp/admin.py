@@ -27,7 +27,7 @@ class ProcessAdmin(admin.ModelAdmin):
 @admin.register(ServicesMain)
 class ServicesMainAdmin(admin.ModelAdmin):
     form = ServicesMainAdminForm
-    list_display = ('name', 'h1_name', 'h1_description', 'description', 'description_two', 'image', 'is_main', 'link', 'price')  # Отображаемые поля в списке брэндов
+    list_display = ('name', 'h1_name', 'h1_description', 'description', 'description_two', 'image', 'is_main', 'links', 'price')  # Отображаемые поля в списке брэндов
 
     def image(self, obj):
         return obj.image.url if obj.image else None  # Отображение превью изображения в админке

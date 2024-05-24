@@ -102,8 +102,12 @@ def services(request):
 
 def shop(request):
     our_services = ServicesMain.objects.all()
+    model_blog_main = BlogNews.objects.all()
 
-    context = locals()
+    context = {
+        'our_services': our_services,
+        'model_blog_main': model_blog_main,
+    }
     return render(request, 'webapp/services/shop.html', context)
 
 

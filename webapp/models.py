@@ -30,7 +30,7 @@ class ServicesMain(models.Model):
     description_two = models.TextField(verbose_name='description_two', default='Описание')
     image = models.ImageField(upload_to='services', verbose_name='photo')
     is_main = models.BooleanField(default=False)
-    link = models.URLField()  # Поле для хранения ссылки
+    links = models.URLField()  # Поле для хранения ссылки
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Price', default=0.00)
 
     def __str__(self):

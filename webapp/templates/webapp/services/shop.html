@@ -40,11 +40,11 @@
                     <div class="row showing-result-shorting">
                         <div class="col-md-12">
                             <div class="showing pull-left">
-                                <p>Showing 1-12 of 15 results</p>
+                                <p>Показано 1-9</p>
                             </div>
                             <div class="shorting pull-right">
                                 <select class="selectmenu">
-                                    <option selected="selected">Default Sorting</option>
+                                    <option selected="selected">Сортировать по</option>
                                     <option>Default Sorting one</option>
                                     <option>Default Sorting Two</option>
                                     <option>Default Sorting Three</option>
@@ -58,11 +58,11 @@
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-product-item">
                                 <div class="img-holder">
-                                    <img src="{{ main_services.image.url }}" alt="Awesome Product Image">
+                                    <img src="{{ main_services.image.url }}" class="img-fixed-size" alt="Awesome Product Image">
                                     <div class="overlay-box">
                                         <div class="box">
                                             <div class="content">
-                                                <a class="thm-btn bg-1" href="{{ main_services.link }}">Перейти к услуге</a>
+                                                <a class="thm-btn bg-1" href="{{ main_services.links }}">Перейти к услуге</a>
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                 <div class="title-holder">
                                     <div class="top clearfix">
                                         <div class="product-title pull-left">
-                                            <a href="shop-encoders.html">
+                                            <a href="{{ main_services.links }}">
                                                 <h5>{{ main_services.name }}</h5>
                                             </a>
                                         </div>
@@ -84,9 +84,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <h4>$34.99</h4>
                                 </div>
-                           
+
                             </div>
                         </div>
                         {% endfor %}
@@ -138,114 +137,64 @@
                     </div>
                     <!--End single sidebar-->
 
-                    <!--Start single sidebar--> 
+                    <!--Start single sidebar-->
                     <div class="single-sidebar">
                         <div class="sidebar-title">
-                            <h1>Filter By Price</h1>
+                            <h1>Последние Новости</h1>
                         </div>
-                        <div class="price-ranger">
-                            <div id="slider-range"></div>
-                            <div class="ranger-min-max-block">
-                                <input class="thm-btn bg-1" type="submit" value="Filter">
-                                <span>Price:</span>
-                                <input type="text" readonly class="min"> 
-                                <span>-</span>
-                                <input type="text" readonly class="max">
-                            </div>
-                        </div>
-                        
+                        {% for main_latest_news in model_blog_main|slice:":5" %}
+                            <ul class="recent-post">
+                                <li>
+                                    <a href="{% url 'blog:single' pk=main_latest_news.id %}">
+                                        <h5 class="post-title">
+                                            {{ main_latest_news.title }}
+                                        </h5>
+                                    </a>
+                                    <h6 class="post-date">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        {{ main_latest_news.pub_date }}
+                                    </h6>
+                                </li>
+                            </ul>
+                        {% endfor %}
                     </div>
                     <!--End single sidebar-->
-                    <!--Start single sidebar--> 
-                    <div class="single-sidebar">
+
+                    <!--Start single-sidebar-->
+                    <div class="single-sidebar popular-tag">
                         <div class="sidebar-title">
-                            <h1>Latest Products</h1>
+                            <h1>Популярные теги</h1>
                         </div>
-                        <ul class="latest-product">
-                            <li>
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-1.jpg' %}" alt="Awesome Image">
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <a href="#">
-                                        <h4>Portable Stand</h4>
-                                    </a>
-                                    <h5>$34.99</h5>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div> 
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-2.jpg' %}" alt="Awesome Image">
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <a href="#">
-                                        <h4>Zan Speaker</h4>
-                                    </a>
-                                    <h5>$24.99</h5>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div> 
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="{% static 'webapp/images/shop/product-thumb-3.jpg' %}" alt="Awesome Image">
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="content">
-                                                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="title-holder">
-                                    <a href="#">
-                                        <h4>Mini Earphone</h4>
-                                    </a>
-                                    <h5>$34.99</h5>
-                                    <div class="review-box">
-                                        <ul>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div> 
-                            </li>
+                        <ul class="popular-tag">
+                            <li><a href="{% url 'webapp:services' %}">Электроника</a></li>
+                            <li><a href="{% url 'webapp:electro-transport' %}">Транспорт</a></li>
+                            <li><a href="{% url 'webapp:bloks-bcm' %}">Блоки Эбу</a></li>
+                            <li><a href="{% url 'webapp:cpc-four' %}">SPS4</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Батарея</a></li>
+                            <li><a href="{% url 'webapp:encoders' %}">Датчики</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Процессор</a></li>
+                            <li><a href="{% url 'blog:blog' %}">Залило водой</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Чип</a></li>
+                            <li><a href="{% url 'webapp:services' %}">Телевизор</a></li>
+                            <li><a href="{% url 'webapp:inverter' %}">Преобразователи</a></li>
                         </ul>
                     </div>
-                    <!--End single sidebar-->
+                    <!--End single-sidebar-->
+
+                    <!-- Start single-sidebar -->
+                    <div class="single-sidebar facebook">
+                        <div class="sidebar-title">
+                            <h1>Наш инстаграмм</h1>
+                        </div>
+                        <div class="follow-us-content">
+                            <a href="https://www.instagram.com/smart_service_novopolock/">
+                                <img src="{% static 'webapp/images/resources/ecu_insta.jpg' %}"
+                                     alt="Awesome Follow Us Image">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End single-sidebar -->
+
                 </div>    
             </div>
             <!--End Sidebar Wrapper-->  
