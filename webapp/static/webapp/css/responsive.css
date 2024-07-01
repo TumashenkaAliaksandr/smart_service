@@ -190,7 +190,7 @@
   position: static;
 }
 .top-bar-area .topinfo .select-items {
-  width: 250px;
+  width: 280px;
   margin: 0 auto;
   float: none;
 }    
@@ -203,7 +203,16 @@
   float: none;
   text-align: center;
 }    
-       
+
+.top-bar-area .welcome p {
+  color: #ffffff;
+  font-family: "Roboto",sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 5px 0;
+}
+
 /*** 
 =============================================
     Header Area style
@@ -476,6 +485,7 @@
   margin-top: 27px;
 }
 
+
 /*** 
 =============================================
     Cart Area style
@@ -527,26 +537,36 @@
 =============================================
 ***/
 .top-bar-area .welcome p {
-  text-align: center;
-  margin: 10px 0;
-  margin-top: 4%;
+  /*text-align: center;*/
+  margin: 10px 1px;
+  margin-top: 0;
+  font-size: 18px;
 }
 
-.top-bar-area {
-  background: #118b4c none repeat scroll 0 0;
-  padding: 7px 0 8px;
-  /*display: none;*/
-}
+/*.top-bar-area {*/
+/*  background: #118b4c none repeat scroll 0 0;*/
+/*  padding: 7px 0 8px;*/
+/*  !*display: none;*!*/
+/*}*/
+  .top-bar-area {
+    background-image: url('../../webapp/images/resources/ecu_service_green_car.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0 25px;
+    display: block;
+  }
+
+
 
 .top-bar-area .topinfo {
   position: static;
-  margin-bottom: 3px;
-  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 
 .top-bar-area .topinfo .select-items {
   /*width: auto;*/
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   float: none;
 }    
 .top-bar-area .rate {
@@ -556,7 +576,7 @@
 } 
 .top-social-links ul {
   float: none;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .top-social-links-mail ul {
@@ -1229,47 +1249,32 @@
   }
 
   .top-social-links ul li a i {
-    color: #ffffff;
-    font-size: 30px;
+    color: #eaffe6;
+    font-size: 43px;
     transition: all 500ms ease;
-    margin-top: 18px;
-    margin-bottom: 13px;
-    margin-left: 5px;
-    margin-right: 21px;
+    margin-top: 21px;
+    margin-bottom: 5px;
+    /*text-align: center;*/
   }
 
   .top-social-links-mail ul li a i {
     color: #ffffff;
-    font-size: 19px;
+    font-size: 22px;
     transition: all 500ms ease;
     margin-top: 13px;
     margin-bottom: 15px;
-    /*margin-left: 5px;*/
-    /*margin-right: 21px;*/
     position: center;
   }
 
   .newsletter .mailpoet_form {
-  margin-top: 5px;
-  margin-right: 5px;
-  position: fixed;
-  overflow: hidden;
-  background: #fff;
-  height: 27%;
-  box-shadow: 1px 4px 5px #222;
-}
-
-
-    
-    
-    
- 
-    
-    
-    
-    
-    
-    
+    margin-top: 5px;
+    margin-right: 5px;
+    position: fixed;
+    overflow: hidden;
+    background: #fff;
+    height: 27%;
+    box-shadow: 1px 4px 5px #222;
+  }
 }
 
 

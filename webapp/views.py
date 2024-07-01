@@ -17,6 +17,7 @@ def base(request):
 
 
 def index(request):
+
     main_serv = ServicesMain.objects.all()
     brands = Brand.objects.all()
     favorites = Favors.objects.all()

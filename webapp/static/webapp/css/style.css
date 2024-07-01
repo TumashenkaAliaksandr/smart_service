@@ -587,6 +587,7 @@ select:focus {
   .header-area {
     padding: 33px 0 33px;
     /*display: none;*/
+    background-color: whitesmoke;
   }
 }
 .header-contact-info ul {
