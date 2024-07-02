@@ -614,14 +614,14 @@
 .header-contact-info ul {
   margin: 5px 0;
   overflow: hidden;
-  width: 260px;
+  width: 100%;
   margin: 0 auto;
 }
 .header-contact-info ul li {
   display: block;
   float: none;
   margin-right: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }    
     
     
@@ -1260,7 +1260,8 @@
     font-size: 43px;
     transition: all 500ms ease;
     margin-top: 21px;
-    margin-bottom: 5px;
+    margin-bottom: 13px;
+    margin-right: 10px;
     /*text-align: center;*/
   }
 
