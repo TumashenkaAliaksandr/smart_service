@@ -43,49 +43,48 @@
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                <div class="top-social-links">
-                    <ul>
-                        <li><a href="https://www.instagram.com/smart_service_novopolock/"><i class="fa fa-instagram"
-                                                                                             aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i class="fa fa-youtube"
-                                                                                                  aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+{#            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">#}
+{#                <div class="top-social-links">#}
+{#                    <ul>#}
+{#                        <li><a href="https://www.instagram.com/smart_service_novopolock/"><i class="fa fa-instagram"#}
+{#                                                                                             aria-hidden="true"></i></a>#}
+{#                        </li>#}
+{#                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>#}
+{#                        </li>#}
+{#                        <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i class="fa fa-youtube"#}
+{#                                                                                                  aria-hidden="true"></i></a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
             <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
                 <div class="topinfo clearfix">
                     <div class="select-items clearfix">
+                        <div class="top-social-links">
+                            <ul>
+                                <li><a href="https://www.instagram.com/smart_service_novopolock/"><i
+                                        class="fa fa-instagram"
+                                        aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o"
+                                                                      aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i
+                                        class="fa fa-youtube"
+                                        aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="top-social-links-mail">
                             <ul>
                                 <li><a href="mailto:ecuservice@gmail.com"><i
                                         aria-hidden="true"> ecuservice@gmail.com</i></a></li>
                             </ul>
                         </div>
-                        {#                        <div class="single-select-item extras">#}
-                        {#                            <select name="extra" class="selectpicker">#}
-                        {#                                <option>Extras</option>#}
-                        {#                                <option>Extras 1</option>#}
-                        {#                                <option>Extras 2</option>#}
-                        {#                                <option>Extras 3</option>#}
-                        {#                            </select>#}
-                        {#                        </div>#}
-                        {#                        <div class="single-select-item">#}
-                        {#                            <span class="flaticon-circular-clock"></span>#}
-                        {#                            <select name="info" class="selectpicker">#}
-                        {#                                <option>Время Работы:</option>#}
-                        {#                                <option>Понедельник 10.00 - 19.00</option>#}
-                        {#                                <option>Вторник 10.00 - 19.00</option>#}
-                        {#                                <option>Среда 10.00 - 19.00</option>#}
-                        {#                                <option>Четверг 10.00 - 19.00</option>#}
-                        {#                                <option>Пятница 10.00 - 19.00</option>#}
-                        {#                                <option>Суббота 10.00 - 17.00</option>#}
-                        {#                            </select>#}
-                        {#                        </div>#}
                     </div>
                 </div>
             </div>
@@ -99,7 +98,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="logo">
+                <div class="logo img-fixed-size-logo">
                     <a href="{% url 'webapp:home' %}">
                         <img src="{% static 'webapp/images/resources/ecu_service_logo1.png' %}" alt="Awesome Logo">
                     </a>
@@ -111,6 +110,10 @@
                         <li>
                             <div class="iocn-holder">
                                 <span class="flaticon-home-page"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h5>г. Минск</h5>
+                                <h6>п.Звездное д.45</h6>
                             </div>
                             <div class="text-holder">
                                 <h5>г. Новополоцк</h5>
@@ -183,10 +186,10 @@
                             <li {% if request.resolver_match.url_name == 'about' %} class="current" {% endif %}class="dropdown"><a href="{% url 'webapp:about' %}">О Нас</a></li>
                             <li {% if request.resolver_match.url_name == 'shop' %} class="current" {% endif %} class="dropdown"><a href="{% url 'webapp:shop' %}">Мастерская</a>
                                 <ul>
-                                    <li><a href="shop.html">Диагностика</a></li>
+                                    <li><a href="{% url 'webapp:about' %}">Диагностика</a></li>
                                     <li><a href="{% url 'webapp:encoders' %}">Настройка Оборудования</a></li>
-                                    <li><a href="shopping-cart.html">Обслуживание Оборудования</a></li>
-                                    <li><a href="checkout.html">Сотрудничество</a></li>
+                                    <li><a href="{% url 'webapp:services' %}">Обслуживание Оборудования</a></li>
+                                    <li><a href="{% url 'webapp:contact' %}">Сотрудничество</a></li>
                                 </ul>
                             </li>
                             <li {% if request.resolver_match.url_name in "['blog', 'single']" %}class="current"{% endif %}><a href="{% url 'blog:blog' %}">Блог</a>
@@ -229,6 +232,7 @@
 <!--End mainmenu area-->
 
 {% block content %}{% endblock %}
+
 <!--Start Brand area-->
 <section class="brand-area">
     <div class="container">
