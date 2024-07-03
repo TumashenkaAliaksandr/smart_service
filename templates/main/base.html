@@ -43,22 +43,6 @@
                 </div>
             </div>
 
-{#            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">#}
-{#                <div class="top-social-links">#}
-{#                    <ul>#}
-{#                        <li><a href="https://www.instagram.com/smart_service_novopolock/"><i class="fa fa-instagram"#}
-{#                                                                                             aria-hidden="true"></i></a>#}
-{#                        </li>#}
-{#                        <li><a href="https://t.me/belserv"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>#}
-{#                        </li>#}
-{#                        <li><a href="https://www.youtube.com/channel/UC3aUfmmYZNAoI66RPacnJYw"><i class="fa fa-youtube"#}
-{#                                                                                                  aria-hidden="true"></i></a>#}
-{#                        </li>#}
-{#                        <li>#}
-{#                        </li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
             <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
                 <div class="topinfo clearfix">
                     <div class="select-items clearfix">
@@ -193,10 +177,6 @@
                                 </ul>
                             </li>
                             <li {% if request.resolver_match.url_name in "['blog', 'single']" %}class="current"{% endif %}><a href="{% url 'blog:blog' %}">Блог</a>
-{#                                <ul>#}
-{#                                    <li><a href="blog.html">Blog Default</a></li>#}
-{#                                    <li><a href="blog-single.html">Blog Single</a></li>#}
-{#                                </ul>#}
                             </li>
                             <li {% if request.resolver_match.url_name == 'contact' %}class="current"{% endif %}><a href="{% url 'webapp:contact' %}">Контакты</a></li>
                         </ul>
